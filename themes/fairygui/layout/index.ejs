@@ -1,0 +1,157 @@
+<div class="sidebar">
+  <ul class="main-menu">
+    <%- partial('partials/main_menu', { context: 'sidebar' }) %>
+  </ul>
+</div>
+
+<div id="hero">
+  <div class="inner">
+    <div class="right">
+      <br/>
+      <h1>
+        FairyGUI<sup>3.0</sup>
+      </h1>
+      <br/><br/><br/>
+        超强 UI 制作工具，跨平台多引擎 UI 解决方案
+      <br/><br/>
+        Unity、Flash、Staring、白鹭、LayaAir……
+      </br></br>
+      <p>
+        <a class="button" href="<%- url_for("/product/") %>">立即获取</a>
+      </p>
+    </div>
+  </div>
+</div>
+
+  </br></br></br></br>
+  <div class="software">
+    <img src="<%- url_for("/images/software.png") %>">
+  </div>
+
+</div>
+
+<div id="highlights">
+  <div class="inner">
+    <div class="point">
+      <h2>UI 制作的全新体验</h2>
+    </div>
+    <div class="box big">
+      <div class="left">
+        <img src="<%- url_for("/images/test.png") %>">
+      </div>
+      <div class="right">
+        <p>
+          重新定义 UI 制作流程，全可视化，零代码，是一款同时适用于程序员、设计师和策划的 UI 制作工具。
+        </p>
+      </div>
+    </div><br>
+ 	<div class="box big">
+      <div class="left">
+        <img src="<%- url_for("/images/test.png") %>">
+      </div>
+      <div class="right">
+        <p>
+          内置强大的动画、动效编辑器，让设计师的UI创意能够自由发挥。
+        </p>
+      </div>
+    </div><br>
+ 	<div class="box big">
+      <div class="left">
+        <img src="<%- url_for("/images/test.png") %>">
+      </div>
+      <div class="right">
+        <p>
+          配合FairyGUI-SDK，在各个游戏引擎都能得到高效的渲染表现，独特的FairyBatching技术可自动优化复杂界面的DC值。
+        </p>
+      </div>
+    </div><br>
+ 	<div class="box big">
+      <div class="left">
+        <img src="<%- url_for("/images/test.png") %>">
+      </div>
+      <div class="right">
+        <p>
+          支持用于VR AR的UI开发，轻松制作曲面等酷炫界面。
+        </p>
+      </div>
+    </div>
+    <div class="point">
+      <h2>我们都在用 FairyGUI</h2>
+    </div>
+    <div class="box middle">
+      <div class="left">
+        <img src="<%- url_for("/images/test.png") %>">
+        <h2>喵喵的熏鱼肉</h2>
+        <h4>技术总监，8 年手游经验</h4>
+      </div>
+      <div class="right">
+        <p>
+          这特喵的全都是吹牛逼的话啊这特喵的全都是吹牛逼的话啊这特喵的全都是吹牛逼的话啊这特喵的全都是吹牛逼的话啊
+        </p>
+      </div>
+    </div>
+    <div class="box middle">
+      <div class="left">
+        <img src="<%- url_for("/images/test.png") %>">
+        <h2>喵喵的熏鱼肉</h2>
+        <h4>技术总监，8 年手游经验</h4>
+      </div>
+      <div class="right">
+        <p>
+          这特喵的全都是吹牛逼的话啊这特喵的全都是吹牛逼的话啊这特喵的全都是吹牛逼的话啊这特喵的全都是吹牛逼的话啊
+        </p>
+      </div>
+    </div>
+    <div class="box middle">
+      <div class="left">
+        <img src="<%- url_for("/images/test.png") %>">
+        <h2>喵喵的熏鱼肉</h2>
+        <h4>技术总监，8 年手游经验</h4>
+      </div>
+      <div class="right">
+        <p>
+          这特喵的全都是吹牛逼的话啊这特喵的全都是吹牛逼的话啊这特喵的全都是吹牛逼的话啊这特喵的全都是吹牛逼的话啊
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="sponsors">
+  <div class="inner">
+    <h1>合作伙伴</h1>
+    <%- partial('partials/sponsors') %>
+    <br>
+  </div>
+</div>
+
+<div id="bottom-download">
+  看了这么多还在犹豫么？下载仅需五秒！快来体验吧！
+  <p>
+    <a class="button" href="<%- url_for("/product/download/") %>">立即获取</a>
+  </p>
+</div>
+
+<div id="footer">
+
+  <ul class="main-menu">
+    <%- partial('partials/main_menu', { context: 'sidebar' }) %>
+  </ul>
+  <br/><br/><br/>
+
+  官方QQ群: 434866637<br>
+  &copy; FairyGUI.com 2014-<%- new Date().getFullYear() %> 粤ICP备15041112号
+</div>
+
+<script>
+var topScrolled = false
+window.addEventListener('scroll', function () {
+  if (window.pageYOffset > 165 && !topScrolled) {
+    topScrolled = true
+    document.getElementById('mobile-bar').classList.remove('top')
+  } else if (window.pageYOffset <= 165 && topScrolled) {
+    topScrolled = false
+    document.getElementById('mobile-bar').classList.add('top')
+  }
+})
+</script>
