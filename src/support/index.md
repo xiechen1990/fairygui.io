@@ -1,4 +1,8 @@
-# 支持FairyGUI的开发
+---
+title: 支持 FairyGUI 的开发
+type: supports
+order: 0
+---
 
 FairyGUI 是采用 MIT 许可的开源项目，使用完全免费。不过，如果没有资金的支持，维护和开发新功能是不可能持续的。你可以通过 [PayPal]() 来赞助。
 

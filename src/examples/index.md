@@ -1,7 +1,12 @@
-# 在线演示
+---
+title: 在线示例
+type: examples
+order: 0
+---
 
 <iframe width="960" height="640" src="http://www.fairygui.com/laya-demo/main" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
+## 清单
 
 1. [综合例子](http://www.fairygui.com/laya-demo/main)
 2. [简单的背包例子](http://www.fairygui.com/laya-demo/bag)
