@@ -3,6 +3,9 @@
         <%- partial('partials/main_menu', { context: 'sidebar' }) %>
     </ul>
     <div class="list">
+		<a class="become-backer" href="<%- url_for("/support") %>">
+            成为赞助者
+        </a>
         <h2>
             <%- type === 'api' ? 'API' : (type.split('_')[0].charAt(0).toUpperCase() + type.split('_')[0].slice(1)) %>
             <!--<select class="version-select">
