@@ -1,18 +1,18 @@
 # Hexo Configuration
-## Docs: http://zespia.tw/hexo/docs/configuration.html
-## Source: https://github.com/tommy351/hexo/
+## Docs: https://hexo.io/docs/configuration.html
+## Source: https://github.com/hexojs/hexo/
 
 # Site
 title: FairyGUI
-subtitle:
+subtitle: FairyGUI
 description: "超强 UI 编辑器，跨平台多引擎 UI 解决方案"
 author: FairyGUI.com
-email:
-language:
+language: zh-CN
+timezone: Asia/Shanghai
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://fairygui.com
+url: http://www.fairygui.com
 root: /
 permalink: :year/:month/:day/:title/
 tag_dir: tags
@@ -77,8 +77,8 @@ pagination_dir: page
 disqus_shortname:
 
 # Extensions
-## Plugins: https://github.com/tommy351/hexo/wiki/Plugins
-## Themes: https://github.com/tommy351/hexo/wiki/Themes
+## Plugins: https://hexo.io/plugins/
+## Themes: https://hexo.io/themes/
 theme: fairygui
 exclude_generator:
 
@@ -94,7 +94,7 @@ markdown:
   smartypants: true
 
 # Deployment
-## Docs: http://zespia.tw/hexo/docs/deployment.html
+## Docs: https://hexo.io/docs/deployment.html
 #deploy:
   #type: git
   #repository: git@github.com:fairygui/fairygui.com.git
