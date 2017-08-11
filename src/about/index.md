@@ -9,6 +9,10 @@ order: 0
 
 FairyGUI编辑器就是使用FairyGUI制作的。GitHub上有FairyGUI编辑器所有界面的UI工程。下载后可以用FairyGUI编辑器打开。你可以利用这套皮肤制作你自己的编辑器，而且你可以随意选用AS3，或者TS、JS，或者C#，效率都杠杠的！
 
+## SDK贡献
+
+Haxe SDK由[Rakuten](https://github.com/rakuten)提供。
+
 ## 网站制作贡献
 
 [喵喵大人](http://catlib.io)，[Ou Changkun](https://changkun.us/about/)， [Duke Chiang](http://dukechiang.com)， [Blank](http://alianhome.com/)
