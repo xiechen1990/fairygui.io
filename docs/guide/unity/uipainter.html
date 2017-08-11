@@ -1,0 +1,347 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>曲面UI — FairyGUI</title>
+        <meta charset="utf-8">
+        <meta name="description" content="FairyGUI - 超强 UI 制作工具，跨平台开源 UI 解决方案 ">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+        <meta property="og:type" content="article">
+        <meta property="og:title" content="曲面UI — FairyGUI">
+        <meta property="og:description" content="FairyGUI - 超强 UI 制作工具，跨平台开源 UI 解决方案 ">
+
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:title" content="曲面UI — FairyGUI">
+        <meta name="twitter:description" content="FairyGUI - 超强 UI 制作工具，跨平台开源 UI 解决方案 ">
+
+
+        <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Roboto Mono' rel='stylesheet' type='text/css'>
+
+        <!-- main page styles -->
+        <link rel="stylesheet" href="/css/page.css">
+
+        <!-- this needs to be loaded before guide's inline scripts -->
+        <script src="/js/vue.min.js"></script>
+        <script>window.PAGE_TYPE = "guide_unity"</script>
+    </head>
+    <body class="docs">        <div id="mobile-bar"  data-bg-text="FairyGUI" >
+            <a class="menu-button"></a>
+            <a class="logo" href="https://github.com/fairygui/FairyGUI-unity"></a>
+        </div>
+        <div id="bg"> <!--end tag in the `index.ejs`-->
+
+<div id="header">
+  <a id="logo" href="https://github.com/fairygui/">
+    <img src="/images/github-white.png">
+  </a>
+  <ul id="nav">
+    
+
+	<li><a href="/" class="nav-link">首页</a></li>
+
+<li><a href="/product/" class="nav-link">产品</a></li>
+<li><a href="/guide/" class="nav-link current">教程</a></li>
+<li><a href="/api/" class="nav-link">API</a></li>
+<li><a href="/examples/" class="nav-link">在线例子</a></li>
+<li><a href="/showcase/" class="nav-link">商业案例</a></li>
+<li><a href="http://www.fairygui.com/questions" target="_blank" class="nav-link">问答社区</a></li>
+<li><a href="/about/" class="nav-link">关于</a></li>
+  </ul>
+</div>
+
+        
+            <div id="main" class="fix-sidebar">
+                
+                    
+    <div class="sidebar">
+    <ul class="main-menu">
+        
+
+	<li><a href="/" class="nav-link">首页</a></li>
+
+<li><a href="/product/" class="nav-link">产品</a></li>
+<li><a href="/guide/" class="nav-link current">教程</a></li>
+<li><a href="/api/" class="nav-link">API</a></li>
+<li><a href="/examples/" class="nav-link">在线例子</a></li>
+<li><a href="/showcase/" class="nav-link">商业案例</a></li>
+<li><a href="http://www.fairygui.com/questions" target="_blank" class="nav-link">问答社区</a></li>
+<li><a href="/about/" class="nav-link">关于</a></li>
+    </ul>
+    <div class="list">
+		<a class="become-backer" href="/about/donate.html">
+            赞助
+        </a>
+        <h2>
+            Guide
+            <!--<select class="version-select">
+                <option value="SELF" selected>unity</option>
+            </select>-->
+ 		 
+		  <a style="
+		      padding: 0 10px;
+		      margin-top: -10px;
+		      line-height: 30px;
+		      color: white;
+		      font-weight: 200;
+		      letter-spacing: 1px;"
+			target="_blank" 
+		    href="http://shang.qq.com/wpa/qunwpa?idkey=3aeb034b24ddb72ec9be855ba6215b366b2adf01a7652f330912ce7f3d9714db"><img title="FairyGUI官方交流群2" src="http://pub.idqqimg.com/wpa/images/group.png" alt="FairyGUI技术交流群" border="0" />
+		  </a>
+		  <!--b2704e60dc8a8fd26a92270706b6bcd46b40ce961cae0b001144cb517891aa9b-->
+		
+        </h2>
+        <ul class="menu-root">
+            
+
+	 			
+	                
+	                <li>
+	                    <a href="/guide/index.html" class="sidebar-link">介绍</a>
+	                </li>
+	            
+	
+	            
+	                
+	                <li>
+	                    <a href="/guide/editor/index.html" class="sidebar-link">编辑器使用基础</a>
+	                </li>
+	            
+	                
+	                <li>
+	                    <a href="/guide/editor/object.html" class="sidebar-link">元件</a>
+	                </li>
+	            
+	                
+	                <li>
+	                    <a href="/guide/editor/image.html" class="sidebar-link">图片</a>
+	                </li>
+	            
+	                
+	                <li>
+	                    <a href="/guide/editor/movieclip.html" class="sidebar-link">动画</a>
+	                </li>
+	            
+	                
+	                <li>
+	                    <a href="/guide/editor/graph.html" class="sidebar-link">图形</a>
+	                </li>
+	            
+	                
+	                <li>
+	                    <a href="/guide/editor/loader.html" class="sidebar-link">装载器</a>
+	                </li>
+	            
+	                
+	                <li>
+	                    <a href="/guide/editor/text.html" class="sidebar-link">文本</a>
+	                </li>
+	            
+	                
+	                <li>
+	                    <a href="/guide/editor/richtext.html" class="sidebar-link">富文本</a>
+	                </li>
+	            
+	                
+	                <li>
+	                    <a href="/guide/editor/group.html" class="sidebar-link">组</a>
+	                </li>
+	            
+	                
+	                <li>
+	                    <a href="/guide/editor/component.html" class="sidebar-link">组件</a>
+	                </li>
+	            
+	                
+	                <li>
+	                    <a href="/guide/editor/controller.html" class="sidebar-link">控制器</a>
+	                </li>
+	            
+	                
+	                <li>
+	                    <a href="/guide/editor/relation.html" class="sidebar-link">关联系统</a>
+	                </li>
+	            
+	                
+	                <li>
+	                    <a href="/guide/editor/label.html" class="sidebar-link">标签</a>
+	                </li>
+	            
+	                
+	                <li>
+	                    <a href="/guide/editor/button.html" class="sidebar-link">按钮</a>
+	                </li>
+	            
+	                
+	                <li>
+	                    <a href="/guide/editor/combobox.html" class="sidebar-link">下拉框</a>
+	                </li>
+	            
+	                
+	                <li>
+	                    <a href="/guide/editor/progressbar.html" class="sidebar-link">进度条</a>
+	                </li>
+	            
+	                
+	                <li>
+	                    <a href="/guide/editor/slider.html" class="sidebar-link">滑动条</a>
+	                </li>
+	            
+	                
+	                <li>
+	                    <a href="/guide/editor/scrollbar.html" class="sidebar-link">滚动条</a>
+	                </li>
+	            
+	                
+	                <li>
+	                    <a href="/guide/editor/list.html" class="sidebar-link">列表</a>
+	                </li>
+	            
+	                
+	                <li>
+	                    <a href="/guide/editor/window.html" class="sidebar-link">窗口系统</a>
+	                </li>
+	            
+	                
+	                <li>
+	                    <a href="/guide/editor/popup.html" class="sidebar-link">Popup管理</a>
+	                </li>
+	            
+	                
+	                <li>
+	                    <a href="/guide/editor/transition.html" class="sidebar-link">动效</a>
+	                </li>
+	            
+	                
+	                <li>
+	                    <a href="/guide/editor/adaption.html" class="sidebar-link">自适应</a>
+	                </li>
+	            
+	
+	            
+	                
+	                
+	                <li><h3>Unity</h3></li>
+	                
+	                <li>
+	                    <a href="/guide/unity/index.html" class="sidebar-link">显示UI面板</a>
+	                </li>
+	            
+	                
+	                
+	                <li>
+	                    <a href="/guide/unity/atlas.html" class="sidebar-link">纹理集的处理</a>
+	                </li>
+	            
+	                
+	                
+	                <li>
+	                    <a href="/guide/unity/font.html" class="sidebar-link">字体的处理</a>
+	                </li>
+	            
+	                
+	                
+	                <li>
+	                    <a href="/guide/unity/input.html" class="sidebar-link">输入处理</a>
+	                </li>
+	            
+	                
+	                
+	                <li>
+	                    <a href="/guide/unity/event.html" class="sidebar-link">事件机制</a>
+	                </li>
+	            
+	                
+	                
+	                <li>
+	                    <a href="/guide/unity/insert3d.html" class="sidebar-link">穿插3D对象</a>
+	                </li>
+	            
+	                
+	                
+	                <li>
+	                    <a href="/guide/unity/uipainter.html" class="sidebar-link current">曲面UI</a>
+	                </li>
+	            
+	                
+	                
+	                <li>
+	                    <a href="/guide/unity/drawcall.html" class="sidebar-link">DrawCall优化</a>
+	                </li>
+	            
+
+	            
+	                
+	                
+	                <li><h3>LayaAir</h3></li>
+	                
+	                <li>
+	                    <a href="/guide/laya/index.html" class="sidebar-link">在LayaAir中使用FairyGUI</a>
+	                </li>
+	            
+	
+	            
+	                
+	                
+	                <li><h3>Egret</h3></li>
+	                
+	                <li>
+	                    <a href="/guide/egret/index.html" class="sidebar-link">在Egret中使用FairyGUI</a>
+	                </li>
+	            
+
+	            
+
+	            
+
+            
+        </ul>
+    </div>
+</div>
+
+
+<div class="content guide_unity with-sidebar ">
+    
+      <h1>曲面UI</h1>
+    
+    <p>本篇教程介绍如何使用FairyGUI制作曲面UI。原理是将目标界面捕获到一张RenderTexture上，然后将这张Texture贴到一个曲面模型上，点击检测则使用MeshCollider完成。从这个原理也可以看出，FairyGUI不只可以支持曲面UI，而是任意形状的UI都支持，只要提供相应的模型即可。</p>
+<h2 id="制作曲面UI"><a href="#制作曲面UI" class="headerlink" title="制作曲面UI"></a>制作曲面UI</h2><p>首先将制作好的曲面模型放进场景里：</p>
+<p><img src="../../images/20170809145538.png" alt=""></p>
+<p>在模型的GameObject上挂一个<code>UIPainter</code>组件，这时应该会自动添加“Mesh Collider”组件和“Mesh Renderer”组件。</p>
+<p><img src="../../images/20170809145818.png" alt=""></p>
+<p>UIPainter和UIPanel的设置极为相似，设置好“Package Name”和“Component Name”后，对应的UI就能显示在曲面上了！</p>
+<p><img src="../../images/20170809150918.png" alt=""></p>
+<p>材质那里要注意选择一个着色器，如果不需要特别的效果，那选择“FairyGUI/Image”就可以，如果需要光照等需求，也选择其他着色器。（如果没有材质，自己新建一个材质）。</p>
+<h2 id="UIPainter"><a href="#UIPainter" class="headerlink" title="UIPainter"></a>UIPainter</h2><ul>
+<li><p><code>Package Name</code> UI组件所在的包名称。注意，这里只是保存一个名称，并没有实际引用到任何UI数据。</p>
+</li>
+<li><p><code>Component Name</code> UI组件的名称。注意，这里只是保存一个名称，并没有实际引用到任何UI数据。</p>
+</li>
+<li><p><code>Sorting Order</code> 调整UIPainter的显示顺序。越大的显示在越前面。这个顺序是和UIPanel共用的。</p>
+</li>
+<li><p><code>Fairy Batching</code> 是否启用Fairy Batching。关于Fairy Batching请参考<a href="drawcall.html">这里</a>。切换这个值，可以在编辑模式下实时看到DrawCall的变化（切换后点击一下Game，Stat里显示的内容才会更新），这可以使你更加容易决定是否启用这项技术。</p>
+</li>
+<li><p><code>Touch Disabled</code> 勾选后，将关闭点击检测。当这个UI没有可交互的内容时可以勾选以提高点击检测时的性能。</p>
+</li>
+</ul>
+<p>当使用曲面UI时，因为需要用到捕获UI成纹理的功能，需要定义VUI、Hidden VUI这两个Layer，否则会出现警告。另外，场景里会出现Capture Camera对象，这是正常的。</p>
+
+    
+    <div class="footer">
+      发现错误或想贡献文档?
+      <a href="https://github.com/fairygui/fairygui.com/blob/master/src/guide/unity/uipainter.md" target="_blank">
+        在 Github 上编辑此文档!
+      </a>
+    </div>
+</div>
+
+                
+            </div>
+            <script src="/js/smooth-scroll.min.js"></script>
+        
+
+        <!-- main custom script for sidebars, version selects etc. -->        
+        <script src="/js/css.escape.js"></script>
+        <script src="/js/common.js"></script>
+    </body>
+</html>
