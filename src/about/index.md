@@ -11,7 +11,7 @@ FairyGUI编辑器就是使用FairyGUI制作的。GitHub上有FairyGUI编辑器�
 
 ## 网站制作贡献
 
-[喵喵大人](http://catlib.io)，[Ou Changkun](https://changkun.us/about/)， [Duke Chiang]()， [Blank](http://alianhome.com/)
+[喵喵大人](http://catlib.io)，[Ou Changkun](https://changkun.us/about/)， [Duke Chiang](http://dukechiang.com)， [Blank](http://alianhome.com/)
 
 
 
