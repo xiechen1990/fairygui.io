@@ -269,6 +269,12 @@
 	                    <a href="/guide/unity/drawcall.html" class="sidebar-link current">DrawCall优化</a>
 	                </li>
 	            
+	                
+	                
+	                <li>
+	                    <a href="/guide/unity/lua.html" class="sidebar-link">在Lua中使用</a>
+	                </li>
+	            
 
 	            
 	                
@@ -315,7 +321,7 @@
 <p>FairyGUI基于Unity的<code>Dynamic Batching</code>技术，提供了<code>深度调整技术</code>进行 Draw Call优化 。FairyGUI能在不改变最终显示效果的前提下，尽可能的把相同材质的物体调整到连续的RenderingOrder值上，以促使他们能够被Unity Dynamic Batching优化。Dynamic Batching是Unity提供的Draw Call Batching技术之一。如果动态物体共用着相同的材质，那么Unity会自动对这些物体进行批处理。但Dynamic Batching的一个重要的前提是这些动态物体是连续渲染的。先来看看FairyGUI中物体的渲染顺序，例如：</p>
 <p><img src="../../images/2015-09-23_165230.png" alt=""></p>
 <p>这里有4个按钮，每个按钮都是一个组件，每个组件里包含一个图片和一个文字对象。FairyGUI是树状的显示对象结构，那么他们按深度排序应该是：</p>
-<p><img src="../../images/2015-09-23_170211.png" alt=""></p>
+<p><img src="../../images/2015-09-23_1702111.png" alt=""></p>
 <p>因为文字和图片的材质并不相同，所以每次从文字到图片都产生上下文切换，所以产生了6个DC。<br>FairyGUI的深度调整技术可以优化这种情况。观察一下，其实四个按钮之间并不相交，所以FairyGUI智能地将渲染顺序调整为：</p>
 <p><img src="../../images/2015-09-23_171345.png" alt=""></p>
 <p>因为FairyGUI使用了图集，而且动态文字也使用了相同的贴图，这样，DC就降低到了2个，达到了优化的目的。实际情况会比这个复杂很多，但FairyGUI能在不改变最终显示效果的前提下，尽可能的把相同材质的物体调整到连续的RenderingOrder值上，以促使他们能够被Unity Dynamic Batching优化。而对开发者来说，这些底层上的调整是透明的，也就是不会影响原来的显示对象层次。从效率上考虑，这种技术仅比较物体之间的显示矩形区域（一个Rect）是否相交，所以速度是非常快的，不会带来过多的CPU负荷。</p>

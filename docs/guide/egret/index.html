@@ -269,6 +269,12 @@
 	                    <a href="/guide/unity/drawcall.html" class="sidebar-link">DrawCall优化</a>
 	                </li>
 	            
+	                
+	                
+	                <li>
+	                    <a href="/guide/unity/lua.html" class="sidebar-link">在Lua中使用</a>
+	                </li>
+	            
 
 	            
 	                
@@ -305,33 +311,31 @@
       <h1>在Egret中使用FairyGUI</h1>
     
     <h2 id="Egret-4-x"><a href="#Egret-4-x" class="headerlink" title="Egret 4.x"></a>Egret 4.x</h2><ol>
-<li>将FairyGUI库以及依赖的rawinflate库拷贝到libs目录。</li>
-</ol>
+<li><p>将FairyGUI库以及依赖的rawinflate库拷贝到libs目录。</p>
 <p><img src="../../images/20170809161022.png" alt=""></p>
-<ol>
-<li>在index.html里添加上述两个库的引用。</li>
-</ol>
+</li>
+<li><p>在index.html里添加上述两个库的引用。</p>
 <p><img src="../../images/20170809161215.png" alt=""></p>
 <p>注：FairyGUI只依赖egret的core和res两个模块，不需要gui和eui。</p>
-<ol>
-<li>使用FairyGUI编辑器完成UI编辑。发布目录请选择Egret工程的resource/assets目录。发布后得到两个（或以上）文件。</li>
-</ol>
+</li>
+<li><p>使用FairyGUI编辑器完成UI编辑。发布目录请选择Egret工程的resource/assets目录。发布后得到两个（或以上）文件。</p>
 <p><img src="../../images/20170809161256.png" alt=""></p>
-<ol>
-<li>在default.res.json里，将上述的文件添加到定义中。扩展名为fui文件，类型请选择为bin。注意：Egret自动检测添加的资源，名称通常会自动加上下划线和后缀，例如basic.fui，名称自动设置为“basic_fui”，这里我们要手动将_fui去掉，名称只需要为“basic”。</li>
-</ol>
+</li>
+<li><p>在default.res.json里，将上述的文件添加到定义中。扩展名为fui文件，类型请选择为bin。注意：Egret自动检测添加的资源，名称通常会自动加上下划线和后缀，例如basic.fui，名称自动设置为“basic_fui”，这里我们要手动将_fui去掉，名称只需要为“basic”。</p>
 <p><img src="../../images/20170809161350.png" alt=""></p>
 <p>资源一般都加到preload组里，如果你是高阶玩家，也可以试试动态加载。确保在使用到相应的元件前加载好就行。</p>
-<ol>
-<li>在代码里完成规定的初始化，例如设定默认字体，滚动条等等。</li>
-</ol>
+</li>
+<li><p>在代码里完成规定的初始化，例如设定默认字体，滚动条等等。</p>
 <figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"> <span class="comment">/**</span></div><div class="line"><span class="comment">  * 创建游戏场景</span></div><div class="line"><span class="comment">  * Create a game scene</span></div><div class="line"><span class="comment">  */</span></div><div class="line"> <span class="function"><span class="keyword">private</span> <span class="title">createGameScene</span>(<span class="params"></span>):<span class="keyword">void</span> </span>&#123;</div><div class="line">     fairygui.UIPackage.addPackage(<span class="string">"basic"</span>);</div><div class="line">     </div><div class="line">     fairygui.UIConfig.defaultFont = <span class="string">"宋体"</span>;</div><div class="line">     fairygui.UIConfig.verticalScrollBar = fairygui.UIPackage.getItemURL(<span class="string">"Basic"</span>, <span class="string">"ScrollBar_VT"</span>);</div><div class="line">     fairygui.UIConfig.horizontalScrollBar = fairygui.UIPackage.getItemURL(<span class="string">"Basic"</span>, <span class="string">"ScrollBar_HZ"</span>);</div><div class="line">     fairygui.UIConfig.popupMenu = fairygui.UIPackage.getItemURL(<span class="string">"Basic"</span>, <span class="string">"PopupMenu"</span>);</div><div class="line">     fairygui.UIConfig.buttonSound = fairygui.UIPackage.getItemURL(<span class="string">"Basic"</span>,<span class="string">"click"</span>);</div><div class="line">     </div><div class="line">     <span class="keyword">this</span>.stage.addChild(fairygui.GRoot.inst.displayObject);</div><div class="line"></div><div class="line">     <span class="keyword">this</span>.mainPanel = <span class="keyword">new</span> MainPanel();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ol>
 <h2 id="Egret-5-x"><a href="#Egret-5-x" class="headerlink" title="Egret 5.x"></a>Egret 5.x</h2><p>步骤与4.x的基本一样，不过需要额外的两个操作：</p>
 <ol>
 <li>复制一份rawinflate.min.js，并改名为rawinflate.js。</li>
-<li>在egretProperties.json文件中添加:</li>
+<li><p>在egretProperties.json文件中添加:</p>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line">&#123;  </div><div class="line">    <span class="string">"name"</span>: <span class="string">"rawinflate"</span>,  </div><div class="line">    <span class="string">"path"</span>: <span class="string">"./libs/rawinflate"</span>  </div><div class="line">&#125;,  </div><div class="line">&#123;  </div><div class="line">    <span class="string">"name"</span>: <span class="string">"fairygui"</span>,  </div><div class="line">    <span class="string">"path"</span>: <span class="string">"./libs/fairygui"</span>  </div><div class="line">&#125;</div></pre></td></tr></table></figure></li>
 </ol>
-<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line">&#123;  </div><div class="line">    <span class="string">"name"</span>: <span class="string">"rawinflate"</span>,  </div><div class="line">    <span class="string">"path"</span>: <span class="string">"./libs/rawinflate"</span>  </div><div class="line">&#125;,  </div><div class="line">&#123;  </div><div class="line">    <span class="string">"name"</span>: <span class="string">"fairygui"</span>,  </div><div class="line">    <span class="string">"path"</span>: <span class="string">"./libs/fairygui"</span>  </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
     
     <div class="footer">
       发现错误或想贡献文档?

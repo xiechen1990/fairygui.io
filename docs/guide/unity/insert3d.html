@@ -269,6 +269,12 @@
 	                    <a href="/guide/unity/drawcall.html" class="sidebar-link">DrawCall优化</a>
 	                </li>
 	            
+	                
+	                
+	                <li>
+	                    <a href="/guide/unity/lua.html" class="sidebar-link">在Lua中使用</a>
+	                </li>
+	            
 
 	            
 	                
@@ -308,23 +314,21 @@
 <h2 id="直接放入3D对象"><a href="#直接放入3D对象" class="headerlink" title="直接放入3D对象"></a>直接放入3D对象</h2><p>这种方式是直接用UI相机渲染3D对象，相比RenderTexture的方案，使用简单且节省内存，缺点是在UI相机下3D对象没有透视。</p>
 <p>在UI中插入3D对象需要用到一个图形占位和<code>GoWrapper</code>对象。</p>
 <ol>
-<li>实例化你的3D对象，例如:</li>
-</ol>
+<li><p>实例化你的3D对象，例如:</p>
 <figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line">Object prefab = Resources.Load(<span class="string">"Role/npc"</span>);</div><div class="line">GameObject go = (GameObject)Object.Instantiate(prefab);</div></pre></td></tr></table></figure>
-<ol>
-<li>给3D对象设置合适的位置、缩放和旋转。</li>
-</ol>
+</li>
+<li><p>给3D对象设置合适的位置、缩放和旋转。</p>
 <figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line">go.transform.localPosition = <span class="keyword">new</span> Vector3(<span class="number">61</span>, <span class="number">-89</span>, <span class="number">1000</span>); </div><div class="line">go.transform.localScale = <span class="keyword">new</span> Vector3(<span class="number">180</span>, <span class="number">180</span>, <span class="number">180</span>);</div><div class="line">go.transform.localEulerAngles = <span class="keyword">new</span> Vector3(<span class="number">0</span>, <span class="number">100</span>, <span class="number">0</span>);</div></pre></td></tr></table></figure>
 <p>注意：对于模型这种有“厚度”的对象（在z轴有一定范围），localPosition的z值不应该为0，可以设置一个较大的正数值（正数表示远离摄像机）。因为Shader是开启了ZTest的，如果模型在z轴的坐标为0，和UI的z值相同，那么他的前端就可能与他上一层的UI重叠。</p>
 <p>模型的缩放可以根据这个公式计算：缩放倍数 = 显示大小（单位像素）/ 模型大小（单位米）。例如如果一个模型是1米高，最终需要显示400像素高，那么需要放大400倍。</p>
-<ol>
-<li>在UI中需要放置3D对象中放置一个空白的图形，假设名称为“holder”。</li>
-</ol>
+</li>
+<li><p>在UI中需要放置3D对象中放置一个空白的图形，假设名称为“holder”。</p>
 <figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line">GGraph holder = view.GetChild(<span class="string">"holder"</span>).asGraph;</div></pre></td></tr></table></figure>
-<ol>
-<li>构建GoWrapper对象，放入到holder中。</li>
-</ol>
+</li>
+<li><p>构建GoWrapper对象，放入到holder中。</p>
 <figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line">GoWrapper wrapper = <span class="keyword">new</span> GoWrapper(go);</div><div class="line">holder.SetNativeObject(wrapper);</div></pre></td></tr></table></figure>
+</li>
+</ol>
 <p><strong>点击处理</strong></p>
 <p>GoWrapper默认是没有大小的，所有不能处理点击事件。如果需要对3D对象显示区域的点击事件，可以在holder上再放置一个图形（透明度设置为0）作为点击区域，或者一个空组件也行。</p>
 <p><strong>调试方式</strong></p>

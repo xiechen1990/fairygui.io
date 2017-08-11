@@ -269,6 +269,12 @@
 	                    <a href="/guide/unity/drawcall.html" class="sidebar-link">DrawCall优化</a>
 	                </li>
 	            
+	                
+	                
+	                <li>
+	                    <a href="/guide/unity/lua.html" class="sidebar-link">在Lua中使用</a>
+	                </li>
+	            
 
 	            
 	                
@@ -319,13 +325,13 @@
 <p>没有直接传递自定义参数进回调函数的办法。但可以通过三种方式间接实现：</p>
 <ol>
 <li>通过全局或者模块变量；</li>
-<li>使用lamba表达式，例如：</li>
-</ol>
+<li><p>使用lamba表达式，例如：</p>
 <figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line">a.onClick.Add(()=&gt;&#123; ... &#125;);</div></pre></td></tr></table></figure>
-<ol>
-<li>将变量放到显示对象的data属性里。例如:</li>
-</ol>
+</li>
+<li><p>将变量放到显示对象的data属性里。例如:</p>
 <figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line">a.data = ...;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">aCallback</span>(<span class="params">EventContext context</span>)</span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">	Debug.Log(context.sender.data)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ol>
 <h2 id="EventListener"><a href="#EventListener" class="headerlink" title="EventListener"></a>EventListener</h2><ul>
 <li><code>Add</code> <code>Remove</code> 添加或删除一个回调。</li>
 <li><code>AddCapture</code> <code>RemoveCapture</code> 添加或删除一个捕获期回调。</li>

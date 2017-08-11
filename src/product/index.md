@@ -6,7 +6,7 @@ order: 0
 
 ## FairyGUI 编辑器 
 
->English,  简体中文, 繁體中文
+>当前版本3.3.4
 
 <div id="downloads">
 <a class="button" href="http://res.fairygui.com/FairyGUI-Editor_3_3_4.zip" target="_self">Windows平台</a><span class="light info">支持简体中文、繁体中文和英文</span>

@@ -43,23 +43,24 @@ C’s capture listeners->B’s capture listeners->A’s capture listeners->A’s
 两种形式的使用方法都是相同的，差别在于不带参数或带一个参数,只是为了方便在不需要用到EventContext时少写一点而已。
 
 没有直接传递自定义参数进回调函数的办法。但可以通过三种方式间接实现：
+
 1. 通过全局或者模块变量；
 2. 使用lamba表达式，例如：
 
-```csharp
+  ```csharp
 	a.onClick.Add(()=>{ ... });
-```
+  ```
 
 3. 将变量放到显示对象的data属性里。例如:
 
-```csharp
+  ```csharp
 	a.data = ...;
 
 	void aCallback(EventContext context)
 	{
 		Debug.Log(context.sender.data)
 	}
-```
+  ```
 
 ## EventListener
 
