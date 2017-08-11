@@ -4,7 +4,7 @@
 <% } %>
 <li><a href="<%- url_for("/product/")%>" class="nav-link<%- page.path.match(/product/) ? ' current' : '' %>">产品</a></li>
 <li><a href="<%- url_for("/guide/") %>" class="nav-link<%- page.path.match(/guide\//) ? ' current' : '' %>">教程</a></li>
-<li><a href="<%- url_for("/api/") %>" class="nav-link<%- page.path.match(/api/) ? ' current' : '' %>">API</a></li>
+<li><a href="<%- url_for("http://ask.fairygui.com/api/")%>" target="_blank"  class="nav-link">API</a></li>
 <li><a href="<%- url_for("/examples/") %>" class="nav-link<%- page.path.match(/examples/) ? ' current' : '' %>">在线例子</a></li>
 <li><a href="<%- url_for("/showcase/") %>" class="nav-link<%- page.path.match(/showcase/) ? ' current' : '' %>">商业案例</a></li>
 <li><a href="<%- url_for("http://ask.fairygui.com/")%>" target="_blank" class="nav-link">问答社区</a></li>
