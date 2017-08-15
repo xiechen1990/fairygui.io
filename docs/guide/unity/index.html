@@ -407,6 +407,12 @@
 <p>对于RenderMode为WorldSpace的UIPanel，也就是我们常说的3D UI（例如：头顶血条），如果希望通过z值来进行排序，而不是sortingOrder值，可以先将这一类UIPanel的sortingOrder设置为一个相同的值，例如100，然后调用：</p>
 <figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="comment">//对sortingOrder为100的UIPanel按z进行排序，z值越小，显示在越前面。</span></div><div class="line">Stage.inst.SortWorldSpacePanelsByZOrder(<span class="number">100</span>);</div></pre></td></tr></table></figure>
 <p>这个方法有一个List.Sort的排序消耗，不建议每帧调用，可以隔一段时间，或者在对象位置改变后才调用。</p>
+<p><strong>关于HUD</strong></p>
+<p>UIPanel可以用来制作头顶血条。要注意的是：</p>
+<ol>
+<li>放在3D对象上的UIPanel是无法和其他UIPanel进行DrawCall合并的，因此如果同屏人物很多，DC就很高。这个无法避免。如果一定要合并DC，那改用2D UI，把这些HUD对象都放到同一层里，然后与3D对象同步位置。至于近大远小之类的，要不自己按距离算scale，要不就别管了。EmitNumbers这个Demo就演示了怎样用2D UI和3D对象同步坐标。</li>
+<li>UIPanel没有自动面向屏幕的功能，自行挂脚本实现，使用LookAt一般就可以。</li>
+</ol>
 <h2 id="动态创建UI"><a href="#动态创建UI" class="headerlink" title="动态创建UI"></a>动态创建UI</h2><p>在很多情况下，你并不需要将UI界面放到场景中。另外一种常用的创建UI对象的方式是：</p>
 <figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line">GComponent view = UIPackage.CreateObject(“包名”, “组件名”).asCom;</div><div class="line"></div><div class="line"><span class="comment">//以下几种方式都可以将view显示出来：</span></div><div class="line"></div><div class="line"><span class="comment">//1，直接加到GRoot显示出来</span></div><div class="line">GRoot.inst.AddChild(view);</div><div class="line"></div><div class="line"><span class="comment">//2，使用窗口方式显示</span></div><div class="line">aWindow.contentPane = view;</div><div class="line">aWindow.Show();</div><div class="line"></div><div class="line"><span class="comment">//3，加到其他组件里</span></div><div class="line">aComponnent.AddChild(view);</div></pre></td></tr></table></figure>
 <p>动态创建的界面不会自动销毁，例如一个背包窗口，你并不需要在每次过场景都销毁。如果要销毁界面，需要手工调用Dispose方法，例如</p>
