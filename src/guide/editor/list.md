@@ -64,7 +64,7 @@ order: 180
 
 列表对应的类型是GList。在FairyGUI中，列表的本质就是一个组件，GList也是从GComponent派生来的，所以你可以用GComponent的API直接访问列表内的内容，例如可以用GetChild或者GetChildAt访问列表内的项目；也可以用AddChild添加一个item。这部分的API可以参考GComponent的[显示列表管理](component.html#GComponent)。
 
-当你对列表增删改后，列表是自动排列和刷新的，不需要调用任何API。这个刷新发生在本帧绘制之前。刷新时将按照列表的布局调整各个子元件的坐标。如果你希望立刻访问此元件的正确坐标，那么可以调用`EnsureBoundsCorrect`通知GList立刻重排。EnsureBoundsCorrect是一个友好的函数，你不用担心重复调用会有额外性能消耗。
+当你对列表增删改后，列表是自动排列和刷新的，不需要调用任何API。这个刷新发生在本帧绘制之前。刷新时将按照列表的布局调整各个子元件的坐标。如果你希望立刻访问item的正确坐标，那么可以调用`EnsureBoundsCorrect`通知GList立刻重排。EnsureBoundsCorrect是一个友好的函数，你不用担心重复调用会有额外性能消耗。
 
 在实际应用中，列表的内容通常被频繁的更新。典型的用法就是当接收到后台数据时，将列表清空，然后再重新添加所有项目。如果每次都创建和销毁UI对象，将消耗很大的CPU和内存。因此，GList内建了对象池。
 
