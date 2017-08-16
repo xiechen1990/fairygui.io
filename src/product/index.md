@@ -16,6 +16,12 @@ order: 0
 
 FairyGUI编辑器是绿色软件，解压后可直接使用，无需安装。建议解压到非中文目录下。
 
+旧版本下载通道：
+
+- Windows res.fairygui.com/FairyGUI-Editor_X_X_X.zip
+- OSX res.fairygui.com/FairyGUI-Editor_Mac_X_X_X.zip
+
+将XXX换成版本号的三个数字就可以了。
 
 ## Unity SDK
 
@@ -33,7 +39,7 @@ FairyGUI编辑器是绿色软件，解压后可直接使用，无需安装。建
 
 <img src="https://img.shields.io/github/stars/fairygui/FairyGUI-layabox.svg"         alt="stars"> <img src="https://img.shields.io/github/forks/fairygui/FairyGUI-layabox.svg" alt="forks">
 
-[下载例子](http://fairygui.oss-cn-shenzhen.aliyuncs.com/FairyGUI-layabox-demo20170726.zip)
+[下载例子](http://res.fairygui.com/FairyGUI-layabox-demo20170726.zip)
 
 ## Egret SDK
 
@@ -41,7 +47,7 @@ FairyGUI编辑器是绿色软件，解压后可直接使用，无需安装。建
 
 <img src="https://img.shields.io/github/stars/fairygui/FairyGUI-egret.svg"         alt="stars"> <img src="https://img.shields.io/github/forks/fairygui/FairyGUI-egret.svg" alt="forks">
 
-[下载例子](http://fairygui.oss-cn-shenzhen.aliyuncs.com/FairyGUI-egret-demo20170726.zip)
+[下载例子](http://res.fairygui.com/FairyGUI-egret-demo20170726.zip)
 
 ## Starling SDK
 
@@ -49,7 +55,7 @@ FairyGUI编辑器是绿色软件，解压后可直接使用，无需安装。建
 
 <img src="https://img.shields.io/github/stars/fairygui/FairyGUI-starling.svg"         alt="stars"> <img src="https://img.shields.io/github/forks/fairygui/FairyGUI-starling.svg" alt="forks">
 
-[下载例子](http://fairygui.oss-cn-shenzhen.aliyuncs.com/FairyGUI-starling-demo20170726.zip)
+[下载例子](http://res.fairygui.com/FairyGUI-starling-demo20170726.zip)
 
 ## Haxe SDK
 
@@ -65,4 +71,4 @@ FairyGUI编辑器是绿色软件，解压后可直接使用，无需安装。建
 
 <img src="https://img.shields.io/github/stars/fairygui/FairyGUI-as3.svg"         alt="stars"> <img src="https://img.shields.io/github/forks/fairygui/FairyGUI-as3.svg" alt="forks">
 
-[下载例子](http://fairygui.oss-cn-shenzhen.aliyuncs.com/FairyGUI-as3-demo20170726.zip)
+[下载例子](http://res.fairygui.com/FairyGUI-as3-demo20170726.zip)

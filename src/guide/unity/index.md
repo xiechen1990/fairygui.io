@@ -233,7 +233,7 @@ UIConfig组件用于设置一些全局的参数。使用UIConfig组件设置和�
 FairyGUI是以左上角为原点的，Unity的屏幕坐标是以左下角为原点的。如果需要进行这两者的转换，可以用：
 
 ```csharp
- 	//Unity的屏幕坐标系，以左下角为原点
+    //Unity的屏幕坐标系，以左下角为原点
 	Vector2 pos = Input.mousePosition;
 
 	//转换为FairyGUI的屏幕坐标

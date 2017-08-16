@@ -70,12 +70,12 @@ order: 80
     require 'FairyGUI'
     
     function OnClick()
-    	print('you click')
+        print('you click')
     end
     
     --也可以带上事件参数
     function OnClick(context)
-    	print('you click'..context.sender)
+        print('you click'..context.sender)
     end
     
     UIPackage.AddPackage('Demo')
@@ -90,12 +90,12 @@ order: 80
 2. 类方法的侦听和删除侦听
 ```csharp
     function TestClass:OnClick()
-    	print('you click')
+        print('you click')
     end
     
     --也可以带上事件参数
     function TestClass:OnClick(context)
-    	print('you click'..context.sender)
+        print('you click'..context.sender)
     end
     
     self.view.onClick:Add(TestClass.OnClick, self)
@@ -134,7 +134,7 @@ FairyGUI提供的Window类，一般需要开发者自己扩展，例如覆盖OnS
     MyWindow = fgui.window_class(WindowBase)
 
     function MyWindow:OnInit()
-    	WindowBase.OnInit(self)
+        WindowBase.OnInit(self)
     end
 ```
 
@@ -148,23 +148,23 @@ FairyGUI在C#里可以使用UIObjectFactory.SetPackageItemExtension进行自定�
     
     --注意这里不是构造函数，是当组件已经（通过XML）构建完毕后调用的
     function MyButton:ctor()
-    	print(self:GetChild('n1'))
+        print(self:GetChild('n1'))
     end
     
     --添加自定义的方法和字段
     function MyButton:Test()
-    	print('test')
+        print('test')
     end
     
     local get = tolua.initget(MyButton)
     local set = tolua.initset(MyButton)
     get.myProp = function(self)
-    	return self._myProp
+        return self._myProp
     end
     
     set.myProp = function(self, value)
-    	self._myProp = value
-    	self:GetChild('n1').text = value
+        self._myProp = value
+        self:GetChild('n1').text = value
     end
 ```
 

@@ -337,6 +337,8 @@
 <p>在手机上是通过原生的键盘输入。键盘弹出时，派发GTextInput.onFocusIn事件，键盘收回时，派发GTextInput.onFocusOut事件。</p>
 <p>Unity在键盘输入时自带了一个额外的输入框，如果你不需要这个输入框，希望像微信那样弹出自己的输入框，你需要自行编写原生支持，FairyGUI这边提供的支持有：</p>
 <figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="comment">//取消Unity弹出原生的键盘的行为</span></div><div class="line">Stage.keyboardInput = <span class="literal">false</span>;</div><div class="line"></div><div class="line"><span class="comment">//插入字符到光标位置</span></div><div class="line">Stage.inst.InputString(<span class="string">"xxx"</span>);</div></pre></td></tr></table></figure>
+<p><strong>复制粘贴问题</strong></p>
+<p>当使用DLL形式的插件时，因为DLL默认是为移动平台编译的，所以不支持复制粘贴（如果要支持，需要自己写原生）。如果是在PC平台上使用时，需要将<a href="https://github.com/fairygui/FairyGUI-unity/blob/master/Examples.Unity5/Assets/FairyGUI/CopyPastePatch.cs" target="_blank" rel="external">CopyPastePatch.cs</a>放到工程里，并在游戏启动时调用CopyPastePatch.Apply()，就可以在PC平台激活复制粘贴功能。如果你是使用源码形式的插件，不需要进行这个处理。</p>
 <h2 id="手势"><a href="#手势" class="headerlink" title="手势"></a>手势</h2><p>FairyGUI提供了常用手势的支持，它们是：</p>
 <ul>
 <li><p><code>LongPressGesture</code> 长按手势。</p>
