@@ -442,7 +442,7 @@
 <h2 id="UIConfig"><a href="#UIConfig" class="headerlink" title="UIConfig"></a>UIConfig</h2><p>UIConfig组件用于设置一些全局的参数。使用UIConfig组件设置和在代码中使用UIConfig类设置全局参数效果是一样的。UIConfig组件还可以加载包，点击<code>Preload Packages</code>下面的Add即可。</p>
 <p><img src="../../images/2016-04-06_095535.png" alt=""></p>
 <h2 id="坐标转换"><a href="#坐标转换" class="headerlink" title="坐标转换"></a>坐标转换</h2><p>FairyGUI是以左上角为原点的，Unity的屏幕坐标是以左下角为原点的。如果需要进行这两者的转换，可以用：</p>
-<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line">   <span class="comment">//Unity的屏幕坐标系，以左下角为原点</span></div><div class="line">Vector2 pos = Input.mousePosition;</div><div class="line"></div><div class="line"><span class="comment">//转换为FairyGUI的屏幕坐标</span></div><div class="line">pos.y = Screen.height - pos.y;</div></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="comment">//Unity的屏幕坐标系，以左下角为原点</span></div><div class="line">Vector2 pos = Input.mousePosition;</div><div class="line"></div><div class="line"><span class="comment">//转换为FairyGUI的屏幕坐标</span></div><div class="line">pos.y = Screen.height - pos.y;</div></pre></td></tr></table></figure>
 <p>如果要获得任意一个UI元件在屏幕上的坐标，可以用：</p>
 <figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line">Vector2 screenPos = aObject.LocalToGlobal(Vector2.zero);</div></pre></td></tr></table></figure>
 <p>如果要获取屏幕坐标在UI元件上的局部坐标，可以用：</p>

@@ -15,11 +15,11 @@ Unity项目载入UI包有以下几种方式，开发者可以根据项目需要�
   这种方式处理的UI包，如果使用UIPanel显示UI，不需要任何代码载入；如果是动态创建UI，要使用代码载入包：
 
   ```csharp
-	//demo就是发布时填写的文件名
-	UIPackage.AddPackage("demo");
-
-	//如果在子目录下
-	UIPackage.AddPacakge("路径/demo");
+    //demo就是发布时填写的文件名
+    UIPackage.AddPackage("demo");
+    
+    //如果在子目录下
+    UIPackage.AddPacakge("路径/demo");
   ```
 
 2. 将发布后的文件打包为两个AssetBundle，即定义文件和资源各打包为一个bundle(desc_bundle+res_bundle)。这样做的好处是一般UI的更新都是修改元件位置什么的，不涉及图片资源的更新，那么只需要重新打包和推送desc_bundle就行了，不需要让玩家更新通常体积比较大的res_bundle，节省流量。打包程序由开发者按照自己熟悉的方式自行实现。以demo为例，请遵循以下规则打包：
@@ -30,8 +30,8 @@ Unity项目载入UI包有以下几种方式，开发者可以根据项目需要�
   这种方式处理的UI包，必须使用代码载入：
 
    ```csharp
-	//desc_bundle和res_boundle的载入由开发者自行实现。
-	UIPackage.AddPackage(desc_bundle, res_bundle);
+    //desc_bundle和res_boundle的载入由开发者自行实现。
+    UIPackage.AddPackage(desc_bundle, res_bundle);
   ```
 
 3. 将发布后的文件打包为一个AssetBundle。打包程序由开发者按照自己熟悉的方式自行实现。以demo为例，将demo.bytes和其他资源（demo@atlas0.png等），都放入bundle。
@@ -39,8 +39,8 @@ Unity项目载入UI包有以下几种方式，开发者可以根据项目需要�
   这种方式处理的UI包，必须使用代码载入：
 
   ```csharp
-	//bundle的载入由开发者自行实现。
-	UIPackage.AddPackage(bundle);
+    //bundle的载入由开发者自行实现。
+    UIPackage.AddPackage(bundle);
   ```
 
 **在使用AssetBundle的载入方案中，将由FairyGUI接管bundle并负责bundle资源的释放。**
@@ -72,8 +72,8 @@ Unity项目载入UI包有以下几种方式，开发者可以根据项目需要�
 运行时，获得UIPanel的UI的方式是：
 
 ```csharp
-	UIPanel panel = gameObject.GetComponent<UIPanel>();
-	GComponent view = panel.ui;
+    UIPanel panel = gameObject.GetComponent<UIPanel>();
+    GComponent view = panel.ui;
 ```
 
 UIPanel在GameObjec销毁时（手动销毁或者过场景等）时会一并销毁。
@@ -125,24 +125,24 @@ UIPane只保存了UI包的名称和组件的名称，它不对纹理或其他资
 UIPanel也可以在游戏中创建，为任意游戏对象动态挂接UI界面，例如：
 
 ```csharp
-	//UIPanel的生命周期将和yourGameObject保持一致。再次提醒，注意yourGameObject的layer。
-	UIPanel panel = yourGameObject.AddComponent<UIPanel>();
-	panel.packageName = “包名”;
-	panel.componentName = “组件名”;
-
-	//设置renderMode的方式
-	panel.container.renderMode = RenderMode.WorldSpace;
-
-	//设置fairyBatching
-	panel.fairyBatching = true;
-
-	//设置sortingOrder的方式
-	panel.SetSortingOrder(1, true);
-
-	//设置hitTestMode的方式
-	panel.SetHitTestMode(HitTestMode.Default);
-
-	panel.CreateUI();
+    //UIPanel的生命周期将和yourGameObject保持一致。再次提醒，注意yourGameObject的layer。
+    UIPanel panel = yourGameObject.AddComponent<UIPanel>();
+    panel.packageName = “包名”;
+    panel.componentName = “组件名”;
+    
+    //设置renderMode的方式
+    panel.container.renderMode = RenderMode.WorldSpace;
+    
+    //设置fairyBatching
+    panel.fairyBatching = true;
+    
+    //设置sortingOrder的方式
+    panel.SetSortingOrder(1, true);
+    
+    //设置hitTestMode的方式
+    panel.SetHitTestMode(HitTestMode.Default);
+    
+    panel.CreateUI();
 ```
 
 **UIPanel的排序**
@@ -154,8 +154,8 @@ UIPanel在屏幕上的显示顺序是由他的sortingOrder属性决定的。sort
 对于RenderMode为WorldSpace的UIPanel，也就是我们常说的3D UI（例如：头顶血条），如果希望通过z值来进行排序，而不是sortingOrder值，可以先将这一类UIPanel的sortingOrder设置为一个相同的值，例如100，然后调用：
 
 ```csharp
-	//对sortingOrder为100的UIPanel按z进行排序，z值越小，显示在越前面。
-	Stage.inst.SortWorldSpacePanelsByZOrder(100);
+    //对sortingOrder为100的UIPanel按z进行排序，z值越小，显示在越前面。
+    Stage.inst.SortWorldSpacePanelsByZOrder(100);
 ```
 
 这个方法有一个List.Sort的排序消耗，不建议每帧调用，可以隔一段时间，或者在对象位置改变后才调用。
@@ -171,19 +171,19 @@ UIPanel可以用来制作头顶血条。要注意的是：
 在很多情况下，你并不需要将UI界面放到场景中。另外一种常用的创建UI对象的方式是：
 
 ```csharp
-	GComponent view = UIPackage.CreateObject(“包名”, “组件名”).asCom;
-
-	//以下几种方式都可以将view显示出来：
-
-	//1，直接加到GRoot显示出来
-	GRoot.inst.AddChild(view);
-
-	//2，使用窗口方式显示
-	aWindow.contentPane = view;
-	aWindow.Show();
-
-	//3，加到其他组件里
-	aComponnent.AddChild(view);
+    GComponent view = UIPackage.CreateObject(“包名”, “组件名”).asCom;
+    
+    //以下几种方式都可以将view显示出来：
+    
+    //1，直接加到GRoot显示出来
+    GRoot.inst.AddChild(view);
+    
+    //2，使用窗口方式显示
+    aWindow.contentPane = view;
+    aWindow.Show();
+    
+    //3，加到其他组件里
+    aComponnent.AddChild(view);
 ```
 
 动态创建的界面不会自动销毁，例如一个背包窗口，你并不需要在每次过场景都销毁。如果要销毁界面，需要手工调用Dispose方法，例如
@@ -234,56 +234,56 @@ FairyGUI是以左上角为原点的，Unity的屏幕坐标是以左下角为原�
 
 ```csharp
     //Unity的屏幕坐标系，以左下角为原点
-	Vector2 pos = Input.mousePosition;
+    Vector2 pos = Input.mousePosition;
 
-	//转换为FairyGUI的屏幕坐标
-	pos.y = Screen.height - pos.y;
+    //转换为FairyGUI的屏幕坐标
+    pos.y = Screen.height - pos.y;
 ```
 
 如果要获得任意一个UI元件在屏幕上的坐标，可以用：
 
 ```csharp
-	Vector2 screenPos = aObject.LocalToGlobal(Vector2.zero);
+    Vector2 screenPos = aObject.LocalToGlobal(Vector2.zero);
 ```
 
 如果要获取屏幕坐标在UI元件上的局部坐标，可以用：
 
 ```csharp
-	Vector2 screenPos = Stage.inst.touchPosition;
-	Vector2 localPos = aObject.GlobalToLocal(screenPos);
+    Vector2 screenPos = Stage.inst.touchPosition;
+    Vector2 localPos = aObject.GlobalToLocal(screenPos);
 ```
 
 如果有UI适配导致的全局缩放，那么逻辑屏幕大小和物理屏幕大小不一致，逻辑屏幕的坐标就是GRoot里的坐标。如果要进行局部坐标与逻辑屏幕坐标的转换，可以用：
 
 ```csharp
-	//物理屏幕坐标转换为逻辑屏幕坐标
-	Vector2 logicScreenPos = GRoot.inst.GlobalToLocal(screenPos);
-
-	//UI元件坐标与逻辑屏幕坐标之间的转换
-	aObject.LocalToRoot(pos);
-	aObject.RootToLocal(pos);
+    //物理屏幕坐标转换为逻辑屏幕坐标
+    Vector2 logicScreenPos = GRoot.inst.GlobalToLocal(screenPos);
+    
+    //UI元件坐标与逻辑屏幕坐标之间的转换
+    aObject.LocalToRoot(pos);
+    aObject.RootToLocal(pos);
 ```
 
 如果要转换任意两个UI对象间的坐标，例如需要知道A里面的坐标(10,10)在B里面的位置，可以用：
 
 ```csharp
-	Vector2 posInB = aObject.TransformPoint(bObject, new Vector2(10,10));
+    Vector2 posInB = aObject.TransformPoint(bObject, new Vector2(10,10));
 ```
 
 如果要转换世界空间的坐标到UI里的坐标，可以用：
 
 ```csharp
-	Vector3 screenPos = Camera.main.WorldToScreenPoint(worldPos);
-	//原点位置转换
-	screenPos.y = Screen.height - screenPos.y; 
-	Vector2 pt = GRoot.inst.GlobalToLocal(screenPos);
+    Vector3 screenPos = Camera.main.WorldToScreenPoint(worldPos);
+    //原点位置转换
+    screenPos.y = Screen.height - screenPos.y; 
+    Vector2 pt = GRoot.inst.GlobalToLocal(screenPos);
 ```
 
 如果要转换UI里的坐标到世界空间的坐标，可以用：
 
 ```csharp
-	Vector2 screenPos = GRoot.inst.LocalToGlobal(pos);
-	//原点位置转换
-	screenPos.y = Screen.height - screenPos.y; 
-	Vector3 worldPos = Camera.main.ScreenToWorldPoint(screenPos);
+    Vector2 screenPos = GRoot.inst.LocalToGlobal(pos);
+    //原点位置转换
+    screenPos.y = Screen.height - screenPos.y; 
+    Vector3 worldPos = Camera.main.ScreenToWorldPoint(screenPos);
 ```
