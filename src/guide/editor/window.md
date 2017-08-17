@@ -59,10 +59,10 @@ order: 190
 ```csharp
     //Unity
     UIConfig.modalLayerColor = new Color(0f, 0f, 0f, 0.4f);
-
+    
     //AS3
     UIConfig.modalLayerColor = 0x333333;
-	UIConfig.modalLayerAlpha = 0.2;
+    UIConfig.modalLayerAlpha = 0.2;
 ```
 
 如果你不需要这个灰色效果，那么把透明度设置为0即可。

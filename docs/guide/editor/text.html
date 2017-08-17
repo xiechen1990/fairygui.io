@@ -47,6 +47,7 @@
 <li><a href="/showcase/" class="nav-link">商业案例</a></li>
 <li><a href="http://ask.fairygui.com/" target="_blank" class="nav-link">问答社区</a></li>
 <li><a href="/about/" class="nav-link">关于</a></li>
+<li>中文 / <a href="http://en.fairygui.com/" target="_self"  class="nav-link">English</a></li>
   </ul>
 </div>
 
@@ -67,6 +68,7 @@
 <li><a href="/showcase/" class="nav-link">商业案例</a></li>
 <li><a href="http://ask.fairygui.com/" target="_blank" class="nav-link">问答社区</a></li>
 <li><a href="/about/" class="nav-link">关于</a></li>
+<li>中文 / <a href="http://en.fairygui.com/" target="_self"  class="nav-link">English</a></li>
     </ul>
     <div class="list">
 		<a class="become-backer" href="/about/donate.html">
@@ -213,7 +215,7 @@
 	            
 	                
 	                <li>
-	                    <a href="/guide/editor/adaption.html" class="sidebar-link">自适应</a>
+	                    <a href="/guide/editor/adaptation.html" class="sidebar-link">Adaptation</a>
 	                </li>
 	            
 	
@@ -443,7 +445,7 @@
 <li><p><code>[color=#FFFFFF]text[/color]</code> 设置文本颜色。注意一定要用十六进制颜色代码，像red、blue这种颜色名称是不支持的。使用color语法还可以设置文本颜色为渐变色<em>（仅Unity平台支持，且在编辑器暂时无法预览）</em>，例如：</p>
 </li>
 </ul>
-<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="comment">//指定两个颜色表示上下过渡</span></div><div class="line">[color=<span class="meta">#FFFFFF,#000000]文字[/color]</span></div><div class="line"></div><div class="line"><span class="comment">//指定四个颜色可以做左右过渡或者双方向过渡</span></div><div class="line">[color=<span class="meta">#FFFFFF,#CCCCCC,#000000,#FFFF00]文字[/color]</span></div></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="comment">//指定两个颜色表示上下过渡</span></div><div class="line">[<span class="meta">color=#FFFFFF,#000000</span>]文字[/color]</div><div class="line"></div><div class="line"><span class="comment">//指定四个颜色可以做左右过渡或者双方向过渡</span></div><div class="line">[<span class="meta">color=#FFFFFF,#CCCCCC,#000000,#FFFF00</span>]文字[/color]</div></pre></td></tr></table></figure>
 <ul>
 <li><p><code>[font=font_face]text[/font]</code> 设置文本的字体。</p>
 </li>
@@ -453,7 +455,7 @@
 </li>
 </ul>
 <p>标签之间支持嵌套，但不支持交叉嵌套。例如：</p>
-<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="comment">//允许</span></div><div class="line">[color=<span class="meta">#FFFFFF][size=20]text[/size][/color]</span></div><div class="line"></div><div class="line"><span class="comment">//不允许</span></div><div class="line">[color=<span class="meta">#FFFFFF][size=20]text[/color][/size]</span></div></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="comment">//允许</span></div><div class="line">[<span class="meta">color=#FFFFFF</span>][size=<span class="number">20</span>]text[/size][/color]</div><div class="line"></div><div class="line"><span class="comment">//不允许</span></div><div class="line">[<span class="meta">color=#FFFFFF</span>][size=<span class="number">20</span>]text[/color][/size]</div></pre></td></tr></table></figure>
 <p>对不支持的标签，例如“[tag]text[/tag]”，FairyGUI不做解析，这部分内容原样输出。当需要使用不成对的“[”或“]”字符时，可以使用HTML代码“&amp;#x5b;”或“&amp;#x5d;”代替。</p>
 <p>普通文本不支持语法中的img、url标签，因为普通文本是不可以图文混排的。要支持图文混排，改为使用富文本。</p>
 <p>FairyGUI也提供了扩展UBB解析器的方法。继承UBBParser类，注册自己的TagHandler即可。具体实现方法请阅读UBBParser的源码或参考demo。</p>

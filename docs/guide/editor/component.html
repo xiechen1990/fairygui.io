@@ -47,6 +47,7 @@
 <li><a href="/showcase/" class="nav-link">商业案例</a></li>
 <li><a href="http://ask.fairygui.com/" target="_blank" class="nav-link">问答社区</a></li>
 <li><a href="/about/" class="nav-link">关于</a></li>
+<li>中文 / <a href="http://en.fairygui.com/" target="_self"  class="nav-link">English</a></li>
   </ul>
 </div>
 
@@ -67,6 +68,7 @@
 <li><a href="/showcase/" class="nav-link">商业案例</a></li>
 <li><a href="http://ask.fairygui.com/" target="_blank" class="nav-link">问答社区</a></li>
 <li><a href="/about/" class="nav-link">关于</a></li>
+<li>中文 / <a href="http://en.fairygui.com/" target="_self"  class="nav-link">English</a></li>
     </ul>
     <div class="list">
 		<a class="become-backer" href="/about/donate.html">
@@ -213,7 +215,7 @@
 	            
 	                
 	                <li>
-	                    <a href="/guide/editor/adaption.html" class="sidebar-link">自适应</a>
+	                    <a href="/guide/editor/adaptation.html" class="sidebar-link">Adaptation</a>
 	                </li>
 	            
 	
@@ -474,7 +476,7 @@
 <p>还有另外一个因子可以影响渲染循序，它就是GObject.sortingOrder。<strong>这个属性只用于特定的用途，不作常规的使用。它一般用于类似固定置顶的功能，另外，永远不要将sortingOrder用在列表中。</strong>。sortingOrder越大，则渲染顺序越后，即显示到更前面的位置。一般情况下，sortingOrder为0，这时渲染顺序由显示对象在显示列表中的顺序决定。sortingOrder可以令你更灵活的控制渲染循序。例如，如果希望一个元件始终保持在其他元件上方，可以设置其sortingOrder一个较大的整数值，这样无论容器使用AddChild添加了多少元件，这个元件依然显示在最前面。（sortingOrder的效率较差，勿做频繁调用的用途）</p>
 <p><strong>绑定扩展类</strong></p>
 <p>可以绑定一个类为组件的扩展类。首先，编写一个扩展类：</p>
-<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">MyComponent</span> : <span class="title">GComponent</span></div><div class="line">&#123;</div><div class="line">    GObject msgObj;</div><div class="line"></div><div class="line">    <span class="comment">//如果你有需要访问容器内容的初始化工作，必须在这个方法里，而不是在构造函数里。</span></div><div class="line">    <span class="function"><span class="keyword">override</span> <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">ConstructFromXML</span>(<span class="params">XML xml</span>)</span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">base</span>.ConstructFromXML(xml);</div><div class="line">        </div><div class="line">        <span class="comment">//在这里继续你的初始化</span></div><div class="line">        msgObj = GetChild(<span class="string">"msg"</span>);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">ShowMessage</span>(<span class="params"><span class="keyword">string</span> msg</span>)</span></div><div class="line">    &#123;</div><div class="line">        msgObj.text = msg;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">MyComponent</span> : <span class="title">GComponent</span></div><div class="line">&#123;</div><div class="line">    GObject msgObj;</div><div class="line"></div><div class="line">    <span class="comment">//如果你有需要访问容器内容的初始化工作，必须在这个方法里，而不是在构造函数里。</span></div><div class="line">    <span class="function"><span class="keyword">override</span> <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">ConstructFromXML</span>(<span class="params">XML xml</span>)</span></div><div class="line"><span class="function">    </span>&#123;</div><div class="line">        <span class="keyword">base</span>.ConstructFromXML(xml);</div><div class="line">        </div><div class="line">        <span class="comment">//在这里继续你的初始化</span></div><div class="line">        msgObj = GetChild(<span class="string">"msg"</span>);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">ShowMessage</span>(<span class="params"><span class="keyword">string</span> msg</span>)</span></div><div class="line"><span class="function">    </span>&#123;</div><div class="line">        msgObj.text = msg;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>然后注册你的扩展类。注意，<strong>必须在组件构建前注册</strong>。</p>
 <figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line">UIObjectFactory.SetPackageItemExtension(<span class="string">"ui://包名/组件A”, typeof(MyComponent));</span></div></pre></td></tr></table></figure>
 <p>这样就为组件A绑定了一个实现类MyComponent 。以后所有组件A创建出来的对象（包括在编辑器里使用的组件A）都是MyComponent类型。然后我们就可以为MyComponent添加API，用更加面向对象的方式操作组件A。例如：</p>

@@ -47,6 +47,7 @@
 <li><a href="/showcase/" class="nav-link">商业案例</a></li>
 <li><a href="http://ask.fairygui.com/" target="_blank" class="nav-link">问答社区</a></li>
 <li><a href="/about/" class="nav-link">关于</a></li>
+<li>中文 / <a href="http://en.fairygui.com/" target="_self"  class="nav-link">English</a></li>
   </ul>
 </div>
 
@@ -67,6 +68,7 @@
 <li><a href="/showcase/" class="nav-link">商业案例</a></li>
 <li><a href="http://ask.fairygui.com/" target="_blank" class="nav-link">问答社区</a></li>
 <li><a href="/about/" class="nav-link">关于</a></li>
+<li>中文 / <a href="http://en.fairygui.com/" target="_self"  class="nav-link">English</a></li>
     </ul>
     <div class="list">
 		<a class="become-backer" href="/about/donate.html">
@@ -213,7 +215,7 @@
 	            
 	                
 	                <li>
-	                    <a href="/guide/editor/adaption.html" class="sidebar-link">自适应</a>
+	                    <a href="/guide/editor/adaptation.html" class="sidebar-link">Adaptation</a>
 	                </li>
 	            
 	
@@ -346,7 +348,7 @@
 <p>如果这些默认的外部加载机制不能满足你的需求，例如，你希望从AssetBundle中获取资源，或者你需要加入缓存机制（这是有必要的，如果需要重复加载，建议做缓存），或者需要控制素材的生命期（这也是必要的，因为GLoader不会销毁外部载入的资源），那么你需要扩展GLoader。</p>
 <ol>
 <li><p>首先编写你的Loader类，有两个重点方法需要重写：</p>
-<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">class</span> <span class="title">MyGLoader</span>  : <span class="title">GLoader</span></div><div class="line">&#123;</div><div class="line">    <span class="function"><span class="keyword">override</span> <span class="keyword">protected</span> function <span class="title">LoadExternal</span>(<span class="params"></span>)</span></div><div class="line">    &#123;</div><div class="line">        <span class="comment">/*</span></div><div class="line">        开始外部载入，地址在url属性</div><div class="line">        载入完成后调用OnExternalLoadSuccess</div><div class="line">        载入失败调用OnExternalLoadFailed</div><div class="line"></div><div class="line">        注意：如果是外部载入，在载入结束后，调用OnExternalLoadSuccess或OnExternalLoadFailed前，</div><div class="line">        比较严谨的做法是先检查url属性是否已经和这个载入的内容不相符。</div><div class="line">        如果不相符，表示loader已经被修改了。</div><div class="line">        这种情况下应该放弃调用OnExternalLoadSuccess或OnExternalLoadFailed。</div><div class="line">        */</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">override</span> <span class="keyword">protected</span> function <span class="title">FreeExternal</span>(<span class="params">NTexture texture</span>)</span></div><div class="line">    &#123;</div><div class="line">        <span class="comment">//释放外部载入的资源</span></div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">class</span> <span class="title">MyGLoader</span>  : <span class="title">GLoader</span></div><div class="line">&#123;</div><div class="line">    <span class="function"><span class="keyword">override</span> <span class="keyword">protected</span> function <span class="title">LoadExternal</span>(<span class="params"></span>)</span></div><div class="line"><span class="function">    </span>&#123;</div><div class="line">        <span class="comment">/*</span></div><div class="line"><span class="comment">        开始外部载入，地址在url属性</span></div><div class="line"><span class="comment">        载入完成后调用OnExternalLoadSuccess</span></div><div class="line"><span class="comment">        载入失败调用OnExternalLoadFailed</span></div><div class="line"><span class="comment"></span></div><div class="line"><span class="comment">        注意：如果是外部载入，在载入结束后，调用OnExternalLoadSuccess或OnExternalLoadFailed前，</span></div><div class="line"><span class="comment">        比较严谨的做法是先检查url属性是否已经和这个载入的内容不相符。</span></div><div class="line"><span class="comment">        如果不相符，表示loader已经被修改了。</span></div><div class="line"><span class="comment">        这种情况下应该放弃调用OnExternalLoadSuccess或OnExternalLoadFailed。</span></div><div class="line"><span class="comment">        */</span></div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">override</span> <span class="keyword">protected</span> function <span class="title">FreeExternal</span>(<span class="params">NTexture texture</span>)</span></div><div class="line"><span class="function">    </span>&#123;</div><div class="line">        <span class="comment">//释放外部载入的资源</span></div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 </li>
 <li><p>注册我们要使用的Loader类。注册完成后，游戏中<strong>所有装载器</strong>都变成由MyGLoader实例化产生。</p>
 <figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line">UIObjectFactory.SetLoaderExtension(<span class="keyword">typeof</span>(MyGLoader));</div></pre></td></tr></table></figure>
