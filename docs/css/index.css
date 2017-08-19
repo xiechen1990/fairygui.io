@@ -917,6 +917,9 @@ body {
   #hero sup {
     top: 0em;
   }
+  .software {
+    display: none;
+  }
   .software img {
     width: 100%;
   }
