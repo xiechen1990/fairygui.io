@@ -87,7 +87,7 @@ pre .xml .cdata {
   opacity: 0.5;
 }
 body {
-  font-family: 'Hiragino Sans GB', 'Segoe UI', 'Sans-serif', 'Microsoft Yahei';
+  font-family: 'Hiragino Sans GB', 'Segoe UI', 'Sans-serif', 'Microsoft Yahei', Arial, sans-serif;
   font-size: 15px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -147,6 +147,7 @@ a.button {
   transition: all 0.15s ease;
   box-sizing: border-box;
   border: 1px solid #fff;
+  font-weight: 100;
 }
 a.button.white {
   background-color: #fff;
@@ -425,7 +426,7 @@ body.docs #mobile-bar::before {
   font-size: 1.5em;
   line-height: 40px;
   color: #2c3e50;
-  font-family: 'Hiragino Sans GB', 'Segoe UI', 'Sans-serif', 'Microsoft Yahei';
+  font-family: 'Hiragino Sans GB', 'Segoe UI', 'Sans-serif', 'Microsoft Yahei', Arial, sans-serif;
   font-weight: 500;
 }
 #logo img {
@@ -659,10 +660,10 @@ body {
   padding-top: 50px;
   font-size: 6.2em;
   color: #fff;
-  font-family: 'Hiragino Sans GB', 'Segoe UI', 'Sans-serif', 'Microsoft Yahei';
+  font-family: 'Hiragino Sans GB', 'Segoe UI', 'Sans-serif', 'Microsoft Yahei', Arial, sans-serif;
 }
 #hero h2 {
-  font-family: 'Hiragino Sans GB', 'Segoe UI', 'Sans-serif', 'Microsoft Yahei';
+  font-family: 'Hiragino Sans GB', 'Segoe UI', 'Sans-serif', 'Microsoft Yahei', Arial, sans-serif;
   font-weight: 500;
   font-size: 4.4em;
   margin: 0 0 10px;
@@ -687,7 +688,6 @@ body {
 #hero .button {
   margin: 2.9em 0;
   font-size: 1em;
-  font-weight: 100;
   letter-spacing: 0.1em;
 }
 #hero .button:first-child {
@@ -848,7 +848,7 @@ body {
   opacity: 0.66;
 }
 #footer {
-  padding: 50px 0;
+  padding: 50px 15px;
   color: #fff;
   text-align: center;
   font-size: 14px;
@@ -901,12 +901,16 @@ body {
   }
   #hero h1 {
     font-size: 5em;
+    padding-top: 80px;
   }
   #hero h2 {
     display: block;
   }
   #hero .button {
     font-size: 0.9em;
+  }
+  #hero sup {
+    top: 0em;
   }
   .software img {
     width: 100%;

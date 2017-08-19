@@ -80,7 +80,6 @@ body
     .button
         margin 2.9em 0
         font-size 1em
-        font-weight 100
         letter-spacing .1em
         &:first-child
             margin-right 1em
@@ -211,7 +210,7 @@ body
             opacity 0.66
 
 #footer
-    padding $space 0
+    padding $space $space * 0.3
     color #fff
     text-align center
     font-size: 14px
@@ -252,10 +251,13 @@ body
             width 100%
         h1
             font-size 5em
+            padding-top 80px
         h2
             display block
         .button
             font-size .9em
+        sup
+            top 0em
     .software
         img
             width 100%
