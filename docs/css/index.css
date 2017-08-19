@@ -372,6 +372,7 @@ body.docs #mobile-bar::before {
   display: inline-block;
   position: relative;
   margin: 0 0.6em;
+  color: #fff;
 }
 #nav li a {
   color: #fff;
