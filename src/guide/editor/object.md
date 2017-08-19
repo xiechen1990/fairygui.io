@@ -96,7 +96,7 @@ Unity的Blend效果与编辑器中的预览可能会有差别。开发者可以�
     aObject.SetPivot(0.5f, 0.5f, true); //设置轴心，并同时作为锚点
 ```
 
-- `设置可见` visible = true/false。
+- `设置可见` visible = true/false。在FariyGUI里，对象的显示和隐藏是通过直接从底层的舞台上移除实现的，不会影响FairyGUI的显示列表，但会影响底层的显示列表，也就是addToStage和removeFromStage事件是会触发的。
 
 - `设置交互` touchable = true/false。
 
@@ -130,3 +130,5 @@ Unity的Blend效果与编辑器中的预览可能会有差别。开发者可以�
     //Unity版本获取GameObject
     GameObject go = displayObject.gameObject;
 ```
+
+
