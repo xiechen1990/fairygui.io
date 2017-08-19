@@ -42,11 +42,12 @@
 
 <li><a href="/product/" class="nav-link">产品</a></li>
 <li><a href="/guide/" class="nav-link current">教程</a></li>
-<li><a href="/api/" class="nav-link">API</a></li>
+<li><a href="http://ask.fairygui.com/api/" target="_blank"  class="nav-link">API</a></li>
 <li><a href="/examples/" class="nav-link">在线例子</a></li>
 <li><a href="/showcase/" class="nav-link">商业案例</a></li>
-<li><a href="http://www.fairygui.com/questions" target="_blank" class="nav-link">问答社区</a></li>
+<li><a href="http://ask.fairygui.com/" target="_blank" class="nav-link">问答社区</a></li>
 <li><a href="/about/" class="nav-link">关于</a></li>
+<li><a class="nav-link">中文</a> / <a href="http://en.fairygui.com/" target="_self"  class="nav-link">English</a></li>
   </ul>
 </div>
 
@@ -62,11 +63,12 @@
 
 <li><a href="/product/" class="nav-link">产品</a></li>
 <li><a href="/guide/" class="nav-link current">教程</a></li>
-<li><a href="/api/" class="nav-link">API</a></li>
+<li><a href="http://ask.fairygui.com/api/" target="_blank"  class="nav-link">API</a></li>
 <li><a href="/examples/" class="nav-link">在线例子</a></li>
 <li><a href="/showcase/" class="nav-link">商业案例</a></li>
-<li><a href="http://www.fairygui.com/questions" target="_blank" class="nav-link">问答社区</a></li>
+<li><a href="http://ask.fairygui.com/" target="_blank" class="nav-link">问答社区</a></li>
 <li><a href="/about/" class="nav-link">关于</a></li>
+<li><a class="nav-link">中文</a> / <a href="http://en.fairygui.com/" target="_self"  class="nav-link">English</a></li>
     </ul>
     <div class="list">
 		<a class="become-backer" href="/about/donate.html">
@@ -86,9 +88,8 @@
 		      font-weight: 200;
 		      letter-spacing: 1px;"
 			target="_blank" 
-		    href="http://shang.qq.com/wpa/qunwpa?idkey=3aeb034b24ddb72ec9be855ba6215b366b2adf01a7652f330912ce7f3d9714db"><img title="FairyGUI官方交流群2" src="http://pub.idqqimg.com/wpa/images/group.png" alt="FairyGUI技术交流群" border="0" />
+		    href="http://shang.qq.com/wpa/qunwpa?idkey=098bd1b1410eacf21973f93386d410380be58f9c59e9f9b6c571cb679e554014"><img title="FairyGUI官方交流群2" src="http://pub.idqqimg.com/wpa/images/group.png" alt="FairyGUI技术交流群" border="0" />
 		  </a>
-		  <!--b2704e60dc8a8fd26a92270706b6bcd46b40ce961cae0b001144cb517891aa9b-->
 		
         </h2>
         <ul class="menu-root">
@@ -214,7 +215,7 @@
 	            
 	                
 	                <li>
-	                    <a href="/guide/editor/adaption.html" class="sidebar-link">自适应</a>
+	                    <a href="/guide/editor/adaptation.html" class="sidebar-link">Adaptation</a>
 	                </li>
 	            
 	
@@ -267,6 +268,12 @@
 	                
 	                <li>
 	                    <a href="/guide/unity/drawcall.html" class="sidebar-link">DrawCall优化</a>
+	                </li>
+	            
+	                
+	                
+	                <li>
+	                    <a href="/guide/unity/lua.html" class="sidebar-link">在Lua中使用</a>
 	                </li>
 	            
 
@@ -477,6 +484,7 @@
 <p>注意：如果组件A只是一个普通的组件，没有定义“扩展”，那么基类是GComponent，如上例所示；如果组件A的扩展是按钮，那么MyComponent的基类应该为GButton，如果扩展是进度条，那么基类应该为GProgressBar，等等。这个千万不能弄错，否则会出现报错。</p>
 <h2 id="ScrollPane"><a href="#ScrollPane" class="headerlink" title="ScrollPane"></a>ScrollPane</h2><p>当组件的“溢出处理”设置为“滚动”后，可以通过GComponent.scrollPane使用滚动相关的功能，例如：</p>
 <figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line">ScrollPane scrollPane =  aComponent.scrollPane;</div><div class="line"><span class="comment">//设置滚动位置为100像素</span></div><div class="line">scrollPane.posX = <span class="number">100</span>;</div><div class="line"></div><div class="line"><span class="comment">//滚动到中间位置，带动画过程</span></div><div class="line">scrollPane.SetPercX(<span class="number">0.5</span>f, <span class="literal">true</span>);</div></pre></td></tr></table></figure>
+<p>当你增删子组件后，或者移动子组件的位置、调整子组件的大小，容器是自动更新滚动区域的，不需要调用任何API。这个刷新发生在本帧绘制之前。如果你希望立刻访问子元件的正确坐标，那么可以调用<code>EnsureBoundsCorrect</code>通知GComponent立刻重排。EnsureBoundsCorrect是一个友好的函数，你不用担心重复调用会有额外性能消耗。</p>
 <p>ScrollPane中常用的API有：</p>
 <ul>
 <li><p><code>viewWidth</code> <code>viewHeight</code> 视口宽度和高度。</p>

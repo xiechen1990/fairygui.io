@@ -14,34 +14,34 @@ FairyGUI提供了非常完整的解决方案解决模型、粒子、骨骼动画
 
 1. 实例化你的3D对象，例如:
 
-```csharp
+  ```csharp
 	Object prefab = Resources.Load("Role/npc");
 	GameObject go = (GameObject)Object.Instantiate(prefab);
-```
+  ```
 2. 给3D对象设置合适的位置、缩放和旋转。
 
-```csharp
+  ```csharp
 	go.transform.localPosition = new Vector3(61, -89, 1000); 
 	go.transform.localScale = new Vector3(180, 180, 180);
 	go.transform.localEulerAngles = new Vector3(0, 100, 0);
-```
+  ```
 
-注意：对于模型这种有“厚度”的对象（在z轴有一定范围），localPosition的z值不应该为0，可以设置一个较大的正数值（正数表示远离摄像机）。因为Shader是开启了ZTest的，如果模型在z轴的坐标为0，和UI的z值相同，那么他的前端就可能与他上一层的UI重叠。
+  注意：对于模型这种有“厚度”的对象（在z轴有一定范围），localPosition的z值不应该为0，可以设置一个较大的正数值（正数表示远离摄像机）。因为Shader是开启了ZTest的，如果模型在z轴的坐标为0，和UI的z值相同，那么他的前端就可能与他上一层的UI重叠。
 
-模型的缩放可以根据这个公式计算：缩放倍数 = 显示大小（单位像素）/ 模型大小（单位米）。例如如果一个模型是1米高，最终需要显示400像素高，那么需要放大400倍。
+  模型的缩放可以根据这个公式计算：缩放倍数 = 显示大小（单位像素）/ 模型大小（单位米）。例如如果一个模型是1米高，最终需要显示400像素高，那么需要放大400倍。
 
 2. 在UI中需要放置3D对象中放置一个空白的图形，假设名称为“holder”。
 
-```csharp
+  ```csharp
 	GGraph holder = view.GetChild("holder").asGraph;
-```
+  ```
 
 3. 构建GoWrapper对象，放入到holder中。
 
-```csharp
+  ```csharp
 	GoWrapper wrapper = new GoWrapper(go);
 	holder.SetNativeObject(wrapper);
-```
+  ```
 
 **点击处理**
 

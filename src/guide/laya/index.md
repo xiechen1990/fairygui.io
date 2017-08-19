@@ -8,25 +8,25 @@ order: 0
 
 1. 将FairyGUI库以及依赖的rawinflate库拷贝到bin/libs目录
 
-![](../../images/20170809155135.png)
+  ![](../../images/20170809155135.png)
 
 2. 把fairygui.d.ts拷贝到libs目录。
 
-![](../../images/20170809155742.png)
+  ![](../../images/20170809155742.png)
 
 3. 在index.html里添加上述两个库的引用，注意放置的位置。
 
-![](../../images/20170809160052.png)
+  ![](../../images/20170809160052.png)
 
-注：FairyGUI只依赖laya.core， laya.html两个模块，不需要laya.ui。
+  注：FairyGUI只依赖laya.core， laya.html两个模块，不需要laya.ui。
 
 4. 使用FairyGUI编辑器完成UI编辑。发布目录请选择Laya工程的bin/res目录（当然其他目录也是可以的）。发布后得到两个（或以上）文件。
 
-![](../../images/20170809160159.png)
+  ![](../../images/20170809160159.png)
 
 5. 在程序启动时（或者在需要用到这些UI的适当地方）加载这两个文件，并完成初始化。
 
-```csharp
+  ```csharp
 	// 程序入口
 	class GameMain {
     constructor()
@@ -59,7 +59,7 @@ order: 0
 	        new MainPanel();
 	    }
 	}
-```
+  ```
 
 ## AS版本
 

@@ -298,6 +298,8 @@ FairyGUI和Flash/Cocos类似，采用树状的结构组织显示对象。容器�
     scrollPane.SetPercX(0.5f, true);
 ```
 
+当你增删子组件后，或者移动子组件的位置、调整子组件的大小，容器是自动更新滚动区域的，不需要调用任何API。这个刷新发生在本帧绘制之前。如果你希望立刻访问子元件的正确坐标，那么可以调用`EnsureBoundsCorrect`通知GComponent立刻重排。EnsureBoundsCorrect是一个友好的函数，你不用担心重复调用会有额外性能消耗。
+
 ScrollPane中常用的API有：
 
 - `viewWidth` `viewHeight` 视口宽度和高度。

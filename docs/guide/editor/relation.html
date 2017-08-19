@@ -42,11 +42,12 @@
 
 <li><a href="/product/" class="nav-link">产品</a></li>
 <li><a href="/guide/" class="nav-link current">教程</a></li>
-<li><a href="/api/" class="nav-link">API</a></li>
+<li><a href="http://ask.fairygui.com/api/" target="_blank"  class="nav-link">API</a></li>
 <li><a href="/examples/" class="nav-link">在线例子</a></li>
 <li><a href="/showcase/" class="nav-link">商业案例</a></li>
-<li><a href="http://www.fairygui.com/questions" target="_blank" class="nav-link">问答社区</a></li>
+<li><a href="http://ask.fairygui.com/" target="_blank" class="nav-link">问答社区</a></li>
 <li><a href="/about/" class="nav-link">关于</a></li>
+<li><a class="nav-link">中文</a> / <a href="http://en.fairygui.com/" target="_self"  class="nav-link">English</a></li>
   </ul>
 </div>
 
@@ -62,11 +63,12 @@
 
 <li><a href="/product/" class="nav-link">产品</a></li>
 <li><a href="/guide/" class="nav-link current">教程</a></li>
-<li><a href="/api/" class="nav-link">API</a></li>
+<li><a href="http://ask.fairygui.com/api/" target="_blank"  class="nav-link">API</a></li>
 <li><a href="/examples/" class="nav-link">在线例子</a></li>
 <li><a href="/showcase/" class="nav-link">商业案例</a></li>
-<li><a href="http://www.fairygui.com/questions" target="_blank" class="nav-link">问答社区</a></li>
+<li><a href="http://ask.fairygui.com/" target="_blank" class="nav-link">问答社区</a></li>
 <li><a href="/about/" class="nav-link">关于</a></li>
+<li><a class="nav-link">中文</a> / <a href="http://en.fairygui.com/" target="_self"  class="nav-link">English</a></li>
     </ul>
     <div class="list">
 		<a class="become-backer" href="/about/donate.html">
@@ -86,9 +88,8 @@
 		      font-weight: 200;
 		      letter-spacing: 1px;"
 			target="_blank" 
-		    href="http://shang.qq.com/wpa/qunwpa?idkey=3aeb034b24ddb72ec9be855ba6215b366b2adf01a7652f330912ce7f3d9714db"><img title="FairyGUI官方交流群2" src="http://pub.idqqimg.com/wpa/images/group.png" alt="FairyGUI技术交流群" border="0" />
+		    href="http://shang.qq.com/wpa/qunwpa?idkey=098bd1b1410eacf21973f93386d410380be58f9c59e9f9b6c571cb679e554014"><img title="FairyGUI官方交流群2" src="http://pub.idqqimg.com/wpa/images/group.png" alt="FairyGUI技术交流群" border="0" />
 		  </a>
-		  <!--b2704e60dc8a8fd26a92270706b6bcd46b40ce961cae0b001144cb517891aa9b-->
 		
         </h2>
         <ul class="menu-root">
@@ -214,7 +215,7 @@
 	            
 	                
 	                <li>
-	                    <a href="/guide/editor/adaption.html" class="sidebar-link">自适应</a>
+	                    <a href="/guide/editor/adaptation.html" class="sidebar-link">Adaptation</a>
 	                </li>
 	            
 	
@@ -267,6 +268,12 @@
 	                
 	                <li>
 	                    <a href="/guide/unity/drawcall.html" class="sidebar-link">DrawCall优化</a>
+	                </li>
+	            
+	                
+	                
+	                <li>
+	                    <a href="/guide/unity/lua.html" class="sidebar-link">在Lua中使用</a>
 	                </li>
 	            
 
@@ -389,20 +396,17 @@
 <p>RelationType.Size相当于RelationType.Width_Width和RelationType.Height_Height的组合。这里强调一下，使组件变为满屏大小这个操作必须由你完成，也就是上面代码中的SetSize调用。关联并不能完成这项任务，因为关联是不管元件当前的大小的，它只会在目标变化时保持两者大小的差别。</p>
 <p>删除关联的方法是：</p>
 <figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="comment">//删除某个关联</span></div><div class="line">aObject.RemoveRelation(targetObject, RelationType.Size);</div><div class="line"></div><div class="line"><span class="comment">//删除指向某个对象的所有关联</span></div><div class="line">aObject.relations.ClearFor(targetObject);</div></pre></td></tr></table></figure>
-<h2 id="实例解析"><a href="#实例解析" class="headerlink" title="实例解析"></a>实例解析</h2><ol>
-<li>这是一个游戏的主界面，主界面在实际显示时通常需要调整大小到满屏，这就要求设计时考虑到界面大小会变化的情况。下图是主界面中各个单独部件布局的要求：</li>
-</ol>
+<h2 id="实例解析"><a href="#实例解析" class="headerlink" title="实例解析"></a>实例解析</h2><p><strong>实例一</strong></p>
+<p>这是一个游戏的主界面，主界面在实际显示时通常需要调整大小到满屏，这就要求设计时考虑到界面大小会变化的情况。下图是主界面中各个单独部件布局的要求：</p>
 <p><img src="../../images/2016-01-11_164517.jpg" alt=""></p>
 <p>A：和容器组件“左右居中“关联<br>B：和容器组件”右-&gt;右”关联<br>C：和容器组件“右-&gt;右”，”底-&gt;底“关联<br>D：和容器组件”底-&gt;底”，“左右居中%”关联<br>E：和容器组件“底-&gt;底”关联</p>
 <p>然后运行时把这个界面设置为满屏就可以了。</p>
 <figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line">aComponent.SetSize(GRoot.inst.width, GRoot.inst.height);</div><div class="line"><span class="comment">//当屏幕改变时仍然保持全屏。如果屏幕大小始终不变，则这句也可以忽略</span></div><div class="line">aComoponet.AddRelation(GRoot.inst, RelationType.Size);</div></pre></td></tr></table></figure>
-<ol>
-<li>这是一个游戏的NPC信息界面，NPC的介绍文本是动态的，这里使用了自动高度的文本。下面的链接是一个列表。要求列表在文本内容变化时，自动上移或下移。我们只需要将列表“顶-&gt;底”关联到文即可。</li>
-</ol>
+<p><strong>实例二</strong></p>
+<p>这是一个游戏的NPC信息界面，NPC的介绍文本是动态的，这里使用了自动高度的文本。下面的链接是一个列表。要求列表在文本内容变化时，自动上移或下移。我们只需要将列表“顶-&gt;底”关联到文即可。</p>
 <p><img src="../../images/2016-01-10_105206.jpg" alt=""></p>
-<ol>
-<li>这是一个游戏中金钱数量的显示，要求当数量变化时，货币图标和文本保持居中。</li>
-</ol>
+<p><strong>实例三</strong></p>
+<p>这是一个游戏中金钱数量的显示，要求当数量变化时，货币图标和文本保持居中。</p>
 <p><img src="../../images/2015-12-21_170726.png" alt=""></p>
 <p><img src="../../images/2015-12-21_172654.png" alt=""></p>
 <p><img src="../../images/2015-12-21_172639.png" alt=""></p>

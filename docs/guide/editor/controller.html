@@ -42,11 +42,12 @@
 
 <li><a href="/product/" class="nav-link">产品</a></li>
 <li><a href="/guide/" class="nav-link current">教程</a></li>
-<li><a href="/api/" class="nav-link">API</a></li>
+<li><a href="http://ask.fairygui.com/api/" target="_blank"  class="nav-link">API</a></li>
 <li><a href="/examples/" class="nav-link">在线例子</a></li>
 <li><a href="/showcase/" class="nav-link">商业案例</a></li>
-<li><a href="http://www.fairygui.com/questions" target="_blank" class="nav-link">问答社区</a></li>
+<li><a href="http://ask.fairygui.com/" target="_blank" class="nav-link">问答社区</a></li>
 <li><a href="/about/" class="nav-link">关于</a></li>
+<li><a class="nav-link">中文</a> / <a href="http://en.fairygui.com/" target="_self"  class="nav-link">English</a></li>
   </ul>
 </div>
 
@@ -62,11 +63,12 @@
 
 <li><a href="/product/" class="nav-link">产品</a></li>
 <li><a href="/guide/" class="nav-link current">教程</a></li>
-<li><a href="/api/" class="nav-link">API</a></li>
+<li><a href="http://ask.fairygui.com/api/" target="_blank"  class="nav-link">API</a></li>
 <li><a href="/examples/" class="nav-link">在线例子</a></li>
 <li><a href="/showcase/" class="nav-link">商业案例</a></li>
-<li><a href="http://www.fairygui.com/questions" target="_blank" class="nav-link">问答社区</a></li>
+<li><a href="http://ask.fairygui.com/" target="_blank" class="nav-link">问答社区</a></li>
 <li><a href="/about/" class="nav-link">关于</a></li>
+<li><a class="nav-link">中文</a> / <a href="http://en.fairygui.com/" target="_self"  class="nav-link">English</a></li>
     </ul>
     <div class="list">
 		<a class="become-backer" href="/about/donate.html">
@@ -86,9 +88,8 @@
 		      font-weight: 200;
 		      letter-spacing: 1px;"
 			target="_blank" 
-		    href="http://shang.qq.com/wpa/qunwpa?idkey=3aeb034b24ddb72ec9be855ba6215b366b2adf01a7652f330912ce7f3d9714db"><img title="FairyGUI官方交流群2" src="http://pub.idqqimg.com/wpa/images/group.png" alt="FairyGUI技术交流群" border="0" />
+		    href="http://shang.qq.com/wpa/qunwpa?idkey=098bd1b1410eacf21973f93386d410380be58f9c59e9f9b6c571cb679e554014"><img title="FairyGUI官方交流群2" src="http://pub.idqqimg.com/wpa/images/group.png" alt="FairyGUI技术交流群" border="0" />
 		  </a>
-		  <!--b2704e60dc8a8fd26a92270706b6bcd46b40ce961cae0b001144cb517891aa9b-->
 		
         </h2>
         <ul class="menu-root">
@@ -214,7 +215,7 @@
 	            
 	                
 	                <li>
-	                    <a href="/guide/editor/adaption.html" class="sidebar-link">自适应</a>
+	                    <a href="/guide/editor/adaptation.html" class="sidebar-link">Adaptation</a>
 	                </li>
 	            
 	
@@ -267,6 +268,12 @@
 	                
 	                <li>
 	                    <a href="/guide/unity/drawcall.html" class="sidebar-link">DrawCall优化</a>
+	                </li>
+	            
+	                
+	                
+	                <li>
+	                    <a href="/guide/unity/lua.html" class="sidebar-link">在Lua中使用</a>
 	                </li>
 	            
 
@@ -357,24 +364,17 @@
 <p>在舞台选定一个元件，可以看到在右边的属性栏出现“属性控制”的面板：</p>
 <p><img src="../../images/20170803091157.png" alt=""></p>
 <p>属性控制的种类有：</p>
-<ol>
-<li><code>显示控制</code></li>
-</ol>
-<p>显示控制指示该元件只有在控制器的活动页面属于参与页面之一时才显示，否则不显示。如果参与页面为空，则显示控制无效，元件一直显示。</p>
+<h3 id="显示控制"><a href="#显示控制" class="headerlink" title="显示控制"></a>显示控制</h3><p>显示控制指示该元件只有在控制器的活动页面属于参与页面之一时才显示，否则不显示。如果参与页面为空，则显示控制无效，元件一直显示。</p>
 <p>设置显示控制的方式：</p>
 <p><img src="../../images/20170803093055.png" alt=""></p>
 <p>如果多个元件需要相同的显示控制时，可以将这些元件先建一个高级组，再对高级组设置显示控制。</p>
 <p>显示控制不使用元件本身的可见属性(visible)，两者是独立的，最终是否可见是两者的“与”逻辑结果。</p>
 <p>当元件不可见时，它并不会被容器(GComponent)的显示列表剔除，但FairyGUI底层会处理，使不可见的元件不占用渲染资源。不受控制器干扰的显示列表保证了任何时候都可以通过GetChild访问到需要的元件。</p>
-<p><strong>屏蔽控制器</strong></p>
-<p>有需要时可以通过主菜单<img src="../../images/20170803093750.png" alt="">屏蔽控制器。</p>
+<h3 id="屏蔽控制器"><a href="#屏蔽控制器" class="headerlink" title="屏蔽控制器"></a>屏蔽控制器</h3><p>有需要时可以通过主菜单<img src="../../images/20170803093750.png" alt="">屏蔽控制器。</p>
 <p>假设现在有两个元件A和B，都使用了显示控制，而他们在不同的页面显示。现在想将他们对齐一下，这显然做不到，因为他们不会同时显示，那只能手动填写他们的坐标了，或者将显示控制先取消掉，对齐好了再设置回来。编辑器已经为你考虑到了这一点。</p>
 <p>点击“屏蔽控制器”后，所有被控制器隐藏的元件都能显示出来，你就可以方便地应用对齐，或者选中这些元件进行批量的操作了。</p>
 <p>这个功能只是辅助UI编辑的，所以只在设计的时候有效，实际运行时并没有屏蔽功能。</p>
-<ol>
-<li><code>位置控制</code></li>
-</ol>
-<p>位置控制是指该元件在不同控制器页面中可以具有不同的XY坐标。</p>
+<h3 id="位置控制"><a href="#位置控制" class="headerlink" title="位置控制"></a>位置控制</h3><p>位置控制是指该元件在不同控制器页面中可以具有不同的XY坐标。</p>
 <p>在属性控制面板中点击<img src="../../images/20170803102646.png" alt="">按钮，然后在弹出的菜单中点击“位置控制”。然后设置目标控制器即可。</p>
 <p><img src="../../images/20170803094055.png" alt=""></p>
 <p>设置完成后，在不同的控制器页面，你可以调整目标元件的X、Y属性值，编辑器会自动记录元件在不同页面的属性值。</p>
@@ -385,46 +385,28 @@
 <li><code>延迟时间</code> 控制器页面切换后，延迟一定时间再开始缓动。单位秒。</li>
 <li><code>缓动函数</code> 时间/速度曲线。详细请参考 <a href="../../images/20170802000005.png">图解</a> <a href="https://greensock.com/ease-visualizer" target="_blank" rel="external">示例</a>。</li>
 </ul>
-<ol>
-<li><code>大小控制</code></li>
-</ol>
-<p>大小控制是指该元件在不同控制器页面中可以具有不同的宽和高以及Scale值。</p>
+<h3 id="大小控制"><a href="#大小控制" class="headerlink" title="大小控制"></a>大小控制</h3><p>大小控制是指该元件在不同控制器页面中可以具有不同的宽和高以及Scale值。</p>
 <p>在属性控制面板中点击<img src="../../images/20170803102646.png" alt="">按钮，然后在弹出的菜单中点击“大小控制”。然后设置目标控制器即可。</p>
 <p><img src="../../images/20170803102954.png" alt=""></p>
 <p>设置完成后，在不同的控制器页面，你可以调整目标元件的宽、高、ScaleX、ScaleY属性值，编辑器会自动记录元件在不同页面的属性值。</p>
 <p>大小控制支持动画效果。缓动的设置方式与位置控制是相同的，请参考位置控制。</p>
-<ol>
-<li><code>颜色控制</code></li>
-</ol>
-<p>颜色控制是指该元件在不同控制器页面中可以具有不同的颜色。只有图片元件（对应图片的变色设置）、文本/富文本元件（对应文字的颜色）和装载器元件（对应载入的图片或动画的变色设置）才支持颜色控制。</p>
+<h3 id="颜色控制"><a href="#颜色控制" class="headerlink" title="颜色控制"></a>颜色控制</h3><p>颜色控制是指该元件在不同控制器页面中可以具有不同的颜色。只有图片元件（对应图片的变色设置）、文本/富文本元件（对应文字的颜色）和装载器元件（对应载入的图片或动画的变色设置）才支持颜色控制。</p>
 <p>在属性控制面板中点击<img src="../../images/20170803102646.png" alt="">按钮，然后在弹出的菜单中点击“颜色控制”。然后设置目标控制器即可。</p>
 <p>设置完成后，在不同的控制器页面，你可以调整目标元件的颜色值，编辑器会自动记录元件在不同页面的属性值。</p>
 <p>颜色控制支持动画效果。缓动的设置方式与位置控制是相同的，请参考位置控制。</p>
-<ol>
-<li><code>外观控制</code></li>
-</ol>
-<p>外观控制是指该元件不同控制器页面中可以对具有不同的透明度、变灰、旋转和不可触摸属性。</p>
+<h3 id="外观控制"><a href="#外观控制" class="headerlink" title="外观控制"></a>外观控制</h3><p>外观控制是指该元件不同控制器页面中可以对具有不同的透明度、变灰、旋转和不可触摸属性。</p>
 <p>在属性控制面板中点击<img src="../../images/20170803102646.png" alt="">按钮，然后在弹出的菜单中点击“外观控制”。然后设置目标控制器即可。</p>
 <p>设置完成后，在不同的控制器页面，你可以调整目标元件的透明度、变灰、旋转和不可触摸属性值，编辑器会自动记录元件在不同页面的属性值。</p>
 <p>外观控制支持动画效果。但只有透明度和旋转参与缓动，变灰和不可触摸都是立刻设置的。缓动的设置方式与位置控制是相同的，请参考位置控制。</p>
-<ol>
-<li><code>文本控制</code></li>
-</ol>
-<p>文本控制是指该元件在不同控制器页面中可以具有不同的文本。文本/富文本元件（对应文字的颜色）、标签组件、按钮组件和下拉框组件才支持文本控制。</p>
+<h3 id="文本控制"><a href="#文本控制" class="headerlink" title="文本控制"></a>文本控制</h3><p>文本控制是指该元件在不同控制器页面中可以具有不同的文本。文本/富文本元件（对应文字的颜色）、标签组件、按钮组件和下拉框组件才支持文本控制。</p>
 <p>在属性控制面板中点击<img src="../../images/20170803102646.png" alt="">按钮，然后在弹出的菜单中点击“文本控制”。然后设置目标控制器即可。</p>
 <p>设置完成后，在不同的控制器页面，你可以调整目标元件的文本属性或标题属性，编辑器会自动记录元件在不同页面的属性值。</p>
 <p>文本控制不支持动画效果。</p>
-<ol>
-<li><code>图标控制</code></li>
-</ol>
-<p>图标控制是指该元件在不同控制器页面中可以具有不同的图标。只有装载器元件、标签组件、按钮组件才支持图标控制。</p>
+<h3 id="图标控制"><a href="#图标控制" class="headerlink" title="图标控制"></a>图标控制</h3><p>图标控制是指该元件在不同控制器页面中可以具有不同的图标。只有装载器元件、标签组件、按钮组件才支持图标控制。</p>
 <p>在属性控制面板中点击<img src="../../images/20170803102646.png" alt="">按钮，然后在弹出的菜单中点击“图标控制”。然后设置目标控制器即可。</p>
 <p>设置完成后，在不同的控制器页面，你可以调整目标元件的URL属性或图标属性，编辑器会自动记录元件在不同页面的属性值。</p>
 <p>图标控制不支持动画效果。</p>
-<ol>
-<li><code>动画控制</code></li>
-</ol>
-<p>动画控制是指该元件在不同控制器页面中可以具有不同的动画相关设置。只有动画和装载器才支持动画控制。</p>
+<h3 id="动画控制"><a href="#动画控制" class="headerlink" title="动画控制"></a>动画控制</h3><p>动画控制是指该元件在不同控制器页面中可以具有不同的动画相关设置。只有动画和装载器才支持动画控制。</p>
 <p>在属性控制面板中点击<img src="../../images/20170803102646.png" alt="">按钮，然后在弹出的菜单中点击“动画控制”。然后设置目标控制器即可。</p>
 <p>设置完成后，在不同的控制器页面，你可以调整目标元件的“播放”和“帧”属性，编辑器会自动记录元件在不同页面的属性值。</p>
 <p>动画控制不支持动画效果。</p>

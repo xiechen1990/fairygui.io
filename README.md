@@ -1,36 +1,13 @@
-# FairyGUI.com
+# FairyGUI.io 教程文档
 
-本站基于 [hexo](https://hexo.io) 构建。网站内容使用 Markdown 格式进行编写，位于 `src`。
+这是FairyGUI的教程文档网站，文档是使用[hexo](http://hexo.io/)构建的。 文档内容在“src”文件夹中，使用Markdown格式编写。
 
-## 开发
+## 搭建本地文档环境
 
-从 `localhost:4000` 启动开发服务器，需要以下三个步骤:
+首先您必须安装[nodejs](http://nodejs.cn/)安装完成后通过如下指令在 `localhost:4000` 启动文档网站：
 
-```bash
-$ npm install hexo-cli -g
-$ make install
-$ make dev
 ```
-
-## 部署
-
-在 `_config.yml` 中填写目标服务器，例如：
-
-```yml
-deploy:
-  type: git
-  repository: git@github.com:fairygui/fairygui.com.git
+$ npm install -g hexo-cli
+$ npm install
+$ hexo server
 ```
-
-然后：
-
-```bash
-$ make deploy
-```
-## 文档编辑
-
-文档位于 `src` 文件夹中。
-
-## 网站主题编辑
-
-网站主题位于 `themes/fairygui` 文件夹中。

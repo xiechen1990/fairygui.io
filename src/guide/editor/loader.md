@@ -63,7 +63,7 @@ GLoader可以载入图片和动画，但不能是组件或其他类型的元件�
 
 1. 首先编写你的Loader类，有两个重点方法需要重写：
 
-```csharp
+  ```csharp
     class MyGLoader  : GLoader
     {
         override protected function LoadExternal()
@@ -85,17 +85,17 @@ GLoader可以载入图片和动画，但不能是组件或其他类型的元件�
             //释放外部载入的资源
         }
     }
-```
+  ```
 
 2. 注册我们要使用的Loader类。注册完成后，游戏中**所有装载器**都变成由MyGLoader实例化产生。
 
-```csharp
+  ```csharp
     UIObjectFactory.SetLoaderExtension(typeof(MyGLoader));
-```
+  ```
 
-在Unity平台中，如果在某些特殊场合需要将Texture2D对象赋予给GLoader，例如一个视频贴图，那么可以这样做：
+  在Unity平台中，如果在某些特殊场合需要将Texture2D对象赋予给GLoader，例如一个视频贴图，那么可以这样做：
 
-```csharp
+  ```csharp
     //必须注意GLoader不管理外部对象的生命周期，不会主动销毁your_Texture2D
     aLoader.texture = new NTexture(your_Texture2D);
-```
+  ```

@@ -64,7 +64,7 @@ order: 180
 
 列表对应的类型是GList。在FairyGUI中，列表的本质就是一个组件，GList也是从GComponent派生来的，所以你可以用GComponent的API直接访问列表内的内容，例如可以用GetChild或者GetChildAt访问列表内的项目；也可以用AddChild添加一个item。这部分的API可以参考GComponent的[显示列表管理](component.html#GComponent)。
 
-当你对列表增删改后，列表是自动排列和刷新的，不需要调用任何API。这个刷新发生在本帧绘制之前。刷新时将按照列表的布局调整各个子元件的坐标。如果你希望立刻访问此元件的正确坐标，那么可以调用`EnsureBoundsCorrect`通知GList立刻重排。EnsureBoundsCorrect是一个友好的函数，你不用担心重复调用会有额外性能消耗。
+当你对列表增删改后，列表是自动排列和刷新的，不需要调用任何API。这个刷新发生在本帧绘制之前。刷新时将按照列表的布局调整各个子元件的坐标。如果你希望立刻访问item的正确坐标，那么可以调用`EnsureBoundsCorrect`通知GList立刻重排。EnsureBoundsCorrect是一个友好的函数，你不用担心重复调用会有额外性能消耗。
 
 在实际应用中，列表的内容通常被频繁的更新。典型的用法就是当接收到后台数据时，将列表清空，然后再重新添加所有项目。如果每次都创建和销毁UI对象，将消耗很大的CPU和内存。因此，GList内建了对象池。
 
@@ -90,10 +90,10 @@ order: 180
 错误示例1：
 
 ```csharp
-	GObject obj = UIPackage.CreateObject(...);
-	aList.AddChild(obj);
-
-	aList.RemoveChildrenToPool();
+    GObject obj = UIPackage.CreateObject(...);
+    aList.AddChild(obj);
+    
+    aList.RemoveChildrenToPool();
 ```
 
 添加对象时不使用池，但最后清除列表时却放到池里。这段代码持续运行，对象池将不断增大，可能造成内存溢出。
@@ -102,10 +102,10 @@ order: 180
 错误示例2：
 
 ```csharp
-	for(int i=0;i<10;i++)
-		aList.AddItemFromPool();
+    for(int i=0;i<10;i++)
+        aList.AddItemFromPool();
 
-	aList.RemoveChildren();
+    aList.RemoveChildren();
 ```
 
 这里添加了10个item，但移除时并没有保存他们的引用，也没有放回到池里，这样就造成了内存泄漏。将aList.RemoveChildren改成aList.RemoveChildrenToPool();
@@ -115,36 +115,36 @@ order: 180
 当添加大量item时，除了用循环方式AddItemFromPool外，还可以使用另一种回调的方式。首先为列表定义一个回调函数，例如
 
 ```csharp
-	void RenderListItem(int index, GObject obj)
-	{
-		GButton button = obj.asButton;
-		button.title = ""+index;
-	}
+    void RenderListItem(int index, GObject obj)
+    {
+        GButton button = obj.asButton;
+        button.title = ""+index;
+    }
 ```
 
 然后设置这个函数为列表的渲染函数：
 
 ```csharp
-	//Unity
-	aList.itemRenderer = RenderListItem;
-
+    //Unity
+    aList.itemRenderer = RenderListItem;
+    
     //AS3
     aList.itemRenderer = RenderListItem;
-
-	//Egret
-	aList.itemRenderer = RenderListItem;
-	aList.callbackThisObj = this;
-
-	//Laya
-	aList.itemRenderer = Handler.create(this, this.RenderListItem);
+    
+    //Egret
+    aList.itemRenderer = RenderListItem;
+    aList.callbackThisObj = this;
+    
+    //Laya
+    aList.itemRenderer = Handler.create(this, this.RenderListItem);
 ```
 
 最后直接设置列表中的项目总数，这样列表就会调整当前列表容器的对象数量，然后调用回调函数渲染item。
 
 ```csharp
-	//创建100个对象，注意这里不能使用numChildren，numChildren是只读的。
-
-	aList.numItems = 10;
+    //创建100个对象，注意这里不能使用numChildren，numChildren是只读的。
+    
+    aList.numItems = 10;
 ```
 
 如果新设置的项目数小于当前的项目数，那么多出来的item将放回池里。
@@ -158,13 +158,13 @@ order: 180
 ```csharp
     //Unity, EventContext.data就是当前被点击的item对象
     list.onClickItem.Add(onClickItem);
-
+    
     //AS3, ItemEvent.itemObject就是当前被点击的对象
     list.addEventListener(ItemEvent.CLICK, onClickItem);
-
+    
     //Egret，ItemEvent.itemObject就是当前被点击的对象
     list.addEventListener(ItemEvent.CLICK, this.onClickItem, this);
-
+    
     //Laya, onClickItem方法的第一个参数就是当前被点击的对象
     list.on(fairygui.Events.CLICK_ITEM, this, this.onClickItem);
 ```
@@ -184,7 +184,7 @@ order: 180
 满足条件后可以开启列表的虚拟功能：
 
 ```csharp
-	aList.SetVirtual();
+    aList.SetVirtual();
 ```
 
 提示：虚拟功能只能开启，不能关闭。
@@ -194,24 +194,24 @@ order: 180
 在虚拟列表中，需要注意item索引和显示对象索引的区分。通过selectedIndex获得的值是item的索引，而非显示对象的索引。AddSelection/RemoveSelection等API同样需要的是item的索引。项目索引和对象索引的转换可以通过以下两个方法完成：
 
 ```csharp
-	//转换项目索引为显示对象索引。
-	int childIndex = aList.ItemIndexToChildIndex(1);
-
-	//转换显示对象索引为项目索引。
-	int itemIndex = aList.ChildIndexToItemIndex(1);
+    //转换项目索引为显示对象索引。
+    int childIndex = aList.ItemIndexToChildIndex(1);
+    
+    //转换显示对象索引为项目索引。
+    int itemIndex = aList.ChildIndexToItemIndex(1);
 ```
 
 使用虚拟列表时，我们很少会需要访问屏外对象。如果你确实需要获得列表中指定索引的某一个项目的显示对象，例如第500个，因为当前这个item是不在视口的，对于虚拟列表，不在视口的对象是没有对应的显示对象的，那么你需要先让列表滚动到目标位置。例如：
 
 ```csharp
-	//这里要注意，因为我们要立即访问新滚动位置的对象，所以第二个参数scrollItToView不能为true，即不使用动画效果
-	aList.ScrollToView(500);
-
+    //这里要注意，因为我们要立即访问新滚动位置的对象，所以第二个参数scrollItToView不能为true，即不使用动画效果
+    aList.ScrollToView(500);
+    
     //转换到显示对象索引
-	int index = aList.ItemIndexToChildIndex(500);
-
-	//这就是你要的第500个对象
-	GObject obj = aList.GetChildAt(index);
+    int index = aList.ItemIndexToChildIndex(500);
+    
+    //这就是你要的第500个对象
+    GObject obj = aList.GetChildAt(index);
 ```
 
 如果某个item需要更新，刷新虚拟列表的方式有两种：
@@ -234,11 +234,11 @@ order: 180
     //根据索引的不同，返回不同的资源URL
 	string GetListItemResource(int index)
 	{
-		Message msg = _messages[index];
-		if (msg.fromMe)
-			return "ui://Emoji/chatRight";
-		else
-			return "ui://Emoji/chatLeft";
+        Message msg = _messages[index];
+        if (msg.fromMe)
+            return "ui://Emoji/chatRight";
+        else
+            return "ui://Emoji/chatLeft";
 	}
 ```
 
@@ -249,7 +249,7 @@ order: 180
 	aList.itemProvider = GetListItemResource;
 
 	//AS3
-	aList.itemProvider = GetListItemResource;
+    aList.itemProvider = GetListItemResource;
 
 	//Egret
 	aList.itemProvider = GetListItemResource;

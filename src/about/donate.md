@@ -22,6 +22,6 @@ FairyGUI 是采用 MIT 许可的开源项目，使用完全免费。不过，如
 
 如果你是企业经营者并且将 FairyGUI 用在商业产品中，那么赞助 FairyGUI 有商业上的益处：可以让你的产品保持健康并得到积极的维护，也能帮助你在 FairyGUI 社区里曝光，从而更容易地吸引到 FairyGUI 开发者。
 
-如果你是企业经营者，并且使用 FairyGUI 来开发核心产品，我也可以做顾问。在 [QQ](tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=support@fairygui.com) 上或通过[邮件](mailto:support@fairygui.com)联系我。
+如果你是企业经营者，并且使用 FairyGUI 来开发核心产品，我也可以做顾问。在 [QQ](tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=support@fairygui.com) 上或通过 [邮件](mailto:support@fairygui.com) 联系我。
 
 如果你是个人开发者并且享受 FairyGUI 带来的高开发效率，可以用捐助来表示你的谢意——比如给我买杯咖啡 :)
