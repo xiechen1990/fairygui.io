@@ -140,7 +140,7 @@ p {
   word-spacing: 0.05em;
 }
 a.button {
-  padding: 15px 35px 15px 35px;
+  padding: 20px 50px 20px 50px;
   border-radius: 0.2em;
   display: inline-block;
   color: #fff;
@@ -655,11 +655,15 @@ body {
   float: right;
   margin-right: 60px;
 }
+#hero .text {
+  padding-bottom: 15px;
+  font-size: 1rem;
+}
 #hero h1 {
   font-weight: 300;
   margin: 0;
   padding-top: 50px;
-  font-size: 6.2em;
+  font-size: 6.7em;
   color: #fff;
   font-family: 'Hiragino Sans GB', 'Segoe UI', 'Sans-serif', 'Microsoft Yahei', Arial, sans-serif;
 }
@@ -688,15 +692,11 @@ body {
 }
 #hero .button {
   margin: 2.9em 0;
-  font-size: 1em;
+  font-size: 1.05em;
   letter-spacing: 0.1em;
 }
 #hero .button:first-child {
   margin-right: 1em;
-}
-#hero .button:hover {
-  background-color: #fff;
-  color: #4e99bf;
 }
 #hero .social-buttons {
   list-style-type: none;
@@ -706,6 +706,9 @@ body {
   display: inline-block;
   vertical-align: middle;
   margin-right: 15px;
+}
+#bottom-download a.button {
+  padding: 10px 30px 10px 30px;
 }
 #highlights {
   background-color: #f0f2f1;
@@ -747,7 +750,7 @@ body {
 }
 #highlights .big .left {
   box-sizing: border-box;
-  width: 20%;
+  width: 15%;
   margin-right: 10px;
   display: inline-block;
   vertical-align: middle;
@@ -766,6 +769,7 @@ body {
 }
 #highlights .big .right p {
   text-align: left;
+  line-height: 30px;
 }
 #highlights .big::after {
   content: "";
