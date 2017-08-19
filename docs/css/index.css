@@ -87,7 +87,7 @@ pre .xml .cdata {
   opacity: 0.5;
 }
 body {
-  font-family: 'Sans-serif', 'Microsoft Yahei';
+  font-family: 'Hiragino Sans GB', 'Segoe UI', 'Sans-serif', 'Microsoft Yahei', Arial, sans-serif;
   font-size: 15px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -140,17 +140,22 @@ p {
   word-spacing: 0.05em;
 }
 a.button {
-  padding: 1em 2.5em;
+  padding: 20px 50px 20px 50px;
   border-radius: 0.2em;
   display: inline-block;
   color: #fff;
   transition: all 0.15s ease;
   box-sizing: border-box;
   border: 1px solid #fff;
+  font-weight: 100;
 }
 a.button.white {
   background-color: #fff;
   color: #32a39f;
+}
+a.button:hover {
+  background-color: #fff;
+  color: #4e99bf;
 }
 .highlight {
   overflow-x: auto;
@@ -367,6 +372,7 @@ body.docs #mobile-bar::before {
   display: inline-block;
   position: relative;
   margin: 0 0.6em;
+  color: #fff;
 }
 #nav li a {
   color: #fff;
@@ -376,7 +382,7 @@ body.docs #mobile-bar::before {
 }
 .nav-link:hover,
 .nav-link.current {
-  border-bottom: 3px solid #fff;
+  border-bottom: 2px solid #fff;
 }
 .nav-link.shop {
   margin-left: 10px;
@@ -421,14 +427,14 @@ body.docs #mobile-bar::before {
   font-size: 1.5em;
   line-height: 40px;
   color: #2c3e50;
-  font-family: 'Sans-serif', 'Microsoft Yahei';
+  font-family: 'Hiragino Sans GB', 'Segoe UI', 'Sans-serif', 'Microsoft Yahei', Arial, sans-serif;
   font-weight: 500;
 }
 #logo img {
   vertical-align: middle;
   margin-right: 6px;
-  width: 40px;
-  height: 40px;
+  width: 36px;
+  height: 36px;
 }
 #mobile-bar {
   position: fixed;
@@ -612,7 +618,7 @@ body {
 }
 #bottom-download {
   color: #fff;
-  font-size: 1.2em;
+  font-size: 1em;
   text-align: center;
   padding: 20px 0;
   background: linear-gradient(to right, #32a39f, #698fde);
@@ -649,14 +655,20 @@ body {
   float: right;
   margin-right: 60px;
 }
+#hero .text {
+  padding-bottom: 15px;
+  font-size: 1rem;
+}
 #hero h1 {
   font-weight: 300;
   margin: 0;
-  font-size: 6.2em;
+  padding-top: 50px;
+  font-size: 6.7em;
   color: #fff;
+  font-family: 'Hiragino Sans GB', 'Segoe UI', 'Sans-serif', 'Microsoft Yahei', Arial, sans-serif;
 }
 #hero h2 {
-  font-family: 'Sans-serif', 'Microsoft Yahei';
+  font-family: 'Hiragino Sans GB', 'Segoe UI', 'Sans-serif', 'Microsoft Yahei', Arial, sans-serif;
   font-weight: 500;
   font-size: 4.4em;
   margin: 0 0 10px;
@@ -671,16 +683,16 @@ body {
   font-size: 1em;
 }
 #hero sup {
-  font-size: 0.3em;
+  font-size: 0.25em;
   vertical-align: top;
   position: relative;
   top: 0.6em;
   left: 0.3em;
+  font-weight: normal;
 }
 #hero .button {
-  margin: 1em 0;
-  font-size: 1.25em;
-  font-weight: 600;
+  margin: 2.9em 0;
+  font-size: 1em;
   letter-spacing: 0.1em;
 }
 #hero .button:first-child {
@@ -695,10 +707,13 @@ body {
   vertical-align: middle;
   margin-right: 15px;
 }
+#bottom-download a.button {
+  padding: 10px 30px 10px 30px;
+}
 #highlights {
   background-color: #f0f2f1;
   padding-top: 40px;
-  padding-bottom: 70px;
+  padding-bottom: 20px;
 }
 #highlights .inner {
   max-width: 1175px;
@@ -735,7 +750,7 @@ body {
 }
 #highlights .big .left {
   box-sizing: border-box;
-  width: 20%;
+  width: 15%;
   margin-right: 10px;
   display: inline-block;
   vertical-align: middle;
@@ -754,6 +769,7 @@ body {
 }
 #highlights .big .right p {
   text-align: left;
+  line-height: 30px;
 }
 #highlights .big::after {
   content: "";
@@ -837,12 +853,17 @@ body {
   opacity: 0.66;
 }
 #footer {
-  padding: 50px 0;
+  padding: 50px 15px;
   color: #fff;
   text-align: center;
+  font-size: 14px;
+  background-color: #4b4b4b;
+}
+#footer p {
+  height: 15px;
 }
 #footer a {
-  font-weight: 700;
+  font-weight: 100;
   color: #fff;
 }
 #footer .main-menu {
@@ -885,12 +906,19 @@ body {
   }
   #hero h1 {
     font-size: 5em;
+    padding-top: 80px;
   }
   #hero h2 {
     display: block;
   }
   #hero .button {
     font-size: 0.9em;
+  }
+  #hero sup {
+    top: 0em;
+  }
+  .software {
+    display: none;
   }
   .software img {
     width: 100%;

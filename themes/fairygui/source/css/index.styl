@@ -23,7 +23,7 @@ body
     font-size 0
 #bottom-download
     color white
-    font-size 1.2em
+    font-size 1em
     text-align center
     padding 20px 0
     background linear-gradient(to right, #32a39f, #698fde)
@@ -51,11 +51,16 @@ body
         height 215px
         float right
         margin-right 60px
+    .text
+        padding-bottom 15px
+        font-size: 1rem
     h1
         font-weight 300
         margin 0
-        font-size 6.2em
+        padding-top 50px
+        font-size 6.7em
         color white
+        font-family: $logo-font
     h2
         font-family $logo-font
         font-weight 500
@@ -69,15 +74,15 @@ body
     h6
         font-size 1em
     sup
-        font-size 0.3em
+        font-size 0.25em
         vertical-align top
         position relative
         top 0.6em
         left 0.3em
+        font-weight: normal
     .button
-        margin 1em 0
-        font-size 1.25em
-        font-weight 600
+        margin 2.9em 0
+        font-size 1em
         letter-spacing .1em
         &:first-child
             margin-right 1em
@@ -88,11 +93,14 @@ body
             display inline-block
             vertical-align middle
             margin-right 15px
+#bottom-download
+    a.button
+        padding 10px 30px 10px 30px
 
 #highlights
     background-color #f0f2f1
     padding-top 40px
-    padding-bottom 70px
+    padding-bottom 20px
     .inner
         max-width $width
         margin 0 auto
@@ -122,7 +130,7 @@ body
         background white
         .left
             box-sizing border-box
-            width 20%
+            width 15%
             margin-right 10px
             display inline-block
             vertical-align middle
@@ -138,6 +146,7 @@ body
             padding 10px
             p
                 text-align left
+                line-height: 30px
     .big::after{
         content ""
         display inline-block
@@ -205,11 +214,15 @@ body
             opacity 0.66
 
 #footer
-    padding $space 0
+    padding $space $space * 0.3
     color #fff
     text-align center
+    font-size: 14px
+    background-color: rgb(75,75,75)
+    p
+        height: 15px
     a
-        font-weight 700
+        font-weight 100
         color #fff
     .main-menu
         padding 0
@@ -242,11 +255,15 @@ body
             width 100%
         h1
             font-size 5em
+            padding-top 80px
         h2
             display block
         .button
             font-size .9em
+        sup
+            top 0em
     .software
+        display: none
         img
             width 100%
     #highlights
