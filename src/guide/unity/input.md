@@ -21,12 +21,14 @@ FairyGUI使用内置的机制进行鼠标和触摸事件的处理，不使用射
 
 这种检测不仅适用于点击，也适用于悬停。例如，如果鼠标悬停在UI上，这个判断也是真。
 
-在任何事件回调中都可以获得当前鼠标或手指位置，例如：
+在任何事件回调中都可以获得当前鼠标或手指位置，以及点击的对象，例如：
 
 ```csharp
     void EventHandler(EventContext context)
     {
         Debug.Log(context.inputEvent.x + ", " + context.inputEvent.y);
+
+        Debug.Log(context.sender);
     }
 ```
 
@@ -50,6 +52,15 @@ FairyGUI使用内置的机制进行鼠标和触摸事件的处理，不使用射
 
 ```csharp
     Stage.inst.onTouchMove.Add(onTouchMove);
+```
+
+在任何时候，如果需要获得当前点击的对象，或者鼠标下的对象，都可以通过以下的方式获得：
+
+```csharp
+    GObject obj = GRoot.inst.touchTarget;
+
+    //判断是不是在某个组件内
+    Debug.Log(testComponent.IsAncestorOf(obj));
 ```
 
 ## VR输入处理
@@ -104,13 +115,29 @@ Unity在键盘输入时自带了一个额外的输入框，如果你不需要这
 
 ## 手势
 
-FairyGUI提供了常用手势的支持，它们是：
+FairyGUI提供了手势的支持。使用手势的方式是：
 
-- `LongPressGesture` 长按手势。
+```csharp
+    //targetObject是接收手势的元件，注意一定要是可触摸的。图片是不可触摸的。一般建议用组件。
+    LongPressGesture gesture = new LongPressGesture(targetObject);
+    gesture.onAction.Add(OnGestureAction);
+```
 
-- `SwipeGesture` 手指划动手势。
+常用的手势有：
 
-- `PinchGesture` 两指缩放手势。
+### LongPressGesture
 
-- `RotationGesture` 两指旋转手势。
+长按手势。
+
+### SwipeGesture
+
+手指划动手势。
+
+### PinchGesture
+
+两指缩放手势。
+
+### RotationGesture
+
+两指旋转手势。
 

@@ -319,12 +319,14 @@
 <p>如果要区分点击UI还是点击场景里的对象，可以使用下面的方法：</p>
 <figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">if</span>(Stage.isTouchOnUI) <span class="comment">//点在了UI上</span></div><div class="line">&#123;</div><div class="line">&#125;</div><div class="line"><span class="keyword">else</span> <span class="comment">//没有点在UI上</span></div><div class="line">&#123;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>这种检测不仅适用于点击，也适用于悬停。例如，如果鼠标悬停在UI上，这个判断也是真。</p>
-<p>在任何事件回调中都可以获得当前鼠标或手指位置，例如：</p>
-<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">EventHandler</span>(<span class="params">EventContext context</span>)</span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">    Debug.Log(context.inputEvent.x + <span class="string">", "</span> + context.inputEvent.y);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>在任何事件回调中都可以获得当前鼠标或手指位置，以及点击的对象，例如：</p>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">EventHandler</span>(<span class="params">EventContext context</span>)</span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">    Debug.Log(context.inputEvent.x + <span class="string">", "</span> + context.inputEvent.y);</div><div class="line"></div><div class="line">    Debug.Log(context.sender);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>如果不在事件中，需要获得当前鼠标或者手指的位置，可以用：</p>
 <figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="comment">//这是鼠标的位置，或者最后一个手指的位置</span></div><div class="line">Vector2 pos1 = Stage.inst.touchPosition;</div><div class="line"></div><div class="line"><span class="comment">//获取指定手指的位置，参数是手指id</span></div><div class="line">Vector2 pos2 = Stage.inst.GetTouchPosition(<span class="number">1</span>);</div><div class="line"></div><div class="line"><span class="comment">//这是当前按下的手指的数量</span></div><div class="line"><span class="keyword">int</span> touchCount = Stage.inst.touchCount;</div><div class="line"></div><div class="line"><span class="comment">//获得当前所有按下的手指</span></div><div class="line"><span class="keyword">int</span>[] touchIDs = Stage.inst.GetAllTouch(<span class="literal">null</span>);</div></pre></td></tr></table></figure>
 <p>如果要侦听鼠标或者手指的移动，FairyGUI提供了一个全局的事件。注意：在需要时侦听，不需要时请移除。</p>
 <figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line">Stage.inst.onTouchMove.Add(onTouchMove);</div></pre></td></tr></table></figure>
+<p>在任何时候，如果需要获得当前点击的对象，或者鼠标下的对象，都可以通过以下的方式获得：</p>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line">GObject obj = GRoot.inst.touchTarget;</div><div class="line"></div><div class="line"><span class="comment">//判断是不是在某个组件内</span></div><div class="line">Debug.Log(testComponent.IsAncestorOf(obj));</div></pre></td></tr></table></figure>
 <h2 id="VR输入处理"><a href="#VR输入处理" class="headerlink" title="VR输入处理"></a>VR输入处理</h2><p>VR里输入一般使用凝视输入，或者手柄输入，针对这些新的输入方式，FairyGUI提供了封装支持，也就是说，在VR应用里，你仍然可以像处理鼠标或者触摸输入一样处理VR的输入。</p>
 <p>首先，需要把这些外部输入传入FairyGUI。在Stage类里提供了这些API：</p>
 <figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">SetCustomInput</span>(<span class="params"><span class="keyword">ref</span> RaycastHit hit, <span class="keyword">bool</span> buttonDown</span>)</span>;</div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">SetCustomInput</span>(<span class="params"><span class="keyword">ref</span> RaycastHit hit, <span class="keyword">bool</span> buttonDown, <span class="keyword">bool</span> buttonUp</span>)</span>;</div></pre></td></tr></table></figure>
@@ -345,17 +347,13 @@
 <figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="comment">//取消Unity弹出原生的键盘的行为</span></div><div class="line">Stage.keyboardInput = <span class="literal">false</span>;</div><div class="line"></div><div class="line"><span class="comment">//插入字符到光标位置</span></div><div class="line">Stage.inst.InputString(<span class="string">"xxx"</span>);</div></pre></td></tr></table></figure>
 <p><strong>复制粘贴问题</strong></p>
 <p>当使用DLL形式的插件时，因为DLL默认是为移动平台编译的，所以不支持复制粘贴（如果要支持，需要自己写原生）。如果是在PC平台上使用时，需要将<a href="https://github.com/fairygui/FairyGUI-unity/blob/master/Examples.Unity5/Assets/FairyGUI/CopyPastePatch.cs" target="_blank" rel="external">CopyPastePatch.cs</a>放到工程里，并在游戏启动时调用CopyPastePatch.Apply()，就可以在PC平台激活复制粘贴功能。如果你是使用源码形式的插件，不需要进行这个处理。</p>
-<h2 id="手势"><a href="#手势" class="headerlink" title="手势"></a>手势</h2><p>FairyGUI提供了常用手势的支持，它们是：</p>
-<ul>
-<li><p><code>LongPressGesture</code> 长按手势。</p>
-</li>
-<li><p><code>SwipeGesture</code> 手指划动手势。</p>
-</li>
-<li><p><code>PinchGesture</code> 两指缩放手势。</p>
-</li>
-<li><p><code>RotationGesture</code> 两指旋转手势。</p>
-</li>
-</ul>
+<h2 id="手势"><a href="#手势" class="headerlink" title="手势"></a>手势</h2><p>FairyGUI提供了手势的支持。使用手势的方式是：</p>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="comment">//targetObject是接收手势的元件，注意一定要是可触摸的。图片是不可触摸的。一般建议用组件。</span></div><div class="line">LongPressGesture gesture = <span class="keyword">new</span> LongPressGesture(targetObject);</div><div class="line">gesture.onAction.Add(OnGestureAction);</div></pre></td></tr></table></figure>
+<p>常用的手势有：</p>
+<h3 id="LongPressGesture"><a href="#LongPressGesture" class="headerlink" title="LongPressGesture"></a>LongPressGesture</h3><p>长按手势。</p>
+<h3 id="SwipeGesture"><a href="#SwipeGesture" class="headerlink" title="SwipeGesture"></a>SwipeGesture</h3><p>手指划动手势。</p>
+<h3 id="PinchGesture"><a href="#PinchGesture" class="headerlink" title="PinchGesture"></a>PinchGesture</h3><p>两指缩放手势。</p>
+<h3 id="RotationGesture"><a href="#RotationGesture" class="headerlink" title="RotationGesture"></a>RotationGesture</h3><p>两指旋转手势。</p>
 
     
     <div class="footer">
