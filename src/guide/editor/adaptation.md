@@ -1,5 +1,5 @@
 ---
-title: Adaptation
+title: 自适应
 type: guide_editor
 order: 220
 ---
