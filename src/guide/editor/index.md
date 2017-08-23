@@ -278,7 +278,7 @@ FairyGUI的项目在文件系统的结构为：
 - `文件名` 发布的文件名。这个文件名与包名称不同。当我们载入包时，需要使用这里设定的文件名，而当创建对象时，需要使用包名称。例如
 
 ```csharp
-	UIPackage.AddPackage('file_name'); //这里是发布的文件名。
+    UIPackage.AddPackage('file_name'); //这里是发布的文件名。
     UIPackage.CreateObject("Package1','Component1'); //这里的Package1是包的名称。
 ```
 
