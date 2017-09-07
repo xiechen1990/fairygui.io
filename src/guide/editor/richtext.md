@@ -67,7 +67,7 @@ order: 70
 
 ```csharp
     //Unity, EventContext里的data就是href值。
-    aRichTextField.onClinkLink.Add(onClickLink);
+    aRichTextField.onClickLink.Add(onClickLink);
 
     //AS3/Egret，TextEvent.text就是href值。
     aRichTextField.addEventListener(TextEvent.LINK, onClickLink);

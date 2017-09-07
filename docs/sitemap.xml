@@ -2,6 +2,41 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.fairygui.com/guide/haxe/index.html</loc>
+    
+    <lastmod>2017-09-07T02:02:03.949Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.fairygui.com/guide/unity/lua.html</loc>
+    
+    <lastmod>2017-09-07T02:01:09.539Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.fairygui.com/guide/editor/transition.html</loc>
+    
+    <lastmod>2017-09-07T02:00:25.247Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.fairygui.com/guide/unity/special.html</loc>
+    
+    <lastmod>2017-09-07T01:59:09.389Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.fairygui.com/guide/editor/richtext.html</loc>
+    
+    <lastmod>2017-09-07T01:47:33.056Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.fairygui.com/guide/editor/index.html</loc>
     
     <lastmod>2017-08-22T02:07:42.111Z</lastmod>
@@ -72,13 +107,6 @@
   </url>
   
   <url>
-    <loc>http://www.fairygui.com/guide/unity/lua.html</loc>
-    
-    <lastmod>2017-08-16T02:58:14.138Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://www.fairygui.com/guide/editor/component.html</loc>
     
     <lastmod>2017-08-16T02:16:28.163Z</lastmod>
@@ -86,14 +114,14 @@
   </url>
   
   <url>
-    <loc>http://www.fairygui.com/guide/editor/movieclip.html</loc>
+    <loc>http://www.fairygui.com/guide/editor/image.html</loc>
     
     <lastmod>2017-08-16T02:16:28.163Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.fairygui.com/guide/editor/image.html</loc>
+    <loc>http://www.fairygui.com/guide/editor/movieclip.html</loc>
     
     <lastmod>2017-08-16T02:16:28.163Z</lastmod>
     
@@ -170,13 +198,6 @@
   </url>
   
   <url>
-    <loc>http://www.fairygui.com/guide/editor/transition.html</loc>
-    
-    <lastmod>2017-08-14T06:05:15.537Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://www.fairygui.com/guide/editor/text.html</loc>
     
     <lastmod>2017-08-14T06:05:15.536Z</lastmod>
@@ -198,21 +219,14 @@
   </url>
   
   <url>
-    <loc>http://www.fairygui.com/guide/editor/richtext.html</loc>
-    
-    <lastmod>2017-08-14T06:05:15.534Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.fairygui.com/guide/editor/relation.html</loc>
+    <loc>http://www.fairygui.com/guide/editor/progressbar.html</loc>
     
     <lastmod>2017-08-14T06:05:15.533Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.fairygui.com/guide/editor/progressbar.html</loc>
+    <loc>http://www.fairygui.com/guide/editor/relation.html</loc>
     
     <lastmod>2017-08-14T06:05:15.533Z</lastmod>
     

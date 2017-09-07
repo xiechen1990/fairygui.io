@@ -277,6 +277,12 @@
 	                
 	                
 	                <li>
+	                    <a href="/guide/unity/special.html" class="sidebar-link">特色功能</a>
+	                </li>
+	            
+	                
+	                
+	                <li>
 	                    <a href="/guide/unity/lua.html" class="sidebar-link">在Lua中使用</a>
 	                </li>
 	            
@@ -303,6 +309,16 @@
 
 	            
 
+	            
+	            
+	           	
+	                
+	                
+	                <li><h3>Haxe</h3></li>
+	                
+	                <li>
+	                    <a href="/guide/haxe/index.html" class="sidebar-link">在Haxe中使用FairyGUI</a>
+	                </li>
 	            
 
             
@@ -404,6 +420,8 @@
 <figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line">Transition trans = aComponent.GetTransition(“peng”);</div><div class="line">trans.Play();</div></pre></td></tr></table></figure>
 <p>Play有多种原型，例如可以重复播放一定次数，可以在播放结束时回调等。例如：</p>
 <figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="comment">//结束时有一个回调，但需注意，如果动效里有嵌套的动效，或者有循环的内容，必须是等全部都结束后才会回调。</span></div><div class="line">trans.Play(callback);</div></pre></td></tr></table></figure>
+<p>也可以倒着放，但要注意倒着放之前需要先执行一次正着放。例如：</p>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line">trans.playReverse();</div></pre></td></tr></table></figure>
 <p>要中途停止动效的播放，可以调用：</p>
 <figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line">trans.Stop();</div></pre></td></tr></table></figure>
 <p>Stop方法也可以带参数，原型是：</p>

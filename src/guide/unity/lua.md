@@ -184,6 +184,6 @@ FairyGUI在C#里可以使用UIObjectFactory.SetPackageItemExtension进行自定�
     myButton2.myProp = 'world'
 ```
 
-### XLua
+## XLua
 
 等候补充。。。

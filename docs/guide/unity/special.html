@@ -3,7 +3,7 @@
 <html lang="en">
     <head>
     
-        <title>FairyGUI - 组</title>
+        <title>FairyGUI - 特色功能</title>
     
         <meta charset="utf-8">
         <meta name="description" content="FairyGUI是一款超强的UI编辑器，及跨平台开源UI解决方案，制作效率直接提升 50%！，支持Unity、Starling、Egret、LayaAir、Haxe、Pixi、LibGDX等引擎">
@@ -12,11 +12,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
         <meta property="og:type" content="article">
-        <meta property="og:title" content="-组FairyGUI">
+        <meta property="og:title" content="-特色功能FairyGUI">
         <meta property="og:description" content="FairyGUI是一款超强的UI编辑器，及跨平台开源UI解决方案，制作效率直接提升 50%！，支持Unity、Starling、Egret、LayaAir、Haxe、Pixi、LibGDX等引擎">
 
         <meta name="twitter:card" content="summary">
-        <meta name="twitter:title" content="组 — FairyGUI">
+        <meta name="twitter:title" content="特色功能 — FairyGUI">
         <meta name="twitter:description" content="FairyGUI是一款超强的UI编辑器，及跨平台开源UI解决方案，制作效率直接提升 50%！，支持Unity、Starling、Egret、LayaAir、Haxe、Pixi、LibGDX等引擎">
 
 
@@ -27,7 +27,7 @@
 
         <!-- this needs to be loaded before guide's inline scripts -->
         <script src="/js/vue.min.js"></script>
-        <script>window.PAGE_TYPE = "guide_editor"</script>
+        <script>window.PAGE_TYPE = "guide_unity"</script>
     </head>
     <body class="docs">        <div id="mobile-bar"  data-bg-text="FairyGUI" >
             <a class="menu-button"></a>
@@ -81,7 +81,7 @@
         <h2>
             Guide
             <!--<select class="version-select">
-                <option value="SELF" selected>editor</option>
+                <option value="SELF" selected>unity</option>
             </select>-->
  		 
 		  <a style="
@@ -149,7 +149,7 @@
 	            
 	                
 	                <li>
-	                    <a href="/guide/editor/group.html" class="sidebar-link current">组</a>
+	                    <a href="/guide/editor/group.html" class="sidebar-link">组</a>
 	                </li>
 	            
 	                
@@ -277,7 +277,7 @@
 	                
 	                
 	                <li>
-	                    <a href="/guide/unity/special.html" class="sidebar-link">特色功能</a>
+	                    <a href="/guide/unity/special.html" class="sidebar-link current">特色功能</a>
 	                </li>
 	            
 	                
@@ -327,59 +327,23 @@
 </div>
 
 
-<div class="content guide_editor with-sidebar ">
+<div class="content guide_unity with-sidebar ">
     
-      <h1>组</h1>
+      <h1>特色功能</h1>
     
-    <p>在舞台上选定一个或多个元件，然后按Ctrl+G，就可以建立一个组。 FairyGUI的组有两种类型，<code>普通组</code>和<code>高级组</code>。</p>
-<h2 id="普通组"><a href="#普通组" class="headerlink" title="普通组"></a>普通组</h2><p>普通组仅在编辑时有效，是辅助你进行UI设计的。普通组发布后不存在，也就是在运行时无法访问到普通组。</p>
-<p>普通组的作用有：</p>
-<ol>
-<li>可以整体一起移动；</li>
-<li>可以整体一起调整深度；</li>
-<li>可以整体复制和粘贴。</li>
-<li>双击组，进入组内部后，可以随意调整各个元件的深度，不影响组外的东西。</li>
-<li>当组大小改变时，组内的内容将同时增大或者缩小。</li>
-</ol>
-<p>普通组的属性面板：</p>
-<p><img src="../../images/20170726152337.png" alt=""></p>
+    <h2 id="组件截图"><a href="#组件截图" class="headerlink" title="组件截图"></a>组件截图</h2><p>使用下面的方法可以实现对组件截图的功能。原理是使用FairyGUI提供的<code>绘画模式</code>功能。API是：</p>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line">EnterPaintingMode(<span class="keyword">int</span> requestorId, Margin? margin);</div></pre></td></tr></table></figure>
 <ul>
-<li><code>名称</code> 可以给普通组取名，用途也仅仅是辅助设计。</li>
+<li><code>requestorId</code> 请求者id。当多个请求要求显示对象进入绘画模式时，可以用这个id区分。取值是1、2、4、8、16以此类推。1024内内部保留。用户自定义的id从1024开始。</li>
+<li><code>margin</code> 纹理四周的留空。如果特殊处理后的内容大于原内容，那么这里的设置可以使纹理扩大。</li>
 </ul>
-<h2 id="高级组"><a href="#高级组" class="headerlink" title="高级组"></a>高级组</h2><p>高级组除了具有普通组所有的功能外，它在发布后仍然保留，也就是在运行时可以通过代码访问高级组对象。所以它可以像一个普通元件那样设置关联和属性控制。</p>
-<p>高级组的作用有：</p>
-<ol>
-<li>可以设置可见性。如果组不可见，则组内的所有元件均不可见。</li>
-<li>设置属性控制。高级组支持的属性控制有：显示控制，位置控制，大小控制。</li>
-<li>设置关联。</li>
-<li>设置布局。</li>
-</ol>
-<p>例如有一批元件，你希望在某一页隐藏，那么你可以对每个元件设置一次显示控制，你也可以将他们建立一个高级组，然后对高级组设置一个显示控制，后者是不是简洁很多？</p>
-<p>高级组的属性面板：</p>
-<p><img src="../../images/20170726153357.png" alt=""></p>
-<p>高级组具有简单的布局功能。目前支持<code>水平布局</code>和<code>垂直布局</code>。</p>
-<ul>
-<li><code>水平布局</code></li>
-</ul>
-<p>组内的元件按照他们在容器中的显示顺序水平依次排列，他们之间的间隔由列距指定。当组的宽度改变时，每个元件都<strong>按比例增大</strong>，然后重新排列，列距保持不变。当组内的元件自身的宽度改变时，组自动按规则重新排列。</p>
-<ul>
-<li><code>垂直布局</code></li>
-</ul>
-<p>组件的元件按照他们在容器中的显示顺序垂直依次排列，他们之间的间隔由行距指定。当组的高度改变时，每个元件都<strong>按比例增大</strong>，然后重新排列，行距保持不变。当组内的元件自身的高度改变时，组自动按规则重新排列。</p>
-<p>以下用例子说明一下有布局和无布局的区别：</p>
-<p>这是一个无布局的组，可以看到，组大小改变时，里面的方块大小同时改变，但位置不变。</p>
-<p><img src="../../images/gaollg17.gif" alt=""></p>
-<p>这是一个水平布局的组，可以与上图比较一下差别。</p>
-<p><img src="../../images/gaollg18.gif" alt=""></p>
-<p>如果组内有设置了大小限制的元件，那么组大小改变时，这些元件的大小限制依然生效，在以下的例子中，由于左右两个色块被限制了大小，所以组变大时，只有中间的色块改变大小。</p>
-<p><img src="../../images/gaollg19.gif" alt=""></p>
-<h2 id="GGroup"><a href="#GGroup" class="headerlink" title="GGroup"></a>GGroup</h2><p>高级组可以在运行时通过代码访问。但要注意的是，组不是容器，它并没有维护一个组内元件的列表。如果你需要遍历组内的所有元件，你需要遍历容器组件的所有孩子，测试他们group属性。代码如下：</p>
-<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line">GGroup aGroup = gcom.GetChild(<span class="string">"groupName"</span>).asGroup;</div><div class="line"><span class="keyword">int</span> cnt = gcom.numChildren;</div><div class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;cnt;i++)</div><div class="line">&#123;</div><div class="line">	<span class="keyword">if</span>(gcom.GetChildAt(i).<span class="keyword">group</span>==aGroup)</div><div class="line">		Debug.Log(<span class="string">"get result"</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-
+<p>利用绘画模式实现截图功能：</p>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line">GObject aObject;</div><div class="line">DisplayObject dObject = aObject.displayObject;</div><div class="line">dObject.EnterPaitingMode(<span class="number">1024</span>);</div><div class="line"></div><div class="line"><span class="comment">//纹理将在本帧渲染后才能更新，所以以下代码需要延迟到一下帧执行，具体延迟方法自行把握。</span></div><div class="line">Texture tex = dObject.paintingGraphics.texture.nativeTexture;</div><div class="line"><span class="comment">//得到tex后，你可以使用Unity的方法保存为图片或者进行其他处理。具体处理略。</span></div><div class="line"></div><div class="line"><span class="comment">//处理结束后结束绘画模式。id要和Enter方法的对应。</span></div><div class="line">dObject.LeavePaintingMode(<span class="number">1024</span>);</div></pre></td></tr></table></figure>
+<h2 id="自定义滤镜"><a href="#自定义滤镜" class="headerlink" title="自定义滤镜"></a>自定义滤镜</h2>
     
     <div class="footer">
       发现错误或想贡献文档?
-      <a href="https://github.com/fairygui/fairygui.github.io/tree/master/src/guide/editor/group.md" target="_blank">
+      <a href="https://github.com/fairygui/fairygui.github.io/tree/master/src/guide/unity/special.md" target="_blank">
         在 Github 上编辑此文档!
       </a>
     </div>
