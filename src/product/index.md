@@ -49,13 +49,13 @@ FairyGUI编辑器是绿色软件，解压后可直接使用，无需安装。建
 
 [下载例子](http://res.fairygui.com/FairyGUI-egret-demo20170726.zip)
 
-## Starling SDK
+## Pixi SDK
 
-源码: [https://github.com/fairygui/FairyGUI-starling](https://github.com/fairygui/FairyGUI-starling)
+源码: [https://github.com/jcyuan/FairyGUI-PIXI](https://github.com/jcyuan/FairyGUI-PIXI)
 
-<img src="https://img.shields.io/github/stars/fairygui/FairyGUI-starling.svg"         alt="stars"> <img src="https://img.shields.io/github/forks/fairygui/FairyGUI-starling.svg" alt="forks">
+<img src="https://img.shields.io/github/stars/jcyuan/FairyGUI-PIXI.svg"         alt="stars"> <img src="https://img.shields.io/github/forks/jcyuan/FairyGUI-PIXI.svg" alt="forks">
 
-[下载例子](http://res.fairygui.com/FairyGUI-starling-demo20170726.zip)
+[下载例子](http://res.fairygui.com/FairyGUI-PIXI-demo20170909.zip)
 
 ## Haxe SDK
 
@@ -64,6 +64,14 @@ FairyGUI编辑器是绿色软件，解压后可直接使用，无需安装。建
 <img src="https://img.shields.io/github/stars/rakuten/FairyGUI-haxe.svg"         alt="stars"> <img src="https://img.shields.io/github/forks/rakuten/FairyGUI-haxe.svg" alt="forks">
 
 [下载例子](https://github.com/rakuten/FairyGUI-haxe/releases)
+
+## Starling SDK
+
+源码: [https://github.com/fairygui/FairyGUI-starling](https://github.com/fairygui/FairyGUI-starling)
+
+<img src="https://img.shields.io/github/stars/fairygui/FairyGUI-starling.svg"         alt="stars"> <img src="https://img.shields.io/github/forks/fairygui/FairyGUI-starling.svg" alt="forks">
+
+[下载例子](http://res.fairygui.com/FairyGUI-starling-demo20170726.zip)
 
 ## Flash SDK
 

@@ -1,7 +1,7 @@
 ---
 title: 特色功能
 type: guide_unity
-order: 70
+order: 90
 ---
 
 ## 组件截图
@@ -20,9 +20,10 @@ order: 70
 ```csharp
     GObject aObject;
     DisplayObject dObject = aObject.displayObject;
-    dObject.EnterPaitingMode(1024);
-
-    //纹理将在本帧渲染后才能更新，所以以下代码需要延迟到一下帧执行，具体延迟方法自行把握。
+    dObject.EnterPaitingMode(1024, null);
+    
+    //----我是分割线----
+    //纹理将在本帧渲染后才能更新，所以以下代码需要延迟到下一帧执行，具体延迟方法自行把握。
     Texture tex = dObject.paintingGraphics.texture.nativeTexture;
     //得到tex后，你可以使用Unity的方法保存为图片或者进行其他处理。具体处理略。
 
@@ -33,4 +34,4 @@ order: 70
 ## 自定义滤镜
 
 
-
+待补充。。。

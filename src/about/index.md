@@ -13,6 +13,8 @@ FairyGUI编辑器就是使用FairyGUI制作的。GitHub上有FairyGUI编辑器�
 
 Haxe SDK由[Rakuten](https://github.com/rakuten)提供。
 
+Pixi SDK由[jcyuan](https://github.com/jcyuan)提供。
+
 ## 网站制作贡献
 
 [喵喵大人](http://catlib.io)，[Ou Changkun](https://changkun.us/about/)， [Duke Chiang](http://dukechiang.com)， [Blank](http://alianhome.com/)
