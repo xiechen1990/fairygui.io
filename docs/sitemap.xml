@@ -2,16 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://www.fairygui.com/about/index.html</loc>
+    <loc>http://www.fairygui.com/examples/index.html</loc>
     
-    <lastmod>2017-09-08T16:01:16.019Z</lastmod>
+    <lastmod>2017-09-11T08:41:00.102Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://www.fairygui.com/product/index.html</loc>
     
-    <lastmod>2017-09-08T16:00:25.644Z</lastmod>
+    <lastmod>2017-09-11T08:39:22.490Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.fairygui.com/about/index.html</loc>
+    
+    <lastmod>2017-09-08T16:01:16.019Z</lastmod>
     
   </url>
   
@@ -72,13 +79,6 @@
   </url>
   
   <url>
-    <loc>http://www.fairygui.com/examples/index.html</loc>
-    
-    <lastmod>2017-08-21T07:24:09.374Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://www.fairygui.com/about/donate.html</loc>
     
     <lastmod>2017-08-19T08:03:13.735Z</lastmod>
@@ -121,14 +121,14 @@
   </url>
   
   <url>
-    <loc>http://www.fairygui.com/guide/editor/movieclip.html</loc>
+    <loc>http://www.fairygui.com/guide/editor/component.html</loc>
     
     <lastmod>2017-08-16T02:16:28.163Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.fairygui.com/guide/editor/component.html</loc>
+    <loc>http://www.fairygui.com/guide/editor/movieclip.html</loc>
     
     <lastmod>2017-08-16T02:16:28.163Z</lastmod>
     

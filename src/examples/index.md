@@ -4,6 +4,8 @@ type: examples
 order: 0
 ---
 
+Laya/Egret在线示例：
+
 1. [综合例子](http://www.fairygui.com/laya-demo/main)
 2. [简单的背包例子](http://www.fairygui.com/laya-demo/bag)
 3. [虚拟列表例子](http://www.fairygui.com/laya-demo/virtuallist)
@@ -13,4 +15,8 @@ order: 0
 7. [内置了常用的模式等待功能](www://ask.fairygui.com/laya-demo/modalwaiting)
 8. [UI动效例子](http://www.fairygui.com/laya-demo/transition)
 9. [3D酷炫例子](http://www.fairygui.com/laya-demo/inventory)
+
+Pixi在线示例
+
+1. [综合例子](http://jc-space.com/pixigui)
 

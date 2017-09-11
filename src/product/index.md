@@ -51,11 +51,11 @@ FairyGUI编辑器是绿色软件，解压后可直接使用，无需安装。建
 
 ## Pixi SDK
 
-源码: [https://github.com/jcyuan/FairyGUI-PIXI](https://github.com/jcyuan/FairyGUI-PIXI)
+源码: [https://github.com/jcyuan/FairyGUI-PixiJS/releases](https://github.com/jcyuan/FairyGUI-PixiJS/releases)
 
 <img src="https://img.shields.io/github/stars/jcyuan/FairyGUI-PIXI.svg"         alt="stars"> <img src="https://img.shields.io/github/forks/jcyuan/FairyGUI-PIXI.svg" alt="forks">
 
-[下载例子](http://res.fairygui.com/FairyGUI-PIXI-demo20170909.zip)
+[下载例子](https://github.com/jcyuan/FairyGUI-PixiJS-Example/releases)
 
 ## Haxe SDK
 
