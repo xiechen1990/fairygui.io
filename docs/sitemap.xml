@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.fairygui.com/guide/editor/transition.html</loc>
+    
+    <lastmod>2017-09-24T15:30:24.156Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.fairygui.com/product/release_notes.html</loc>
+    
+    <lastmod>2017-09-24T14:28:12.687Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.fairygui.com/guide/unity/lua.html</loc>
     
     <lastmod>2017-09-24T13:33:45.467Z</lastmod>
@@ -33,13 +47,6 @@
     <loc>http://www.fairygui.com/guide/unity/insert3d.html</loc>
     
     <lastmod>2017-09-24T13:15:32.176Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.fairygui.com/product/release_notes.html</loc>
-    
-    <lastmod>2017-09-24T12:55:33.276Z</lastmod>
     
   </url>
   
@@ -135,13 +142,6 @@
   </url>
   
   <url>
-    <loc>http://www.fairygui.com/guide/editor/transition.html</loc>
-    
-    <lastmod>2017-09-24T00:21:11.792Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://www.fairygui.com/guide/editor/richtext.html</loc>
     
     <lastmod>2017-09-24T00:20:32.819Z</lastmod>
@@ -191,13 +191,6 @@
   </url>
   
   <url>
-    <loc>http://www.fairygui.com/index.html</loc>
-    
-    <lastmod>2017-09-08T22:58:28.095Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://www.fairygui.com/showcase/index.html</loc>
     
     <lastmod>2017-09-08T22:58:28.095Z</lastmod>
@@ -205,23 +198,9 @@
   </url>
   
   <url>
-    <loc>http://www.fairygui.com/guide/editor/relation.html</loc>
+    <loc>http://www.fairygui.com/index.html</loc>
     
-    <lastmod>2017-09-08T22:58:27.894Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.fairygui.com/guide/editor/label.html</loc>
-    
-    <lastmod>2017-09-08T22:58:27.894Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.fairygui.com/guide/haxe/index.html</loc>
-    
-    <lastmod>2017-09-08T22:58:27.894Z</lastmod>
+    <lastmod>2017-09-08T22:58:28.095Z</lastmod>
     
   </url>
   
@@ -233,7 +212,7 @@
   </url>
   
   <url>
-    <loc>http://www.fairygui.com/guide/unity/atlas.html</loc>
+    <loc>http://www.fairygui.com/guide/editor/text.html</loc>
     
     <lastmod>2017-09-08T22:58:27.894Z</lastmod>
     
@@ -254,14 +233,28 @@
   </url>
   
   <url>
-    <loc>http://www.fairygui.com/guide/editor/text.html</loc>
+    <loc>http://www.fairygui.com/guide/haxe/index.html</loc>
     
     <lastmod>2017-09-08T22:58:27.894Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.fairygui.com/guide/index.html</loc>
+    <loc>http://www.fairygui.com/guide/editor/relation.html</loc>
+    
+    <lastmod>2017-09-08T22:58:27.894Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.fairygui.com/guide/unity/atlas.html</loc>
+    
+    <lastmod>2017-09-08T22:58:27.894Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.fairygui.com/guide/editor/label.html</loc>
     
     <lastmod>2017-09-08T22:58:27.894Z</lastmod>
     
@@ -269,6 +262,13 @@
   
   <url>
     <loc>http://www.fairygui.com/guide/editor/scrollbar.html</loc>
+    
+    <lastmod>2017-09-08T22:58:27.894Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.fairygui.com/guide/index.html</loc>
     
     <lastmod>2017-09-08T22:58:27.894Z</lastmod>
     
@@ -289,13 +289,6 @@
   </url>
   
   <url>
-    <loc>http://www.fairygui.com/guide/editor/combobox.html</loc>
-    
-    <lastmod>2017-09-08T22:58:27.891Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://www.fairygui.com/guide/editor/component.html</loc>
     
     <lastmod>2017-09-08T22:58:27.891Z</lastmod>
@@ -303,14 +296,21 @@
   </url>
   
   <url>
-    <loc>http://www.fairygui.com/about/donate.html</loc>
+    <loc>http://www.fairygui.com/guide/editor/combobox.html</loc>
+    
+    <lastmod>2017-09-08T22:58:27.891Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.fairygui.com/about/index.html</loc>
     
     <lastmod>2017-09-08T22:58:27.872Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.fairygui.com/about/index.html</loc>
+    <loc>http://www.fairygui.com/about/donate.html</loc>
     
     <lastmod>2017-09-08T22:58:27.872Z</lastmod>
     
