@@ -72,8 +72,8 @@ order: 80
     int cnt = gcom.numChildren;
     for(int i=0;i<cnt;i++)
     {
-    	if(gcom.GetChildAt(i).group==aGroup)
-    		Debug.Log("get result");
+        if(gcom.GetChildAt(i).group==aGroup)
+            Debug.Log("get result");
     }
 ```
 

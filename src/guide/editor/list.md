@@ -151,6 +151,10 @@ order: 180
 
 使用这种方式生成的列表，如果你需要更新某个item，自行调用RenderListItem(索引，GetChildAt(索引))就可以了。
 
+**列表自动大小**
+
+严格来说，列表没有自动大小的功能。但GList提供了API根据item的数量设置列表大小。当你填充完列表的数据后，可以调用GList.ResizeToFit，这样列表的大小就会修改为最适合的大小，容纳指定的item数量。如果不指定item数量，则列表扩展大小至显示所有item。
+
 **事件**
 
 点击列表内的某一个item触发事件：
@@ -232,39 +236,42 @@ order: 180
 
 ```csharp
     //根据索引的不同，返回不同的资源URL
-	string GetListItemResource(int index)
-	{
+    string GetListItemResource(int index)
+    {
         Message msg = _messages[index];
         if (msg.fromMe)
             return "ui://Emoji/chatRight";
         else
             return "ui://Emoji/chatLeft";
-	}
+    }
 ```
 
 然后设置这个函数为列表的item提供者：
 
 ```csharp
-	//Unity
-	aList.itemProvider = GetListItemResource;
-
-	//AS3
+    //Unity
     aList.itemProvider = GetListItemResource;
 
-	//Egret
-	aList.itemProvider = GetListItemResource;
-	aList.callbackThisObj = this;
+    //AS3
+    aList.itemProvider = GetListItemResource;
 
-	//Laya
-	aList.itemProvider = Handler.create(this, this.GetListItemResource);
+    //Egret
+    aList.itemProvider = GetListItemResource;
+    aList.callbackThisObj = this;
+
+    //Laya
+    aList.itemProvider = Handler.create(this, this.GetListItemResource);
 ```
+
+对于横向流动、竖向流动和分页的列表，与非虚拟列表具有流动特性不同，虚拟列表每行或每列的item个数都是固定的。列表在初始化时会创建一个默认的item用于测算这个数量。
+如果你仍然需要每行或每列不等item数量的排版，且必须使用虚拟化，那么可以插入一些用于占位的空组件或者空图形，并根据实际需要设置他们的宽度，从而实现那种排版效果。
 
 ## 循环列表
 
 循环列表是指首尾相连的列表，循环列表必须是虚拟列表。启用循环列表的方法为:
 
 ```csharp
-	aList.SetVirtualAndLoop()。
+    aList.SetVirtualAndLoop()。
 ```
 
 循环列表只支持单行或者单列的布局，不支持流动布局和分页布局。

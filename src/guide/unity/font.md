@@ -23,7 +23,7 @@ FairyGUI使用Unity的动态字体技术渲染文字。只需以下几个简单�
   从Unity5.0开始，Unity引入了新的字体管理API，也可以不放置字体文件到Resources目录，你只需要直接设置UIConfig.defaultFont="字体名称"即可，同样，多个字体名称用逗号隔开。例如：
 
   ```csharp
-	UIConfig.defaultFont = "Droid Sans Fallback, LTHYSZK, Helvetica-Bold, Microsoft YaHei, SimHei";
+    UIConfig.defaultFont = "Droid Sans Fallback, LTHYSZK, Helvetica-Bold, Microsoft YaHei, SimHei";
   ```
 
 ## 多种字体的处理
@@ -35,7 +35,7 @@ FairyGUI使用Unity的动态字体技术渲染文字。只需以下几个简单�
 这里用到了"黑体"这个名字的字体，这是与UIConfig.defaultFont设不同的字体，那么我们需要注册这种字体。方法是，首先做好上面第一步1和第2步，假如字体文件名称是HeiTi.ttf，然后：
 
 ```csharp
-	FontManager.RegisterFont(FontManager.GetFont("HeiTi"), "黑体");
+    FontManager.RegisterFont(FontManager.GetFont("HeiTi"), "黑体");
 ```
 
 RegisterFont的第二个参数对应编辑器里使用的字体名称；第一个参数，是Unity中放入的字体文件资源。如果文件带路径，这也需要把路径填上。
@@ -57,7 +57,7 @@ RegisterFont的第二个参数对应编辑器里使用的字体名称；第一�
 某些字体，Unity渲染有粗体效果，但当设置成斜体时，粗体效果又丢失（例如雅黑）。FairyGUI在这种情况可以取消Unity默认渲染粗体的效果，改为增加额外的面渲染粗体。激活这个功能的方法是
 
 ```csharp
-	FontManager.GetFont(“字体路径”).customBoldAndItalic = true;
+    FontManager.GetFont(“字体路径”).customBoldAndItalic = true;
 ```
 
 如果已经设置了customBold，不需要再设置customBoldAndItalic。
@@ -75,5 +75,5 @@ RegisterFont的第二个参数对应编辑器里使用的字体名称；第一�
 另外，如果你不喜欢这种显示效果，或者你使用的是全英文的文字，也可以手动把这种技术关闭：
 
 ```csharp
-	UIConfig.renderingTextBrighterOnDesktop = false;
+    UIConfig.renderingTextBrighterOnDesktop = false;
 ```

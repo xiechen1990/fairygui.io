@@ -209,7 +209,7 @@
 	            
 	                
 	                <li>
-	                    <a href="/guide/editor/popup.html" class="sidebar-link">Popup管理</a>
+	                    <a href="/guide/editor/popup.html" class="sidebar-link">Popup</a>
 	                </li>
 	            
 	                
@@ -259,7 +259,7 @@
 	                
 	                
 	                <li>
-	                    <a href="/guide/unity/insert3d.html" class="sidebar-link">穿插3D对象</a>
+	                    <a href="/guide/unity/insert3d.html" class="sidebar-link">穿插3D对象和Canvas</a>
 	                </li>
 	            
 	                
@@ -374,7 +374,7 @@
 <p>如果组内有设置了大小限制的元件，那么组大小改变时，这些元件的大小限制依然生效，在以下的例子中，由于左右两个色块被限制了大小，所以组变大时，只有中间的色块改变大小。</p>
 <p><img src="../../images/gaollg19.gif" alt=""></p>
 <h2 id="GGroup"><a href="#GGroup" class="headerlink" title="GGroup"></a>GGroup</h2><p>高级组可以在运行时通过代码访问。但要注意的是，组不是容器，它并没有维护一个组内元件的列表。如果你需要遍历组内的所有元件，你需要遍历容器组件的所有孩子，测试他们group属性。代码如下：</p>
-<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line">GGroup aGroup = gcom.GetChild(<span class="string">"groupName"</span>).asGroup;</div><div class="line"><span class="keyword">int</span> cnt = gcom.numChildren;</div><div class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;cnt;i++)</div><div class="line">&#123;</div><div class="line">	<span class="keyword">if</span>(gcom.GetChildAt(i).<span class="keyword">group</span>==aGroup)</div><div class="line">		Debug.Log(<span class="string">"get result"</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line">GGroup aGroup = gcom.GetChild(<span class="string">"groupName"</span>).asGroup;</div><div class="line"><span class="keyword">int</span> cnt = gcom.numChildren;</div><div class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;cnt;i++)</div><div class="line">&#123;</div><div class="line">    <span class="keyword">if</span>(gcom.GetChildAt(i).<span class="keyword">group</span>==aGroup)</div><div class="line">        Debug.Log(<span class="string">"get result"</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
     
     <div class="footer">

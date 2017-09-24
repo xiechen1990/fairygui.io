@@ -222,18 +222,18 @@ Unity版本对HTML解析有比较完整的支持。
 又例如，如果要制作鼠标移到链接上显示信息的效果：
 
 ```csharp
-	int cnt = richText.htmlObjectCount;
-	for(int i=0;i<cnt;i++) 
-	{
-		IHtmlObject obj = richText.GetHtmlObjectAt(i);
-		if(obj is HtmlLink) 
-		{
-			((HtmlLink)obj).shape.onRollOver.Add(onLinkRollOver);
-			((HtmlLink)obj).shape.onRollOut.Add(onLinkRollOut);
-		}
-	}
+    int cnt = richText.htmlObjectCount;
+    for(int i=0;i<cnt;i++) 
+    {
+        IHtmlObject obj = richText.GetHtmlObjectAt(i);
+        if(obj is HtmlLink) 
+        {
+            ((HtmlLink)obj).shape.onRollOver.Add(onLinkRollOver);
+            ((HtmlLink)obj).shape.onRollOut.Add(onLinkRollOut);
+        }
+    }
 
-	//你可以在RollOver和RollOut的处理里调用GRoot.inst.ShowPopup、GRoot.inst.ShowTooltips或者其他处理。
+    //你可以在RollOver和RollOut的处理里调用GRoot.inst.ShowPopup、GRoot.inst.ShowTooltips或者其他处理。
 ```
 
 你也可以扩展实现自己的IHtmlObject。你需要自己实现一个IHtmlPageContext接口，然后赋值给RichTextField的htmlPageContext属性。详细可阅读源码。

@@ -209,7 +209,7 @@
 	            
 	                
 	                <li>
-	                    <a href="/guide/editor/popup.html" class="sidebar-link">Popup管理</a>
+	                    <a href="/guide/editor/popup.html" class="sidebar-link">Popup</a>
 	                </li>
 	            
 	                
@@ -259,7 +259,7 @@
 	                
 	                
 	                <li>
-	                    <a href="/guide/unity/insert3d.html" class="sidebar-link">穿插3D对象</a>
+	                    <a href="/guide/unity/insert3d.html" class="sidebar-link">穿插3D对象和Canvas</a>
 	                </li>
 	            
 	                
@@ -333,7 +333,7 @@
     
     <p>Unity平台参考了Flash的事件机制，设计了自己独特的事件机制。<code>EventDispatcher</code>是事件分发的中心，GObject就是一个EventDispatcher。每个事件类型都对应一个<code>EventListener</code>，接收事件并调用处理函数。</p>
 <p>例如，编写某个元件单击的处理逻辑：</p>
-<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line">aObject.onClick.Add(aCallback);</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">aCallback</span>(<span class="params"></span>)</span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">	<span class="comment">//some logic</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line">aObject.onClick.Add(aCallback);</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">aCallback</span>(<span class="params"></span>)</span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">    <span class="comment">//some logic</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h2 id="冒泡和捕获"><a href="#冒泡和捕获" class="headerlink" title="冒泡和捕获"></a>冒泡和捕获</h2><p>一些特殊的事件，比如鼠标/触摸事件，具备向父组件传递的特性，这个传递过程叫做冒泡。例如当手指接触A元件时，A元件触发TouchBegin事件，然后A元件的父组件B触发TouchBegin事件，然后B的父组件C也触发TouchBegin事件，以此类推，直到舞台根部。这个设计保证了所有相关的显示对象都有机会处理触摸事件，而不只是最顶端的显示对象。</p>
 <p>冒泡过程可以被打断，通过调用EventContext.StopPropagation()可以使冒泡停止向父组件推进。</p>
 <p>从上面的冒泡过程可以看出，事件处理的顺序应该是：A’s listeners-&gt;B’s listeners-&gt;C’s listeners，这里还有一种机制可以让链路上任意一个对象可以提前处理事件，这就是事件捕获。事件捕获是反向的，例如在上面的例子中，就是C先捕获事件，然后是B，再到A。所以所有事件处理的完整顺序应该是：</p>
@@ -350,7 +350,7 @@
 <figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line">a.onClick.Add(()=&gt;&#123; ... &#125;);</div></pre></td></tr></table></figure>
 </li>
 <li><p>将变量放到显示对象的data属性里。例如:</p>
-<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line">a.data = ...;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">aCallback</span>(<span class="params">EventContext context</span>)</span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">	Debug.Log(context.sender.data)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line">a.data = ...;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">aCallback</span>(<span class="params">EventContext context</span>)</span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">    Debug.Log(context.sender.data)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 </li>
 </ol>
 <h2 id="EventListener"><a href="#EventListener" class="headerlink" title="EventListener"></a>EventListener</h2><ul>

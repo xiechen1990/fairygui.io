@@ -134,7 +134,7 @@ order: 130
     UIConfig.buttonSound = "ui://包名/声音名";
 
     //全局音量    
-	UIConfig.buttonSoundVolumeScale = 1f;
+    UIConfig.buttonSoundVolumeScale = 1f;
 ```
 
 单选和多选按钮状态改变时有通知事件：

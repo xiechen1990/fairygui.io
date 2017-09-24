@@ -209,7 +209,7 @@
 	            
 	                
 	                <li>
-	                    <a href="/guide/editor/popup.html" class="sidebar-link">Popup管理</a>
+	                    <a href="/guide/editor/popup.html" class="sidebar-link">Popup</a>
 	                </li>
 	            
 	                
@@ -259,7 +259,7 @@
 	                
 	                
 	                <li>
-	                    <a href="/guide/unity/insert3d.html" class="sidebar-link">穿插3D对象</a>
+	                    <a href="/guide/unity/insert3d.html" class="sidebar-link">穿插3D对象和Canvas</a>
 	                </li>
 	            
 	                
@@ -350,11 +350,13 @@
 <figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"> <span class="comment">/**</span></div><div class="line"><span class="comment">  * 创建游戏场景</span></div><div class="line"><span class="comment">  * Create a game scene</span></div><div class="line"><span class="comment">  */</span></div><div class="line"> <span class="function"><span class="keyword">private</span> <span class="title">createGameScene</span>(<span class="params"></span>):<span class="keyword">void</span> </span>&#123;</div><div class="line">     fairygui.UIPackage.addPackage(<span class="string">"basic"</span>);</div><div class="line">     </div><div class="line">     fairygui.UIConfig.defaultFont = <span class="string">"宋体"</span>;</div><div class="line">     fairygui.UIConfig.verticalScrollBar = fairygui.UIPackage.getItemURL(<span class="string">"Basic"</span>, <span class="string">"ScrollBar_VT"</span>);</div><div class="line">     fairygui.UIConfig.horizontalScrollBar = fairygui.UIPackage.getItemURL(<span class="string">"Basic"</span>, <span class="string">"ScrollBar_HZ"</span>);</div><div class="line">     fairygui.UIConfig.popupMenu = fairygui.UIPackage.getItemURL(<span class="string">"Basic"</span>, <span class="string">"PopupMenu"</span>);</div><div class="line">     fairygui.UIConfig.buttonSound = fairygui.UIPackage.getItemURL(<span class="string">"Basic"</span>,<span class="string">"click"</span>);</div><div class="line">     </div><div class="line">     <span class="keyword">this</span>.stage.addChild(fairygui.GRoot.inst.displayObject);</div><div class="line"></div><div class="line">     <span class="keyword">this</span>.mainPanel = <span class="keyword">new</span> MainPanel();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 </li>
 </ol>
+<p>如果出现“fairygui not defined”的错误，请再一次检查index.html里是否有fairygui.js的引用。</p>
 <h2 id="Egret-5-x"><a href="#Egret-5-x" class="headerlink" title="Egret 5.x"></a>Egret 5.x</h2><p>步骤与4.x的基本一样，不过需要额外的两个操作：</p>
 <ol>
 <li>复制一份rawinflate.min.js，并改名为rawinflate.js。</li>
 <li><p>在egretProperties.json文件中添加:</p>
-<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line">&#123;  </div><div class="line">    <span class="string">"name"</span>: <span class="string">"rawinflate"</span>,  </div><div class="line">    <span class="string">"path"</span>: <span class="string">"./libs/rawinflate"</span>  </div><div class="line">&#125;,  </div><div class="line">&#123;  </div><div class="line">    <span class="string">"name"</span>: <span class="string">"fairygui"</span>,  </div><div class="line">    <span class="string">"path"</span>: <span class="string">"./libs/fairygui"</span>  </div><div class="line">&#125;</div></pre></td></tr></table></figure></li>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line">&#123;  </div><div class="line">    <span class="string">"name"</span>: <span class="string">"rawinflate"</span>,  </div><div class="line">    <span class="string">"path"</span>: <span class="string">"./libs/rawinflate"</span>  </div><div class="line">&#125;,  </div><div class="line">&#123;  </div><div class="line">    <span class="string">"name"</span>: <span class="string">"fairygui"</span>,  </div><div class="line">    <span class="string">"path"</span>: <span class="string">"./libs/fairygui"</span>  </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
 </ol>
 
     

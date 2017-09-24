@@ -209,7 +209,7 @@
 	            
 	                
 	                <li>
-	                    <a href="/guide/editor/popup.html" class="sidebar-link">Popup管理</a>
+	                    <a href="/guide/editor/popup.html" class="sidebar-link">Popup</a>
 	                </li>
 	            
 	                
@@ -259,7 +259,7 @@
 	                
 	                
 	                <li>
-	                    <a href="/guide/unity/insert3d.html" class="sidebar-link">穿插3D对象</a>
+	                    <a href="/guide/unity/insert3d.html" class="sidebar-link">穿插3D对象和Canvas</a>
 	                </li>
 	            
 	                
@@ -444,7 +444,7 @@
 <p>如果要访问HTML中的对象，可以使用以下的方式：</p>
 <figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="comment">//当前文本中具有的HTML元素数量</span></div><div class="line"><span class="keyword">int</span> cnt = aRichTextField.richTextField.htmlElementCount;</div><div class="line"></div><div class="line"><span class="comment">//获得指定索引的HTML元素，0=&lt;index&lt;cnt</span></div><div class="line">HtmlElement element = aRichTextField.richTextField.GetHtmlElementAt(index);</div><div class="line"></div><div class="line"><span class="comment">//获得指定名称的HTML元素。名称由HTML元素里的name属性指定。</span></div><div class="line">element = aRichTextField.richTextField.GetHtmlElement(elementName);</div><div class="line"></div><div class="line"><span class="comment">//获得HTML元素对应的HTML对象。HTML对象的类型有HtmlImage、HtmlLink、HtmlInput等。</span></div><div class="line">IHtmlObject htmlObject = (IHtmlObject)element.htmlObject;</div><div class="line"><span class="keyword">if</span>(element.type==HtmlElementType.Image)</div><div class="line">&#123;</div><div class="line">    HtmlImage image = (HtmlImage)htmlObject;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>又例如，如果要制作鼠标移到链接上显示信息的效果：</p>
-<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">int</span> cnt = richText.htmlObjectCount;</div><div class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;cnt;i++) </div><div class="line">&#123;</div><div class="line">	IHtmlObject obj = richText.GetHtmlObjectAt(i);</div><div class="line">	<span class="keyword">if</span>(obj <span class="keyword">is</span> HtmlLink) </div><div class="line">	&#123;</div><div class="line">		((HtmlLink)obj).shape.onRollOver.Add(onLinkRollOver);</div><div class="line">		((HtmlLink)obj).shape.onRollOut.Add(onLinkRollOut);</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//你可以在RollOver和RollOut的处理里调用GRoot.inst.ShowPopup、GRoot.inst.ShowTooltips或者其他处理。</span></div></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="keyword">int</span> cnt = richText.htmlObjectCount;</div><div class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;cnt;i++) </div><div class="line">&#123;</div><div class="line">    IHtmlObject obj = richText.GetHtmlObjectAt(i);</div><div class="line">    <span class="keyword">if</span>(obj <span class="keyword">is</span> HtmlLink) </div><div class="line">    &#123;</div><div class="line">        ((HtmlLink)obj).shape.onRollOver.Add(onLinkRollOver);</div><div class="line">        ((HtmlLink)obj).shape.onRollOut.Add(onLinkRollOut);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//你可以在RollOver和RollOut的处理里调用GRoot.inst.ShowPopup、GRoot.inst.ShowTooltips或者其他处理。</span></div></pre></td></tr></table></figure>
 <p>你也可以扩展实现自己的IHtmlObject。你需要自己实现一个IHtmlPageContext接口，然后赋值给RichTextField的htmlPageContext属性。详细可阅读源码。</p>
 
     

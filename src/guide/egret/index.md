@@ -48,6 +48,8 @@ order: 0
    }
   ```
 
+如果出现“fairygui not defined”的错误，请再一次检查index.html里是否有fairygui.js的引用。
+
 ## Egret 5.x
 
 步骤与4.x的基本一样，不过需要额外的两个操作：
@@ -56,12 +58,12 @@ order: 0
 2. 在egretProperties.json文件中添加:
 
   ```csharp
-	{  
-	    "name": "rawinflate",  
-	    "path": "./libs/rawinflate"  
-	},  
-	{  
-	    "name": "fairygui",  
-	    "path": "./libs/fairygui"  
-	}
+    {  
+        "name": "rawinflate",  
+        "path": "./libs/rawinflate"  
+    },  
+    {  
+        "name": "fairygui",  
+        "path": "./libs/fairygui"  
+    }
   ```

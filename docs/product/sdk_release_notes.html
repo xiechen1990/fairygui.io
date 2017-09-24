@@ -1,0 +1,153 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    
+        <title>FairyGUI - SDK更新日志</title>
+    
+        <meta charset="utf-8">
+        <meta name="description" content="FairyGUI是一款超强的UI编辑器，及跨平台开源UI解决方案，制作效率直接提升 50%！，支持Unity, Cocos2dx, Starling, Egret, LayaAir, Haxe, Pixi, LibGDX等引擎">
+        <meta name="keywords" content="FairyGUI,FGUI,UI编辑器,H5编辑器,GUI,Unity GUI,LayaAir GUI,Flash GUI,Egret GUI,Pixi GUI,LibGDX GUI,Cocos2dx GUI">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+        <meta property="og:type" content="article">
+        <meta property="og:title" content="-SDK更新日志FairyGUI">
+        <meta property="og:description" content="FairyGUI是一款超强的UI编辑器，及跨平台开源UI解决方案，制作效率直接提升 50%！，支持Unity, Cocos2dx, Starling, Egret, LayaAir, Haxe, Pixi, LibGDX等引擎">
+
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:title" content="SDK更新日志 — FairyGUI">
+        <meta name="twitter:description" content="FairyGUI是一款超强的UI编辑器，及跨平台开源UI解决方案，制作效率直接提升 50%！，支持Unity, Cocos2dx, Starling, Egret, LayaAir, Haxe, Pixi, LibGDX等引擎">
+
+
+        <link href='//fonts.proxy.ustclug.org/css?family=Source+Sans+Pro:300,400,600|Roboto Mono' rel='stylesheet' type='text/css'>
+
+        <!-- main page styles -->
+        <link rel="stylesheet" href="/css/page.css">
+
+        <!-- this needs to be loaded before guide's inline scripts -->
+        <script src="/js/vue.min.js"></script>
+        <script>window.PAGE_TYPE = "product"</script>
+    </head>
+    <body class="docs">        <div id="mobile-bar"  data-bg-text="FairyGUI" >
+            <a class="menu-button"></a>
+            <a class="logo" href="https://github.com/fairygui/FairyGUI-unity"></a>
+        </div>
+        <div id="bg"> <!--end tag in the `index.ejs`-->
+
+<div id="header">
+  <a id="logo" href="https://github.com/fairygui/">
+    <img src="/images/github-white.png">
+  </a>
+  <ul id="nav">
+    
+
+	<li><a href="/" class="nav-link">首页</a></li>
+
+<li><a href="/product/" class="nav-link current">产品</a></li>
+<li><a href="/guide/" class="nav-link">教程</a></li>
+<li><a href="http://www.fairygui.com/api/" target="_blank"  class="nav-link">API</a></li>
+<li><a href="/examples/" class="nav-link">在线例子</a></li>
+<li><a href="/showcase/" class="nav-link">商业案例</a></li>
+<li><a href="http://ask.fairygui.com/" target="_blank" class="nav-link">问答社区</a></li>
+<li><a href="/about/" class="nav-link">关于</a></li>
+<li><a class="nav-link">中文</a> / <a href="http://en.fairygui.com/" target="_self"  class="nav-link">English</a></li>
+  </ul>
+</div>
+
+        
+            <div id="main" class="fix-sidebar">
+                
+                    
+    <div class="sidebar">
+    <ul class="main-menu">
+        
+
+	<li><a href="/" class="nav-link">首页</a></li>
+
+<li><a href="/product/" class="nav-link current">产品</a></li>
+<li><a href="/guide/" class="nav-link">教程</a></li>
+<li><a href="http://www.fairygui.com/api/" target="_blank"  class="nav-link">API</a></li>
+<li><a href="/examples/" class="nav-link">在线例子</a></li>
+<li><a href="/showcase/" class="nav-link">商业案例</a></li>
+<li><a href="http://ask.fairygui.com/" target="_blank" class="nav-link">问答社区</a></li>
+<li><a href="/about/" class="nav-link">关于</a></li>
+<li><a class="nav-link">中文</a> / <a href="http://en.fairygui.com/" target="_self"  class="nav-link">English</a></li>
+    </ul>
+    <div class="list">
+		<a class="become-backer" href="/about/donate.html">
+            打赏
+        </a>
+        <h2>
+            Product
+            <!--<select class="version-select">
+                <option value="SELF" selected></option>
+            </select>-->
+ 		
+        </h2>
+        <ul class="menu-root">
+            
+
+	            
+	                
+	                <li>
+	                    <a href="/product/index.html" class="sidebar-link">产品</a>
+	                </li>
+	            
+	                
+	                <li>
+	                    <a href="/product/release_notes.html" class="sidebar-link">发行日志</a>
+	                </li>
+	            
+	                
+	                <li>
+	                    <a href="/product/sdk_release_notes.html" class="sidebar-link current">SDK更新日志</a>
+	                </li>
+	            
+
+            
+        </ul>
+    </div>
+</div>
+
+
+<div class="content product with-sidebar ">
+    
+      <h1>SDK更新日志</h1>
+    
+    <h2 id="2017-9-24"><a href="#2017-9-24" class="headerlink" title="2017/9/24"></a>2017/9/24</h2><ol>
+<li>[All] 修正了虚拟列表滚动后丢失ITEM选中状态的问题。</li>
+<li>[All] 修正了滚动容器的一个bug，对于设置了贴近ITEM的滚动容器，当滚动时，如果点击停止，停止后没有回到贴近ITEM的正确位置。</li>
+<li>[Flash/Starling/Egret] 增加了MovieClip的平滑设置支持。</li>
+<li>[Egret] 修正了富文本点击链接触发两次的问题。</li>
+<li>[Unity] Unity发布了1.9.0版本。</li>
+<li>[Unity] 移动平台现在也支持RollOver和RollOut事件了。</li>
+<li>[Unity] GoWrapper现在可以包装UGUI的Canvas，实现FairyGUI中嵌入UGUI的需求。<a href="../guide/unity/insert3d.html#插入Canvas">使用方法</a></li>
+<li>[Unity] 如果手势是全屏的，也就是没有具体对象的，现在可以直接建立在GRoot上。<a href="../guide/unity/input.html#手势">使用方法</a></li>
+<li>[Unity] 修正了部分输入法，以及在Mac下无法输入中文的bug。</li>
+<li>[Unity] 修正了字体贴图重建时，没有销毁材质，可能造成内存泄漏的bug。</li>
+<li>[Unity] GoWapper增加了对sharedMaterial是否为空的判断。</li>
+<li>[Unity] 如果使用源码版本，不再为移动平台屏蔽OnGUI函数，这会造成不响应按键事件。</li>
+<li>[Unity] Stage.touchScreen不再只读，现在可以手工改变。</li>
+<li>[Unity] 对于设置为使用Raycast进行点击测试的UIPanel，现在你可以使用HitTestContext.layerMask排除掉一些不关心的层。</li>
+</ol>
+
+    
+    <div class="footer">
+      发现错误或想贡献文档?
+      <a href="https://github.com/fairygui/fairygui.github.io/tree/master/src/product/sdk_release_notes.md" target="_blank">
+        在 Github 上编辑此文档!
+      </a>
+    </div>
+</div>
+
+                
+            </div>
+            <script src="/js/smooth-scroll.min.js"></script>
+        
+
+        <!-- main custom script for sidebars, version selects etc. -->        
+        <script src="/js/css.escape.js"></script>
+        <script src="/js/common.js"></script>
+    </body>
+</html>

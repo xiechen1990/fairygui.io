@@ -184,6 +184,16 @@ FairyGUI在C#里可以使用UIObjectFactory.SetPackageItemExtension进行自定�
     myButton2.myProp = 'world'
 ```
 
+## SLua
+
+上面ToLua的经验也很多适应的，请先参阅。
+网络参考资料：[Unity SLua+FairyGUI](http://blog.csdn.net/LMLBY/article/details/61915381)
+
+欢迎补充。
+
 ## XLua
 
-等候补充。。。
+上面ToLua的经验也很多适应的，请先参阅。
+网络参考资料：[FairyGUI导出XLua接口](http://blog.csdn.net/mingtingjian/article/details/62046909)
+
+欢迎补充。

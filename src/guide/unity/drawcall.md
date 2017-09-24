@@ -33,7 +33,7 @@ FairyGUI的深度调整技术可以优化这种情况。观察一下，其实四
 FairyGUI提供了一个开关控制组件是否启用深度调整，它就是`fairyBatching`，例如
 
 ```csharp
-	aComponent.fairyBatching = true;
+    aComponent.fairyBatching = true;
 ```
 
 如果某个组件设置了fairyBatching，那么无需在子组件和孙子组件再启用fairyBatching。一般只在顶层组件打开这个功能，例如主界面，加载界面等。注意，Window这个类已经自动打开了fairyBatching，这符合我们的使用习惯，因为一般我们都是以窗口为单位安排功能的。如果界面不复杂，Draw Call本来就不高的情况下，开发者也可以忽略这个功能，从10个DC优化到8个DC并没有什么意义。
@@ -41,7 +41,7 @@ FairyGUI提供了一个开关控制组件是否启用深度调整，它就是`fa
 对于打开了fairyBatching的组件，当开发者动态改变子元件或者孙子元件的位置或大小时，并不会自动触发深度调整，例如一个图片原来显示在一个窗口里的顶层，你用Tween将它从原来的位置移到另外一个位置，这个图片就有可能被窗口里的其他元素遮挡。这时开发者可以手动触发深度调整，例如
 
 ```csharp
-	aObject.InvalidateBatchingState();
+    aObject.InvalidateBatchingState();
 ```
 
 这个API并不需要由开启了fairyBatching的组件调用，它可以用任何一个内含的元件发起。
@@ -49,7 +49,7 @@ FairyGUI提供了一个开关控制组件是否启用深度调整，它就是`fa
 对于UI动效（Transitions），FairyGUI会在动效结束后自动调用这个API。如果动效过程中有对组件的大小或者位置进行改变，并且观察到组件的渲染顺序不正确，首先可以尝试调整动效的设计，避免出现组件之间重叠状态的改变，如果确实无法避免，那么还可以强制动效每帧都执行深度调整，例如：
 
 ```csharp
-	aTransition.invalidateBatchingEveryFrame = true;
+    aTransition.invalidateBatchingEveryFrame = true;
 ```
 
 下载并运行Demo，可以观察fairyBatching的实际效果。例如这个Demo的首页：

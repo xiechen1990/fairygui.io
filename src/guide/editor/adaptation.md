@@ -20,7 +20,7 @@ FairyGUI为手游开发提供了自动适应各种设备分辨率的UI适配策�
 设置全局缩放的方式是：
 
 ```csharp
-	GRoot.inst.SetContentScaleFactor(1136，640，ScreenMatchMode.MatchWidthOrHeight);
+    GRoot.inst.SetContentScaleFactor(1136，640，ScreenMatchMode.MatchWidthOrHeight);
 ```
 
 这里1136和640是设计分辨率的宽度和高度。ScreenMatchMode定义了适配模式，可用的常量有：
@@ -42,15 +42,15 @@ FairyGUI为手游开发提供了自动适应各种设备分辨率的UI适配策�
 全局缩放后，大部分UI都不需要做任何调整，只有一个例外，就是设计为全屏的界面。在上例中，在设计分辨率下，全屏界面的大小是960x640，我们也是按这个大小设计全屏组件的。全局缩放后，这时逻辑屏幕的大小变成1138x640了，那大小就不一致了。这是我们需要重新调整组件大小使之满屏，即
 
 ```csharp
-	//设置组件全屏，即大小和逻辑屏幕大小一致。
-	//组件的内部应该做好关联处理， 以应对大小改变。
-	aComponent.SetSize(GRoot.inst.width, GRoot.inst.height);
+    //设置组件全屏，即大小和逻辑屏幕大小一致。
+    //组件的内部应该做好关联处理， 以应对大小改变。
+    aComponent.SetSize(GRoot.inst.width, GRoot.inst.height);
 ```
 
 当然，这仅仅是处理全屏界面的一种方式。在有的情况下，例如如果选用“MatchHeight”模式，也就是高度优先的适配方法，这种方法保证了UI界面垂直方向的内容总是铺满，而水平方向就有可能超出屏幕。这时可以将全屏界面居中，牺牲掉两边的内容：
 
 ```csharp
-	aComponent.x = (GRoot.inst.width – aComponent.width)/2;
+    aComponent.x = (GRoot.inst.width – aComponent.width)/2;
 ```
 
 这样，左边缘和右边缘将会被屏幕边缘裁剪掉，这要求设计师在设计时就考虑到这种情况。

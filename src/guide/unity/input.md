@@ -6,7 +6,7 @@ order: 30
 
 ## 鼠标/触摸输入
 
-FairyGUI使用内置的机制进行鼠标和触摸事件的处理，不使用射线。如果要使用射线，可以将UIPanel的“HitTest Mode”设置为“Raycast”。
+FairyGUI使用内置的机制进行鼠标和触摸事件的处理，不使用射线。如果确实要使用射线，可以将UIPanel的“HitTest Mode”设置为“Raycast”。
 
 如果要区分点击UI还是点击场景里的对象，可以使用下面的方法：
 
@@ -24,7 +24,7 @@ FairyGUI使用内置的机制进行鼠标和触摸事件的处理，不使用射
 在任何事件回调中都可以获得当前鼠标或手指位置，以及点击的对象，例如：
 
 ```csharp
-    void EventHandler(EventContext context)
+    void AnyEventHandler(EventContext context)
     {
         Debug.Log(context.inputEvent.x + ", " + context.inputEvent.y);
 
@@ -70,8 +70,8 @@ VR里输入一般使用凝视输入，或者手柄输入，针对这些新的输
 首先，需要把这些外部输入传入FairyGUI。在Stage类里提供了这些API：
 
 ```csharp
-	public void SetCustomInput(ref RaycastHit hit, bool buttonDown);
-	public void SetCustomInput(ref RaycastHit hit, bool buttonDown, bool buttonUp);
+    public void SetCustomInput(ref RaycastHit hit, bool buttonDown);
+    public void SetCustomInput(ref RaycastHit hit, bool buttonDown, bool buttonUp);
 ```
 
 - `hit` 没有手柄的，这里传入眼睛的射线（其实就是摄像机的射线）击中的目标；有手柄的，传入手柄射线击中的目标。
@@ -99,14 +99,13 @@ SetCustomInput可以放在Update里调用，而且必须**每帧调用**。如�
 
 在手机上是通过原生的键盘输入。键盘弹出时，派发GTextInput.onFocusIn事件，键盘收回时，派发GTextInput.onFocusOut事件。
 
-Unity在键盘输入时自带了一个额外的输入框，如果你不需要这个输入框，希望像微信那样弹出自己的输入框，你需要自行编写原生支持，FairyGUI这边提供的支持有：
+Unity在键盘输入时自带了一个额外的输入框，如果你不需要这个输入框，希望像微信那样弹出自己的输入框，你需要自行编写原生代码，FairyGUI这边提供的支持有：
 
 ```csharp
-    //取消Unity弹出原生的键盘的行为
-    Stage.keyboardInput = false;
+    //定义自己的键盘
+    KeyBoard yourKeyboard;
 
-    //插入字符到光标位置
-    Stage.inst.InputString("xxx");
+    Stage.inst.keyboard = yourKeyboard;
 ```
 
 **复制粘贴问题**
@@ -118,10 +117,11 @@ Unity在键盘输入时自带了一个额外的输入框，如果你不需要这
 FairyGUI提供了手势的支持。使用手势的方式是：
 
 ```csharp
-    //targetObject是接收手势的元件，注意一定要是可触摸的。图片是不可触摸的。一般建议用组件。
     LongPressGesture gesture = new LongPressGesture(targetObject);
     gesture.onAction.Add(OnGestureAction);
 ```
+
+targetObject是接收手势的元件，注意一定要是可触摸的。图片是不可触摸的，一般建议用组件，或者图形（图形透明度可以设置为0）。如果你需要全屏幕监测手势，那么可以直接用GRoot.inst作为targetObject（需1.9.0 SDK或更高版本支持）
 
 常用的手势有：
 

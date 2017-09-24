@@ -2,317 +2,324 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://www.fairygui.com/examples/index.html</loc>
+    <loc>http://www.fairygui.com/guide/unity/lua.html</loc>
     
-    <lastmod>2017-09-11T08:41:00.102Z</lastmod>
+    <lastmod>2017-09-24T13:33:45.467Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://www.fairygui.com/product/index.html</loc>
     
-    <lastmod>2017-09-11T08:39:22.490Z</lastmod>
+    <lastmod>2017-09-24T13:31:35.014Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.fairygui.com/about/index.html</loc>
+    <loc>http://www.fairygui.com/product/sdk_release_notes.html</loc>
     
-    <lastmod>2017-09-08T16:01:16.019Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.fairygui.com/guide/unity/special.html</loc>
-    
-    <lastmod>2017-09-07T02:14:52.474Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.fairygui.com/guide/haxe/index.html</loc>
-    
-    <lastmod>2017-09-07T02:02:03.949Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.fairygui.com/guide/unity/lua.html</loc>
-    
-    <lastmod>2017-09-07T02:01:09.539Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.fairygui.com/guide/editor/transition.html</loc>
-    
-    <lastmod>2017-09-07T02:00:25.247Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.fairygui.com/guide/editor/richtext.html</loc>
-    
-    <lastmod>2017-09-07T01:47:33.056Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.fairygui.com/guide/editor/index.html</loc>
-    
-    <lastmod>2017-08-22T02:07:42.111Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.fairygui.com/guide/editor/adaptation.html</loc>
-    
-    <lastmod>2017-08-22T01:31:47.499Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.fairygui.com/guide/unity/input.html</loc>
-    
-    <lastmod>2017-08-21T09:21:52.908Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.fairygui.com/about/donate.html</loc>
-    
-    <lastmod>2017-08-19T08:03:13.735Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.fairygui.com/guide/editor/object.html</loc>
-    
-    <lastmod>2017-08-19T07:51:19.330Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.fairygui.com/guide/editor/window.html</loc>
-    
-    <lastmod>2017-08-17T03:17:36.132Z</lastmod>
+    <lastmod>2017-09-24T13:31:16.484Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://www.fairygui.com/guide/unity/index.html</loc>
     
-    <lastmod>2017-08-17T02:37:45.116Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.fairygui.com/guide/editor/list.html</loc>
-    
-    <lastmod>2017-08-16T03:01:07.422Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.fairygui.com/guide/editor/image.html</loc>
-    
-    <lastmod>2017-08-16T02:16:28.163Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.fairygui.com/guide/editor/component.html</loc>
-    
-    <lastmod>2017-08-16T02:16:28.163Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.fairygui.com/guide/editor/movieclip.html</loc>
-    
-    <lastmod>2017-08-16T02:16:28.163Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.fairygui.com/product/release_notes.html</loc>
-    
-    <lastmod>2017-08-14T06:05:15.664Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.fairygui.com/guide/unity/uipainter.html</loc>
-    
-    <lastmod>2017-08-14T06:05:15.546Z</lastmod>
+    <lastmod>2017-09-24T13:29:42.713Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://www.fairygui.com/guide/unity/insert3d.html</loc>
     
-    <lastmod>2017-08-14T06:05:15.545Z</lastmod>
+    <lastmod>2017-09-24T13:15:32.176Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.fairygui.com/guide/unity/font.html</loc>
+    <loc>http://www.fairygui.com/product/release_notes.html</loc>
     
-    <lastmod>2017-08-14T06:05:15.543Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.fairygui.com/guide/unity/event.html</loc>
-    
-    <lastmod>2017-08-14T06:05:15.542Z</lastmod>
+    <lastmod>2017-09-24T12:55:33.276Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.fairygui.com/guide/unity/drawcall.html</loc>
+    <loc>http://www.fairygui.com/guide/unity/special.html</loc>
     
-    <lastmod>2017-08-14T06:05:15.541Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.fairygui.com/guide/unity/atlas.html</loc>
-    
-    <lastmod>2017-08-14T06:05:15.540Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.fairygui.com/guide/index.html</loc>
-    
-    <lastmod>2017-08-14T06:05:15.539Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.fairygui.com/guide/laya/index.html</loc>
-    
-    <lastmod>2017-08-14T06:05:15.539Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.fairygui.com/guide/egret/index.html</loc>
-    
-    <lastmod>2017-08-14T06:05:15.538Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.fairygui.com/guide/editor/text.html</loc>
-    
-    <lastmod>2017-08-14T06:05:15.536Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.fairygui.com/guide/editor/scrollbar.html</loc>
-    
-    <lastmod>2017-08-14T06:05:15.535Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.fairygui.com/guide/editor/slider.html</loc>
-    
-    <lastmod>2017-08-14T06:05:15.535Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.fairygui.com/guide/editor/relation.html</loc>
-    
-    <lastmod>2017-08-14T06:05:15.533Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.fairygui.com/guide/editor/progressbar.html</loc>
-    
-    <lastmod>2017-08-14T06:05:15.533Z</lastmod>
+    <lastmod>2017-09-24T08:19:21.126Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://www.fairygui.com/guide/editor/popup.html</loc>
     
-    <lastmod>2017-08-14T06:05:15.532Z</lastmod>
+    <lastmod>2017-09-24T03:04:31.604Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.fairygui.com/guide/editor/loader.html</loc>
+    <loc>http://www.fairygui.com/guide/editor/index.html</loc>
     
-    <lastmod>2017-08-14T06:05:15.531Z</lastmod>
+    <lastmod>2017-09-24T01:23:36.718Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.fairygui.com/guide/editor/label.html</loc>
+    <loc>http://www.fairygui.com/guide/editor/object.html</loc>
     
-    <lastmod>2017-08-14T06:05:15.529Z</lastmod>
+    <lastmod>2017-09-24T00:54:07.803Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.fairygui.com/guide/unity/input.html</loc>
+    
+    <lastmod>2017-09-24T00:51:18.010Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.fairygui.com/guide/unity/uipainter.html</loc>
+    
+    <lastmod>2017-09-24T00:47:23.821Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.fairygui.com/guide/unity/font.html</loc>
+    
+    <lastmod>2017-09-24T00:28:27.597Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.fairygui.com/guide/laya/index.html</loc>
+    
+    <lastmod>2017-09-24T00:28:07.766Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.fairygui.com/guide/editor/list.html</loc>
+    
+    <lastmod>2017-09-24T00:27:47.531Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.fairygui.com/guide/unity/event.html</loc>
+    
+    <lastmod>2017-09-24T00:26:39.452Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.fairygui.com/guide/unity/drawcall.html</loc>
+    
+    <lastmod>2017-09-24T00:25:58.358Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.fairygui.com/guide/egret/index.html</loc>
+    
+    <lastmod>2017-09-24T00:22:10.843Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.fairygui.com/guide/editor/window.html</loc>
+    
+    <lastmod>2017-09-24T00:21:33.380Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.fairygui.com/guide/editor/transition.html</loc>
+    
+    <lastmod>2017-09-24T00:21:11.792Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.fairygui.com/guide/editor/richtext.html</loc>
+    
+    <lastmod>2017-09-24T00:20:32.819Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.fairygui.com/guide/editor/image.html</loc>
+    
+    <lastmod>2017-09-24T00:17:55.162Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.fairygui.com/guide/editor/movieclip.html</loc>
+    
+    <lastmod>2017-09-24T00:17:42.366Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://www.fairygui.com/guide/editor/group.html</loc>
     
-    <lastmod>2017-08-14T06:05:15.527Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.fairygui.com/guide/editor/graph.html</loc>
-    
-    <lastmod>2017-08-14T06:05:15.526Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.fairygui.com/guide/editor/controller.html</loc>
-    
-    <lastmod>2017-08-14T06:05:15.525Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.fairygui.com/guide/editor/combobox.html</loc>
-    
-    <lastmod>2017-08-14T06:05:15.524Z</lastmod>
+    <lastmod>2017-09-24T00:14:10.532Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://www.fairygui.com/guide/editor/button.html</loc>
     
-    <lastmod>2017-08-14T06:05:15.523Z</lastmod>
+    <lastmod>2017-09-24T00:13:54.973Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.fairygui.com/showcase/index.html</loc>
+    <loc>http://www.fairygui.com/guide/editor/adaptation.html</loc>
     
-    <lastmod>2017-05-04T04:29:08.957Z</lastmod>
+    <lastmod>2017-09-24T00:13:35.194Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.fairygui.com/examples/index.html</loc>
+    
+    <lastmod>2017-09-11T11:58:28.518Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://www.fairygui.com/index.html</loc>
     
-    <lastmod>2017-05-04T04:29:08.956Z</lastmod>
+    <lastmod>2017-09-08T22:58:28.095Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.fairygui.com/2017/05/04/index/</loc>
+    <loc>http://www.fairygui.com/showcase/index.html</loc>
     
-    <lastmod>2017-05-04T04:29:08.937Z</lastmod>
+    <lastmod>2017-09-08T22:58:28.095Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.fairygui.com/guide/editor/relation.html</loc>
+    
+    <lastmod>2017-09-08T22:58:27.894Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.fairygui.com/guide/editor/label.html</loc>
+    
+    <lastmod>2017-09-08T22:58:27.894Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.fairygui.com/guide/haxe/index.html</loc>
+    
+    <lastmod>2017-09-08T22:58:27.894Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.fairygui.com/guide/editor/slider.html</loc>
+    
+    <lastmod>2017-09-08T22:58:27.894Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.fairygui.com/guide/unity/atlas.html</loc>
+    
+    <lastmod>2017-09-08T22:58:27.894Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.fairygui.com/guide/editor/loader.html</loc>
+    
+    <lastmod>2017-09-08T22:58:27.894Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.fairygui.com/guide/editor/progressbar.html</loc>
+    
+    <lastmod>2017-09-08T22:58:27.894Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.fairygui.com/guide/editor/text.html</loc>
+    
+    <lastmod>2017-09-08T22:58:27.894Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.fairygui.com/guide/index.html</loc>
+    
+    <lastmod>2017-09-08T22:58:27.894Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.fairygui.com/guide/editor/scrollbar.html</loc>
+    
+    <lastmod>2017-09-08T22:58:27.894Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.fairygui.com/guide/editor/graph.html</loc>
+    
+    <lastmod>2017-09-08T22:58:27.893Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.fairygui.com/guide/editor/controller.html</loc>
+    
+    <lastmod>2017-09-08T22:58:27.892Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.fairygui.com/guide/editor/combobox.html</loc>
+    
+    <lastmod>2017-09-08T22:58:27.891Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.fairygui.com/guide/editor/component.html</loc>
+    
+    <lastmod>2017-09-08T22:58:27.891Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.fairygui.com/about/donate.html</loc>
+    
+    <lastmod>2017-09-08T22:58:27.872Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.fairygui.com/about/index.html</loc>
+    
+    <lastmod>2017-09-08T22:58:27.872Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.fairygui.com/2017/09/09/index/</loc>
+    
+    <lastmod>2017-09-08T22:58:27.872Z</lastmod>
     
   </url>
   

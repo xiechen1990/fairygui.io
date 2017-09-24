@@ -9,11 +9,11 @@ Unity平台参考了Flash的事件机制，设计了自己独特的事件机制�
 例如，编写某个元件单击的处理逻辑：
 
 ```csharp
-	aObject.onClick.Add(aCallback);
-	void aCallback()
-	{
-		//some logic
-	}
+    aObject.onClick.Add(aCallback);
+    void aCallback()
+    {
+        //some logic
+    }
 ```
 
 ## 冒泡和捕获
@@ -36,8 +36,8 @@ C’s capture listeners->B’s capture listeners->A’s capture listeners->A’s
 每个事件可以注册一个或多个回调函数。函数原型为：
 
 ```csharp
-	public delegate void EventCallback0();
-	public delegate void EventCallback1(EventContext context);
+    public delegate void EventCallback0();
+    public delegate void EventCallback1(EventContext context);
 ```
 
 两种形式的使用方法都是相同的，差别在于不带参数或带一个参数,只是为了方便在不需要用到EventContext时少写一点而已。
@@ -48,18 +48,18 @@ C’s capture listeners->B’s capture listeners->A’s capture listeners->A’s
 2. 使用lamba表达式，例如：
 
   ```csharp
-	a.onClick.Add(()=>{ ... });
+    a.onClick.Add(()=>{ ... });
   ```
 
 3. 将变量放到显示对象的data属性里。例如:
 
   ```csharp
-	a.data = ...;
+    a.data = ...;
 
-	void aCallback(EventContext context)
-	{
-		Debug.Log(context.sender.data)
-	}
+    void aCallback(EventContext context)
+    {
+        Debug.Log(context.sender.data)
+    }
   ```
 
 ## EventListener
