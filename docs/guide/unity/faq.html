@@ -3,7 +3,7 @@
 <html lang="en">
     <head>
     
-        <title>FairyGUI - 滑动条</title>
+        <title>FairyGUI - 常见问题</title>
     
         <meta charset="utf-8">
         <meta name="description" content="FairyGUI是一款超强的UI编辑器，及跨平台开源UI解决方案，制作效率直接提升 50%！，支持Unity, Cocos2dx, Starling, Egret, LayaAir, Haxe, Pixi, LibGDX等引擎">
@@ -12,11 +12,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
         <meta property="og:type" content="article">
-        <meta property="og:title" content="-滑动条FairyGUI">
+        <meta property="og:title" content="-常见问题FairyGUI">
         <meta property="og:description" content="FairyGUI是一款超强的UI编辑器，及跨平台开源UI解决方案，制作效率直接提升 50%！，支持Unity, Cocos2dx, Starling, Egret, LayaAir, Haxe, Pixi, LibGDX等引擎">
 
         <meta name="twitter:card" content="summary">
-        <meta name="twitter:title" content="滑动条 — FairyGUI">
+        <meta name="twitter:title" content="常见问题 — FairyGUI">
         <meta name="twitter:description" content="FairyGUI是一款超强的UI编辑器，及跨平台开源UI解决方案，制作效率直接提升 50%！，支持Unity, Cocos2dx, Starling, Egret, LayaAir, Haxe, Pixi, LibGDX等引擎">
 
 
@@ -27,7 +27,7 @@
 
         <!-- this needs to be loaded before guide's inline scripts -->
         <script src="/js/vue.min.js"></script>
-        <script>window.PAGE_TYPE = "guide_editor"</script>
+        <script>window.PAGE_TYPE = "guide_unity"</script>
     </head>
     <body class="docs">        <div id="mobile-bar"  data-bg-text="FairyGUI" >
             <a class="menu-button"></a>
@@ -81,7 +81,7 @@
         <h2>
             Guide
             <!--<select class="version-select">
-                <option value="SELF" selected>editor</option>
+                <option value="SELF" selected>unity</option>
             </select>-->
  		 
 		  <a style="
@@ -189,7 +189,7 @@
 	            
 	                
 	                <li>
-	                    <a href="/guide/editor/slider.html" class="sidebar-link current">滑动条</a>
+	                    <a href="/guide/editor/slider.html" class="sidebar-link">滑动条</a>
 	                </li>
 	            
 	                
@@ -289,7 +289,7 @@
 	                
 	                
 	                <li>
-	                    <a href="/guide/unity/faq.html" class="sidebar-link">常见问题</a>
+	                    <a href="/guide/unity/faq.html" class="sidebar-link current">常见问题</a>
 	                </li>
 	            
 
@@ -333,64 +333,34 @@
 </div>
 
 
-<div class="content guide_editor with-sidebar ">
+<div class="content guide_unity with-sidebar ">
     
-      <h1>滑动条</h1>
+      <h1>常见问题</h1>
     
-    <p>滑动条与进度条相似，不过滑动条增加了一个“把”按钮可以让玩家拖动它改变进度条的值。</p>
-<h2 id="创建滑动条"><a href="#创建滑动条" class="headerlink" title="创建滑动条"></a>创建滑动条</h2><p>可以通过两种方式创建滑动条组件。</p>
-<ul>
-<li>点击主菜单“资源”-&gt;“新建滑动条”，然后按照向导的提示一步步完成。</li>
-</ul>
-<p><img src="../../images/20170803191335.png" alt=""></p>
-<ul>
-<li>新建一个组件，然后在组件属性里选择扩展为“滑动条”。</li>
-</ul>
-<h2 id="设计属性"><a href="#设计属性" class="headerlink" title="设计属性"></a>设计属性</h2><p>在组件编辑状态下，滑动条组件的属性面板是：</p>
-<p><img src="../../images/20170803175045.png" alt=""></p>
-<ul>
-<li><p><code>标题类型</code> 如果组件内有名称为“title”的元件，则进度条可以显示一个表达当前进度的文字。</p>
-<ul>
-<li><code>百分比</code> 显示当前进度的百分比，例如“88%”。</li>
-<li><code>当前值/最大值</code> 例如“50/100”。</li>
-<li><code>当前值</code> 例如“50”。</li>
-<li><code>最大值</code> 例如“10000”。</li>
-</ul>
-</li>
-<li><p><code>反向</code> 对于横向的滑动条，一般来说，进度越大，伸缩条越向右延伸，如果是反向的，则伸缩条右边缘固定，进度越大，伸缩条越往左延伸。</p>
-</li>
-<li>对于纵向的滑动条，一般来说，进度越大，伸缩条越向下延伸，如果是反向的，则伸缩条底边缘固定，进度越大，伸缩条越往上延伸。</li>
-</ul>
-<p><strong>命名约定</strong></p>
-<ul>
-<li><code>bar</code> 当进度改变时，改变“bar”对象的宽度。一般用于横向的进度条。注意：一定要设置bar对象的宽度为进度条处于最大值时的宽度。</li>
-</ul>
-<p>“bar”元件可以是任何类型，不限制于图片。</p>
-<ul>
-<li><code>bar_v</code> 当进度改变时，改变“bar_v”对象的高度。一般用于纵向的进度条。注意：一定要设置bar_v对象的高度为进度条处于最大值时的高度。</li>
-</ul>
-<p>“bar_v”元件可以是任何类型，不限制于图片。</p>
-<ul>
-<li><p><code>grip</code> 用于拖动的按钮。注意：grip按钮应该与bar对象建立一个关联，并放置在进度条处于最大值时的位置。</p>
-</li>
-<li><p><code>title</code> 可以是装载器，也可以是标签、按钮。用于显示进度的标题。显示的内容由“标题类型”决定。</p>
-</li>
-</ul>
-<h2 id="实例属性"><a href="#实例属性" class="headerlink" title="实例属性"></a>实例属性</h2><p>在舞台上选中一个滑动条组件，右边的属性面板列表出现：</p>
-<p><img src="../../images/20170803175104.png" alt=""></p>
-<ul>
-<li><p><code>当前值</code> 当前进度。</p>
-</li>
-<li><p><code>最大值</code> 最大进度值。</p>
-</li>
-</ul>
-<h2 id="GSlider"><a href="#GSlider" class="headerlink" title="GSlider"></a>GSlider</h2><figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line">GSlider slider = gcom.GetChild(<span class="string">"n1"</span>).asSlider;</div><div class="line">slider.<span class="keyword">value</span> = <span class="number">50</span>;</div><div class="line"></div><div class="line"><span class="comment">//默认情况下除了拖动grip改变进度外，还可以直接点击滑动条任意位置改变进度。</span></div><div class="line"><span class="comment">//如果不需要，可以用下面的API关闭</span></div><div class="line">slider.changeOnClick = <span class="literal">false</span>;</div></pre></td></tr></table></figure>
-<p>滑动条进度改变时有通知事件：</p>
-<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="comment">//Unity</span></div><div class="line">slider.onChanged.Add(onChanged);</div><div class="line"></div><div class="line"><span class="comment">//AS3</span></div><div class="line">slider.addEventListener(StateChangeEvent.CHANGED, onChanged);</div><div class="line"></div><div class="line"><span class="comment">//Egret</span></div><div class="line">slider.addEventListener(StateChangeEvent.CHANGED, <span class="keyword">this</span>.onChanged, <span class="keyword">this</span>);</div><div class="line"></div><div class="line"><span class="comment">//Laya</span></div><div class="line">slider.<span class="keyword">on</span>(fairygui.Events.STATE_CHANGED, <span class="keyword">this</span>, <span class="keyword">this</span>.onChanged);</div></pre></td></tr></table></figure>
+    <h2 id="UI包加载失败"><a href="#UI包加载失败" class="headerlink" title="UI包加载失败"></a>UI包加载失败</h2><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">FairyGUI: invalid package &apos;XXXX&apos;, </div><div class="line">if the files is checked out from git, </div><div class="line">make sure to disable autocrlf option!</div></pre></td></tr></table></figure>
+<p>如果你使用的FairyGUI编辑器版本小于3.1.5，那么包描述文件的格式为纯文本，当这个文件从GIT上拉下来时，有可能由于GIT的自动转换换行符功能导致文件内容发生变化从而造成FairyGUI识别错误。解决办法是关闭GIT的自动转换换行符功能，然后再重新拉一次下来。</p>
+<p>如果你使用的FairyGUI编辑器版本大于等于3.1.5，那么包描述文件的格式已修改为二进制，不再受GIT的影响。仍然出现这个错误的原因是新的格式需要Unity SDK 1.8.3或以上版本支持。旧版本无法识别这个格式，就会报这个错误。解决办法是升级你的Unity SDK，升级你的Unity SDK，升级你的Unity SDK，重要事情说三遍。<br>如果暂时不想升级，可以修改xxx.fairy（你的项目描述文件），将里面的version=”3.1”改成version=”3”，这样编辑器就会使用旧的文本格式发布。</p>
+<p>除了上面这个错误，如果包仍然不能加载，检查包名和路径是否正确，特别要注意包只能放置在Resources目录或者它的子目录下，否则就只能打AB包。再看看是不是Unity的项目放置在了带中文名称的目录，这都有可能造成载入失败。</p>
+<h2 id="显示白屏"><a href="#显示白屏" class="headerlink" title="显示白屏"></a>显示白屏</h2><p>Unity5.5版本开始，纹理设置新增了<a href="http://ask.fairygui.com/?/question/1" target="_blank" rel="external">TextureShape</a>属性，把他设置为2d就可以了。 </p>
+<h2 id="字体渲染效果不对"><a href="#字体渲染效果不对" class="headerlink" title="字体渲染效果不对"></a>字体渲染效果不对</h2><p>如果你设置了字体后，觉得字体效果不对，可以用以下的方式排查：</p>
+<ol>
+<li>如果是只用了字体名称，没有使用ttf字体文件的，那么你需要再次确认你的操作系统（例如Windows）里是否有安装这种字体，字体名称是否正确。正确的系统字体名称可以在FairyGUI编辑器，选择任何一个文本，点字体属性旁边的A按钮看到。</li>
+<li>如果是用了ttf文件的，那么运行时在Project视图，点击ttf文件左边的箭头后，可以看到ttf文件下有Font Texture和Font Material。Font Texture里应该有你游戏中使用到的文字，并能看到渲染效果。如果能看到，说明这个字体在Unity中的渲染效果就是这样。</li>
+</ol>
+<p><img src="../../images/20170808230450.png" alt=""></p>
+<h2 id="层级显示错误"><a href="#层级显示错误" class="headerlink" title="层级显示错误"></a>层级显示错误</h2><p>如果你看到了层级错乱的情况出现，那多半是因为fairyBatching的影响。在<a href="drawcall.html">DrawCall优化</a>这篇教程里已经有提到，这里再说明一下。</p>
+<p>对于打开了fairyBatching的组件，当开发者自己调用SetPosition等API改变子元件或者孙子元件的位置、大小，旋转或缩放，并不会自动触发深度调整，例如一个图片原来显示在一个窗口里的顶层，你用Tween将它从原来的位置移到另外一个位置，这个图片就有可能被窗口里的其他元素遮挡。这时开发者需要手动触发深度调整，例如：</p>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line">aObject.InvalidateBatchingState();</div></pre></td></tr></table></figure>
+<p>这个API并不需要由开启了fairyBatching的组件调用，aObject可以是任何一个内含的元件。并且你可以在任何时间调用，每帧调用也可以，只要你确认是需要。它的消耗不算大，但也不能说没有。</p>
+<h2 id="Stage-LateUpdate函数CPU占用过高"><a href="#Stage-LateUpdate函数CPU占用过高" class="headerlink" title="Stage.LateUpdate函数CPU占用过高"></a>Stage.LateUpdate函数CPU占用过高</h2><p>Stage.LateUpdate不但包含了FairyGUI自身的消耗，而且因为他是发出事件的源头，所以也包含了事件处理逻辑的消耗 。所以进入Deep Profiler模式，展开Stage.LateUpdate，查看你的事件处理函数的消耗。FairyGUI自身的消耗是在Container.Update下，在非Deep Profiler模式下是很少的（Deep Profile下的数据只能看占比值，不能看绝对值）。</p>
+<h2 id="DrawCall过高"><a href="#DrawCall过高" class="headerlink" title="DrawCall过高"></a>DrawCall过高</h2><p>开启了FairyBatching后，仍然觉得DrawCall过高的话，可以使用Unity的工具Frame Debugger排查。可以看看是不是过多的使用了遮罩（溢出隐藏、滚动），或者元件之间不合理的重叠。另外大段文本、图片平铺、使用滤镜、BlendMode也会阻断DrawCall的合并。</p>
+<h2 id="Lua不能侦听事件"><a href="#Lua不能侦听事件" class="headerlink" title="Lua不能侦听事件"></a>Lua不能侦听事件</h2><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">LuaException: Delegate FairyGUI.EventCallback1 not register</div></pre></td></tr></table></figure>
+<p>如果你确认已经执行了Gen Delegates，那么唯一可能的原因就是DelegateFactory没有init，请检查第三方框架的问题。</p>
+
     
     <div class="footer">
       发现错误或想贡献文档?
-      <a href="https://github.com/fairygui/fairygui.github.io/tree/master/src/guide/editor/slider.md" target="_blank">
+      <a href="https://github.com/fairygui/fairygui.github.io/tree/master/src/guide/unity/faq.md" target="_blank">
         在 Github 上编辑此文档!
       </a>
     </div>

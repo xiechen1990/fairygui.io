@@ -45,20 +45,6 @@ Unity项目载入UI包有以下几种方式，开发者可以根据项目需要�
 
 **在使用AssetBundle的载入方案中，将由FairyGUI接管bundle并负责bundle资源的释放。**
 
-## 常见加载问题
-
-```
-FairyGUI: invalid package 'XXXX', 
-if the files is checked out from git, 
-make sure to disable autocrlf option!
-```
-
-如果你使用的FairyGUI编辑器版本小于3.1.5，那么包描述文件的格式为纯文本，当这个文件从GIT上拉下来时，有可能由于GIT的自动转换换行符功能导致文件内容发生变化从而造成FairyGUI识别错误。解决办法是关闭GIT的自动转换换行符功能，然后再重新拉一次下来。
-
-如果你使用的FairyGUI编辑器版本大于等于3.1.5，那么包描述文件的格式已修改为二进制，不再受GIT的影响。仍然出现这个错误的原因是新的格式需要Unity SDK 1.8.3或以上版本支持。旧版本无法识别这个格式，就会报这个错误。解决办法是升级你的Unity SDK。如果暂时不想升级，可以修改xxx.fairy（你的项目描述文件），将里面的version="3.1"改成version="3"，这样编辑器就会使用旧的文本格式发布。
-
-除了上面这个错误，如果包仍然不能加载，当然首先要检查包名和路径是否正确，特别要注意包放置路径的规律（仔细阅读上面的说明），然后看看是不是Unity的项目放置在了带中文名称的目录，这都有可能造成载入失败。
-
 ## UIPanel
 
 在Unity中使用编辑器制作的界面有两种方式，第一种是使用UIPanel。
@@ -198,6 +184,16 @@ UIPanel可以用来制作头顶血条。要注意的是：
     
     //3，加到其他组件里
     aComponnent.AddChild(view);
+```
+
+如果界面内容过多，创建时可能引起卡顿，FairyGUI提供了异步创建UI的方式，异步创建方式下，每帧消耗的CPU资源将受到控制，但创建时间也会比同步创建稍久一点。例如：
+
+```csharp
+    UIPackage.CreateObjectAsync("包名","组件名", MyCreateObjectCallback);
+
+    void MyCreateObjectCallback(GObject obj)
+    {
+    }
 ```
 
 动态创建的界面不会自动销毁，例如一个背包窗口，你并不需要在每次过场景都销毁。如果要销毁界面，需要手工调用Dispose方法，例如

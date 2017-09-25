@@ -25,6 +25,8 @@ FairyGUI使用Unity的动态字体技术渲染文字。只需以下几个简单�
   ```csharp
     UIConfig.defaultFont = "Droid Sans Fallback, LTHYSZK, Helvetica-Bold, Microsoft YaHei, SimHei";
   ```
+  
+  要注意，这里的字体必须是在系统环境中存在的字体，且名称一定要能被操作系统识别。
 
 ## 多种字体的处理
 

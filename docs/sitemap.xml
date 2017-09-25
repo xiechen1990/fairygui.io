@@ -2,9 +2,51 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.fairygui.com/guide/unity/faq.html</loc>
+    
+    <lastmod>2017-09-25T06:13:17.137Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.fairygui.com/showcase/index.html</loc>
     
-    <lastmod>2017-09-25T03:45:33.568Z</lastmod>
+    <lastmod>2017-09-25T06:07:07.376Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.fairygui.com/guide/unity/insert3d.html</loc>
+    
+    <lastmod>2017-09-25T06:01:39.994Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.fairygui.com/guide/unity/index.html</loc>
+    
+    <lastmod>2017-09-25T05:51:23.240Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.fairygui.com/guide/unity/drawcall.html</loc>
+    
+    <lastmod>2017-09-25T05:26:41.966Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.fairygui.com/guide/unity/font.html</loc>
+    
+    <lastmod>2017-09-25T05:18:56.693Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.fairygui.com/guide/editor/index.html</loc>
+    
+    <lastmod>2017-09-25T05:05:04.504Z</lastmod>
     
   </url>
   
@@ -51,13 +93,6 @@
   </url>
   
   <url>
-    <loc>http://www.fairygui.com/guide/unity/insert3d.html</loc>
-    
-    <lastmod>2017-09-25T01:45:58.227Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://www.fairygui.com/guide/unity/input.html</loc>
     
     <lastmod>2017-09-25T01:45:58.226Z</lastmod>
@@ -65,30 +100,9 @@
   </url>
   
   <url>
-    <loc>http://www.fairygui.com/guide/unity/index.html</loc>
-    
-    <lastmod>2017-09-25T01:45:58.225Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.fairygui.com/guide/unity/font.html</loc>
-    
-    <lastmod>2017-09-25T01:45:58.223Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://www.fairygui.com/guide/unity/event.html</loc>
     
     <lastmod>2017-09-25T01:45:58.222Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.fairygui.com/guide/unity/drawcall.html</loc>
-    
-    <lastmod>2017-09-25T01:45:58.221Z</lastmod>
     
   </url>
   
@@ -152,13 +166,6 @@
     <loc>http://www.fairygui.com/guide/editor/list.html</loc>
     
     <lastmod>2017-09-25T01:45:58.208Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.fairygui.com/guide/editor/index.html</loc>
-    
-    <lastmod>2017-09-25T01:45:58.207Z</lastmod>
     
   </url>
   
@@ -261,14 +268,14 @@
   </url>
   
   <url>
-    <loc>http://www.fairygui.com/guide/editor/progressbar.html</loc>
+    <loc>http://www.fairygui.com/guide/editor/relation.html</loc>
     
     <lastmod>2017-08-14T06:05:15.533Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.fairygui.com/guide/editor/relation.html</loc>
+    <loc>http://www.fairygui.com/guide/editor/progressbar.html</loc>
     
     <lastmod>2017-08-14T06:05:15.533Z</lastmod>
     
