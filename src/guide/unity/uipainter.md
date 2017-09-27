@@ -22,7 +22,7 @@ UIPainter和UIPanel的设置极为相似，设置好“Package Name”和“Comp
 
 材质那里要注意选择一个着色器，如果不需要特别的效果，那选择“FairyGUI/Image”就可以，如果需要光照等需求，也选择其他着色器。（如果没有材质，自己新建一个材质）。
 
-当曲面UI用于VR时，需要注意Stage Camera或者Capture Camera都**不可以**跟随眼睛移动，一般来说，使用高版本的FairyGUI SDK（如果使用的是dll版本，一定要注意和Unity的版本匹配），FairyGUI会自动设置好。如果注意显示问题，请检查一下相机的设置是否正确。
+当曲面UI用于VR时，需要注意Stage Camera或者Capture Camera都**不可以**跟随眼睛移动，一般来说，使用高版本的FairyGUI SDK（如果使用的是dll版本，一定要注意和Unity的版本匹配），FairyGUI会自动设置好。如果出现显示问题，请检查一下相机的设置是否正确。
 
 ## UIPainter
 
