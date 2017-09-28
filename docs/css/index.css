@@ -120,7 +120,7 @@ strong {
 }
 code,
 pre {
-  font-family: 'Roboto Mono', Monaco, courier, monospace;
+  font-family: 'Hiragino Sans GB', 'Segoe UI', 'Sans-serif', 'Microsoft Yahei', Arial, sans-serif;
   font-size: 0.8em;
   background-color: #f8f8f8;
   -webkit-font-smoothing: initial;
@@ -397,7 +397,7 @@ body.docs #mobile-bar::before {
   height: 16px;
   font-size: 9px;
   font-weight: bold;
-  font-family: 'Roboto Mono', Monaco, courier, monospace;
+  font-family: 'Hiragino Sans GB', 'Segoe UI', 'Sans-serif', 'Microsoft Yahei', Arial, sans-serif;
   padding: 1px 4px 0 6px;
   border-radius: 4px;
 }
