@@ -152,42 +152,49 @@ FairyGUI编辑器支持位图字体。首先，我们创建一种字体。点击
 
 ```csharp
     //Unity
-    aTextField.onChanged.Add(onChanged);
+    aTextInput.onChanged.Add(onChanged);
 
     //AS3
-    aTextField.addEventListener(Event.CHANGE, onChanged);
+    aTextInput.addEventListener(Event.CHANGE, onChanged);
 
     //Egret
-    aTextField.addEventListener(Event.CHANGE, this.onChanged, this);
+    aTextInput.addEventListener(Event.CHANGE, this.onChanged, this);
 
     //Laya
-    aTextField.on(laya.events.Event.INPUT, this, this.onChanged);
+    aTextInput.on(laya.events.Event.INPUT, this, this.onChanged);
 ```
 
 在获得焦点和失去焦点时有通知事件：
 
 ```csharp
     //Unity
-    aTextField.onFocusIn.Add(onFocusIn);
-    aTextField.onFocusOut.Add(onFocusOut);
+    aTextInput.onFocusIn.Add(onFocusIn);
+    aTextInput.onFocusOut.Add(onFocusOut);
 
     //AS3
-    aTextField.addEventListener(FocusEvent.FOCUS_IN, onFocusIn);
-    aTextField.addEventListener(FocusEvent.FOCUS_OUT, onFocusOut);
+    aTextInput.addEventListener(FocusEvent.FOCUS_IN, onFocusIn);
+    aTextInput.addEventListener(FocusEvent.FOCUS_OUT, onFocusOut);
 
     //Egret
-    aTextField.addEventListener(FocusEvent.FOCUS_IN, this.onFocusIn, this);
-    aTextField.addEventListener(FocusEvent.FOCUS_OUT, this.onFocusOut, this);
+    aTextInput.addEventListener(FocusEvent.FOCUS_IN, this.onFocusIn, this);
+    aTextInput.addEventListener(FocusEvent.FOCUS_OUT, this.onFocusOut, this);
 
     //Laya
-    aTextField.on(laya.events.Event.FOCUS, this, this.onFocusIn);
-    aTextField.on(laya.events.Event.BLUR, this, this.onFocusOut);
+    aTextInput.on(laya.events.Event.FOCUS, this, this.onFocusIn);
+    aTextInput.on(laya.events.Event.BLUR, this, this.onFocusOut);
 ```
 
-如果要主动设置输入文本焦点，可以用
+如果要主动设置焦点，可以用
 
 ```csharp
-    aTextField.RequestFocus();
+    aTextInput.RequestFocus();
+```
+
+如果输入文本设置了单行，则当按用户回车时会派发一个事件：
+
+```csharp
+    //Unity
+    aTextInput.onSubmit.Add(onSubmit);
 ```
 
 ## UBB语法

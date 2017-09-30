@@ -3,7 +3,7 @@
 <html lang="en">
     <head>
     
-        <title>FairyGUI - 图片</title>
+        <title>FairyGUI - Drag&Drop</title>
     
         <meta charset="utf-8">
         <meta name="description" content="FairyGUI是一款超强的UI编辑器，及跨平台开源UI解决方案，制作效率直接提升 50%！，支持Unity, Cocos2dx, Starling, Egret, LayaAir, Haxe, Pixi, LibGDX等引擎">
@@ -12,11 +12,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
         <meta property="og:type" content="article">
-        <meta property="og:title" content="-图片FairyGUI">
+        <meta property="og:title" content="-Drag&DropFairyGUI">
         <meta property="og:description" content="FairyGUI是一款超强的UI编辑器，及跨平台开源UI解决方案，制作效率直接提升 50%！，支持Unity, Cocos2dx, Starling, Egret, LayaAir, Haxe, Pixi, LibGDX等引擎">
 
         <meta name="twitter:card" content="summary">
-        <meta name="twitter:title" content="图片 — FairyGUI">
+        <meta name="twitter:title" content="Drag&Drop — FairyGUI">
         <meta name="twitter:description" content="FairyGUI是一款超强的UI编辑器，及跨平台开源UI解决方案，制作效率直接提升 50%！，支持Unity, Cocos2dx, Starling, Egret, LayaAir, Haxe, Pixi, LibGDX等引擎">
 
       <!--  <link href='//fonts.proxy.ustclug.org/css?family=Source+Sans+Pro:300,400,600|Roboto Mono' rel='stylesheet' type='text/css'> -->
@@ -118,7 +118,7 @@
 	            
 	                
 	                <li>
-	                    <a href="/guide/editor/image.html" class="sidebar-link current">图片</a>
+	                    <a href="/guide/editor/image.html" class="sidebar-link">图片</a>
 	                </li>
 	            
 	                
@@ -213,7 +213,7 @@
 	            
 	                
 	                <li>
-	                    <a href="/guide/editor/dragdrop.html" class="sidebar-link">Drag&Drop</a>
+	                    <a href="/guide/editor/dragdrop.html" class="sidebar-link current">Drag&Drop</a>
 	                </li>
 	            
 	                
@@ -339,80 +339,30 @@
 
 <div class="content guide_editor with-sidebar ">
     
-      <h1>图片</h1>
+      <h1>Drag&Drop</h1>
     
-    <p>图片是FairyGUI中最基础的元素，它的设计是尽量考虑到简洁而且高效的。因此，不提供修改图片源的功能，也不支持点击。如果需要动态更改，或者支持点击，请改用装载器。</p>
-<h2 id="图片属性"><a href="#图片属性" class="headerlink" title="图片属性"></a>图片属性</h2><p>在资源库中，或者舞台上，双击图片，进入图片属性设置对话框：</p>
-<p><img src="../../images/20170727152217.png" alt=""></p>
-<ul>
-<li><p><code>图像大小</code> 图片的尺寸，像素大小。</p>
-</li>
-<li><p><code>数据大小</code> 图片文件的大小，单位字节。如果出现有 xxx-&gt;xxx的字样，表示该图片被压缩过，前面数字是压缩前大小，后面的数字是压缩后大小。</p>
-</li>
-<li><p><code>使用九宫格进行缩放</code> 九宫格绘制会遵循下面的规则：<br>a. 保持4个角部分不变形<br>b. 单向拉伸4条边（即在4个角两两之间的边，比如上边，只做横向拉伸）<br>c. 双向拉伸中间部分（即九宫格的中间部分，横向，纵向同时拉伸，PS：拉伸比例不一定相同）</p>
-</li>
-</ul>
-<p><img src="../../images/48_183396_534f6b07775ff6b.png" alt=""><br>（图片来自www.cocoachina.com）</p>
-<p>如果你想九宫格中被拉伸的部分改用平铺进行填充，可以在下图的界面内勾选这些宫格：</p>
-<center><br><img src="../../images/20170727163916.png" alt=""><br></center>
-
-<ul>
-<li><p><code>使用平铺进行缩放</code> 图片拉伸时使用平铺模式进行填充。除了Flash和Haxe版本，应该尽量避免使用较小面积的图片平铺填充到较大的面积，因为这样会产生大量的网格，甚至可能溢出报错。如果你确实有这个需求，Unity版本提供了一种优化策略，你需要将这个图片设置为单独导出（下面的纹理集设置会说明），然后在Unity编辑器中，将这张纹理的Wrap Mode设置为Repeat。满足这两个条件后，使用这个图片进行平铺填充的性能会大大提高，而且不会出现溢出的异常。</p>
-</li>
-<li><p><code>允许平滑</code> 它指示图片在拉伸时是否进行平滑处理。如果这个图片是用在制作像素游戏里的角色，你可能需要关闭平滑，其他情况一般都应开启。这个选项不适用于Unity版本，需要在Inspector里设置纹理集属性。</p>
-</li>
-<li><p><code>质量</code> 这个选项适用于Flash和Haxe版本。你可以控制单个图片的压缩率，以便获得最优的质量空间比。改变选项后按“应用”可以立即观察到图片的变化，并在“数据大小”里观察压缩大小的成果。</p>
-</li>
-<li><p><code>纹理集</code> 这个选项适用于使用纹理集的平台。一个包可以包含一张或多张纹理集，每个图片都可以安排放置到不同的纹理集。“单独”表示这个图片单独放置到一张纹理集，纹理集的大小是2的幂；“单独（NPOT）”表示这张图片按原大小直接输出。注意：在Unity中，非2的幂大小的纹理不支持压缩格式，只能为RGBA或RGBA。</p>
-</li>
-<li><p><code>导入</code> 选择一个外部图片覆盖此图片。</p>
-</li>
-<li><p><code>裁剪边缘空白</code> 将图片周围的全透明像素（Alpha=0）永久剪除。图片可能变小。</p>
-</li>
-</ul>
-<h2 id="实例属性"><a href="#实例属性" class="headerlink" title="实例属性"></a>实例属性</h2><p>在舞台上选中一个图片，右边的属性面板列表出现：</p>
-<p><img src="../../images/20170727152341.png" alt=""></p>
-<ul>
-<li><p><code>颜色</code> 修改图片各个颜色通道的值，使图片产生变色的效果。这个功能的原理是设置三角形的顶点颜色。<em>（注：Egret、Laya版本目前是通过滤镜实现的，效率较低，不推荐使用此功能）。</em></p>
-</li>
-<li><p><code>亮度</code> 调整图片的明暗。这个实际是通过修改<code>颜色</code>属性实现的，和设置颜色为灰阶颜色一样的效果。例如设置<code>颜色</code>为0xCCCCCC，和设置亮度为0xCC是相同的效果。</p>
-</li>
-<li><p><code>翻转</code> 将图片水平翻转或垂直翻转。与设置Scale为-1的传统翻转方法不同，这里的翻转是渲染级别的翻转，不涉及到矩阵变换，不受轴心、坐标等影响，如果需要图片翻转建议使用这里的选项。<em>（注：Egret、Laya版本未能实现这个特性，现在是通过设置Scale为-1实现的，因此尽量避免使用这个选项，如果要使用，请不要再使用Scale值）</em>。</p>
-</li>
-<li><p><code>填充方法</code> 设置填充方法可以实现图片的一些裁剪效果。<em>（注：仅Starling、Unity版本支持）</em></p>
-<ul>
-<li><code>水平</code>  </li>
-</ul>
-<p><img src="../../images/gaollg0.gif" alt=""></p>
-<ul>
-<li><code>垂直</code></li>
-</ul>
-<p><img src="../../images/gaollg1.gif" alt=""></p>
-<ul>
-<li><code>90度</code></li>
-</ul>
-<p><img src="../../images/gaollg2.gif" alt=""></p>
-<ul>
-<li><code>180度</code></li>
-</ul>
-<p><img src="../../images/gaollg3.gif" alt=""></p>
-<ul>
-<li><code>360度</code></li>
-</ul>
-<p><img src="../../images/gaollg4.gif" alt=""></p>
-</li>
-</ul>
-<h2 id="GImage"><a href="#GImage" class="headerlink" title="GImage"></a>GImage</h2><p>图片我们一般不直接使用new来创建，也很少有需要单独创建图片的需求。它一般直接放置在其他组件中作为组成元素。如果确实需要实例化一个图片，可以使用以下方法：</p>
-<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line">GImage aImage = UIPackage.CreateObject(<span class="string">"包名"</span>,<span class="string">"图片名"</span>).asImage;</div></pre></td></tr></table></figure>
-<p>图片作为UI的一个基础组成元素，它的设计首先是考虑到简单高效，所以是不提供API修改图片的。如果有动态更改图片的需求，应该改为使用装载器（GLoader）。</p>
-<p>在Unity平台中，如果在某些特殊场合需要将Texture2D对象赋予给GImage，可以这样做：</p>
-<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="comment">//必须注意GImage不管理外部对象的生命周期，不会主动销毁your_Texture2D</span></div><div class="line">aImage.texture = <span class="keyword">new</span> NTexture(your_Texture2D);</div></pre></td></tr></table></figure>
-<p>再次强调，这种需求仍然是建议尽量使用装载器实现。</p>
+    <h2 id="自由拖放"><a href="#自由拖放" class="headerlink" title="自由拖放"></a>自由拖放</h2><p>使一个元件能够被拖动，很简单，设置draggable属性就可以了，例如：</p>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line">aObject.draggable = <span class="literal">true</span>;</div></pre></td></tr></table></figure>
+<p>设置后当玩家按住元件，就可以随意拖动它。可以设置一个矩形限制拖动范围：</p>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="comment">//注意这里的矩形范围使用的是舞台上的坐标，不是元件的本地坐标。</span></div><div class="line">aObject.dragBounds = <span class="keyword">new</span> Rect(<span class="number">100</span>,<span class="number">100</span>,<span class="number">200</span>,<span class="number">200</span>);</div></pre></td></tr></table></figure>
+<p>拖动开始、拖动的过程和拖动结束都可以获得通知：</p>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="comment">//Unity</span></div><div class="line">aObject.onDragStart.Add(onDragStart);</div><div class="line">aObject.onDragMove.Add(onDragMove);</div><div class="line">aObject.onDragEnd.Add(onDragEnd);</div><div class="line"></div><div class="line"><span class="comment">//AS3</span></div><div class="line">aObject.addEventListener(DragEvent.DRAG_START, onDragStart);</div><div class="line">aObject.addEventListener(DragEvent.DRAG_MOVING, onDragMove);</div><div class="line">aObject.addEventListener(DragEvent.DRAG_END, onDragEnd);</div><div class="line"></div><div class="line"><span class="comment">//Egret</span></div><div class="line">aObject.addEventListener(DragEvent.DRAG_START, <span class="keyword">this</span>.onDragStart, <span class="keyword">this</span>);</div><div class="line">aObject.addEventListener(DragEvent.DRAG_MOVING, <span class="keyword">this</span>.onDragMove, <span class="keyword">this</span>);</div><div class="line">aObject.addEventListener(DragEvent.DRAG_END, <span class="keyword">this</span>.onDragEnd, <span class="keyword">this</span>);</div><div class="line"></div><div class="line"><span class="comment">//Laya</span></div><div class="line">aObject.<span class="keyword">on</span>(laya.events.Event.DRAG_START, <span class="keyword">this</span>, <span class="keyword">this</span>.onDragStart);</div><div class="line">aObject.<span class="keyword">on</span>(laya.events.Event.DRAG_MOVE, <span class="keyword">this</span>, <span class="keyword">this</span>.onDragMove);</div><div class="line">aObject.<span class="keyword">on</span>(laya.events.Event.DRAG_END, <span class="keyword">this</span>, <span class="keyword">this</span>.onDragEnd);</div></pre></td></tr></table></figure>
+<h2 id="转换拖动"><a href="#转换拖动" class="headerlink" title="转换拖动"></a>转换拖动</h2><p>如果不希望点击元件的任何地方都可以拖动，那么可以用转换拖动的方式。例如FairyGUI里的窗口，点击它的标题栏，就可以拖动窗口，我们以这个为例子分析怎么实现：</p>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line"><span class="comment">//设置拖动区域为可拖动，然后侦听拖动开始事件</span></div><div class="line">_dragArea.draggable = <span class="literal">true</span>;</div><div class="line">_dragArea.onDragStart.Add(__dragStart);</div><div class="line"></div><div class="line"><span class="keyword">void</span> __dragStart(EventContext context)</div><div class="line">&#123;</div><div class="line">    <span class="comment">//取消掉源拖动，也就是_dragArea不会被实际拖动</span></div><div class="line">    context.PreventDefault();</div><div class="line"></div><div class="line">    <span class="comment">//设置窗口处于拖动状态。context.data是手指的id。</span></div><div class="line">    <span class="keyword">this</span>.StartDrag((<span class="keyword">int</span>)context.data);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>通过以上的方式，实现当_dragArea被尝试拖动时，会转换为Window自身的拖动。</p>
+<h2 id="替身拖动"><a href="#替身拖动" class="headerlink" title="替身拖动"></a>替身拖动</h2><p>拖动只能在元件的父组件内移动，如果你需要在全屏幕内移动，那么需要用到替身拖动。替身拖动的启动方式需要先作转换：</p>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line">aObject.draggable = <span class="literal">true</span>;</div><div class="line">aObject.onDragStart.Add(__dragStart);</div><div class="line"></div><div class="line"><span class="keyword">void</span> __dragStart(EventContext context)</div><div class="line">&#123;</div><div class="line">    <span class="comment">//取消掉源拖动</span></div><div class="line">    context.PreventDefault();</div><div class="line"></div><div class="line">    <span class="comment">//icon是这个对象的替身图片，userData可以是任意数据，底层不作解析。context.data是手指的id。</span></div><div class="line">    DragDropManager.inst.StartDrag(<span class="literal">null</span>, icon, userData, (<span class="keyword">int</span>)context.data);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>使用了替身拖动后，如果要检测拖动结束，不能在监听原来的对象，而应该使用：</p>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line">DragDropManager.inst.dragAgent.onDragEnd.Add(onDragEnd);</div></pre></td></tr></table></figure>
+<p>DragDropManager还提供了常用的拖-&gt;放功能，如果一个组件需要接收其他元件拖动到它里面并释放的事件，可以使用：</p>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line">aComponent.onDrop.Add(onDrop);</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">onDrop</span>(<span class="params">EventContext context</span>)</span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">    <span class="comment">//这里context.data就是StartDrag里传入的userData</span></div><div class="line">    Debug.Log(context.data);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>DragDropManager使用了一个图片资源表达替身，这个图片是用装载器显示的。这个装载器是DragDropManager.inst.dragAgent，你可以调整它的参数以适应实际项目需求。</p>
+<p>如果你的替身不是一个图片那么简单，比如你需要用一个组件作为替身，那么你可以定义自己的DragDropManager，直接复制一个DragDropManager，然后在上面修改就可以。这个类的设计就没有考虑到所有实际情况的，它的目的就是给你参考。</p>
 
     
     <div class="footer">
       发现错误或想贡献文档?
-      <a href="https://github.com/fairygui/fairygui.github.io/tree/master/src/guide/editor/image.md" target="_blank">
+      <a href="https://github.com/fairygui/fairygui.github.io/tree/master/src/guide/editor/dragdrop.md" target="_blank">
         在 Github 上编辑此文档!
       </a>
     </div>
