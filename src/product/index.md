@@ -33,6 +33,12 @@ FairyGUI编辑器是绿色软件，解压后可直接使用，无需安装。建
 
 [下载例子-网盘](http://pan.baidu.com/s/1dDQIg9b) （密码: k2m7）
 
+## Cocos2dx SDK
+
+源码: [https://github.com/fairygui/FairyGUI-cocos2dx](https://github.com/fairygui/FairyGUI-cocos2dx)
+
+<img src="https://img.shields.io/github/stars/fairygui/FairyGUI-cocos2dx.svg"         alt="stars"> <img src="https://img.shields.io/github/forks/fairygui/FairyGUI-cocos2dx.svg" alt="forks">
+
 ## LayaAir SDK
 
 源码: [https://github.com/fairygui/FairyGUI-layabox](https://github.com/fairygui/FairyGUI-layabox)

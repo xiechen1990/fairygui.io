@@ -20,7 +20,7 @@ order: 90
 ```csharp
     GObject aObject;
     DisplayObject dObject = aObject.displayObject;
-    dObject.EnterPaitingMode(1024, null);
+    dObject.EnterPaintingMode(1024, null);
     
     //----我是分割线----
 
