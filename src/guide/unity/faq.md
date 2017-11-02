@@ -19,7 +19,11 @@ make sure to disable autocrlf option!
 
 除了上面这个错误，如果包仍然不能加载，检查包名和路径是否正确，特别要注意包只能放置在Resources目录或者它的子目录下，否则就只能打AB包。再看看是不是Unity的项目放置在了带中文名称的目录，这都有可能造成载入失败。
 
-## 显示白屏
+## 显示白屏/提示atlas not found
+
+```
+FairyGUI: texture 'atlas0.png' not found in xxx
+```
 
 Unity5.5版本开始，纹理设置新增了[TextureShape](http://ask.fairygui.com/?/question/1)属性，把他设置为2d就可以了。 
 
