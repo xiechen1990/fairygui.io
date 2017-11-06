@@ -64,4 +64,8 @@ Stage.LateUpdate不但包含了FairyGUI自身的消耗，而且因为他是发�
 
 如果你确认已经执行了Gen Delegates，那么唯一可能的原因就是DelegateFactory没有init，请检查第三方框架的问题。
 
+## FairyGUI支持XLua吗
+
+无论tolua、slua还是xlua，都是C# binding的方案。FairyGUI是使用C#写的，且没有引用到除了系统库、Unity库外的任何第三方库，所以不存在不支持某某lua的说法。xlua和FairyGUI结合使用的例子可以百度“FairyGUI xlua”。
+
 

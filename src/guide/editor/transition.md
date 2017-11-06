@@ -91,7 +91,7 @@ FairyGUI不仅提供了静态UI的编辑功能，而且提供了强大的动效�
 
 - `Tween` 勾选后从这个关键帧到下一个关键帧建立一个Tween。如果没有下一个关键帧，那么这个Tween是无效的。
 
-- `缓动函数` 时间/速度曲线。详细请参考 [图解](../../images/20170802000005.png) [示例](https://greensock.com/ease-visualizer)。
+- `缓动函数` 时间/速度曲线。详细请参考 [图解](../../images/20170802000005.jpg) [示例](https://greensock.com/ease-visualizer)。
  
 - `重复` 重复播放的次数。-1表示循环。
 

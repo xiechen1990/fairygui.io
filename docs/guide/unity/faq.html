@@ -361,6 +361,7 @@
 <h2 id="DrawCall过高"><a href="#DrawCall过高" class="headerlink" title="DrawCall过高"></a>DrawCall过高</h2><p>开启了FairyBatching后，仍然觉得DrawCall过高的话，可以使用Unity的工具Frame Debugger排查。可以看看是不是过多的使用了遮罩（溢出隐藏、滚动），或者元件之间不合理的重叠。另外大段文本、图片平铺、使用滤镜、BlendMode也会阻断DrawCall的合并。</p>
 <h2 id="Lua不能侦听事件"><a href="#Lua不能侦听事件" class="headerlink" title="Lua不能侦听事件"></a>Lua不能侦听事件</h2><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">LuaException: Delegate FairyGUI.EventCallback1 not register</div></pre></td></tr></table></figure>
 <p>如果你确认已经执行了Gen Delegates，那么唯一可能的原因就是DelegateFactory没有init，请检查第三方框架的问题。</p>
+<h2 id="FairyGUI支持XLua吗"><a href="#FairyGUI支持XLua吗" class="headerlink" title="FairyGUI支持XLua吗"></a>FairyGUI支持XLua吗</h2><p>无论tolua、slua还是xlua，都是C# binding的方案。FairyGUI是使用C#写的，且没有引用到除了系统库、Unity库外的任何第三方库，所以不存在不支持某某lua的说法。xlua和FairyGUI结合使用的例子可以百度“FairyGUI xlua”。</p>
 
     
     <div class="footer">

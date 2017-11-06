@@ -381,7 +381,9 @@
 </li>
 <li><p><code>StopPropagation</code> 点击子节点的区域，父节点也能收到触摸事件，这就是事件冒泡的特性。如果你不想再向父节点传递，可以调用这个方法。</p>
 </li>
-<li><p><code>CaptureTouch</code> 当释放鼠标左键或者手指抬起时，如果鼠标或者触摸位置已经不在组件范围内了，那么组件的TouchEnd事件是不会触发的。如果确实需要，可以请求捕获。在TouchBegin事件处理函数内，你可以调用context.CaptureTouch()，这样，无论鼠标在哪里释放（即使不在对象区域内），对象的onTouchEnd都会被调用。注意仅生效一次。</p>
+<li><p><code>CaptureTouch</code> 当鼠标左键释放或者手指抬起时，如果鼠标或者触摸位置已经不在组件范围内了，那么组件的TouchEnd事件是不会触发的。如果确实需要，可以请求捕获。在TouchBegin事件处理函数内，你可以调用context.CaptureTouch()，这样，无论鼠标在哪里释放（即使不在对象区域内），对象的onTouchEnd都会被调用。注意仅生效一次。<br>在1.9.1SDK后，如果调用了CaptureTouch，那么GObject.onTouchMove事件将在手指（或鼠标左键）抬起前一直触发（无论手指或指针位置是不是在该对象上方），直到鼠标左键释放或者手指抬起。</p>
+</li>
+<li><p><code>UncaptureTouch</code> 取消CaptureTouch发起的触摸事件捕获。</p>
 </li>
 </ul>
 <h2 id="InputEvent"><a href="#InputEvent" class="headerlink" title="InputEvent"></a>InputEvent</h2><p>对键盘事件和鼠标/触摸事件，可以通过EventContext.inputEvent获得此类事件的相关数据。</p>

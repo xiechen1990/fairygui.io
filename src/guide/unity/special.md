@@ -21,10 +21,10 @@ order: 90
     GObject aObject;
     DisplayObject dObject = aObject.displayObject;
     dObject.EnterPaintingMode(1024, null);
-    
-    //----我是分割线----
 
-    //纹理将在本帧渲染后才能更新，所以以下代码需要延迟到下一帧执行，具体延迟方法自行把握。
+    //纹理将在本帧渲染后才能更新，所以访问纹理的代码需要延迟到下一帧执行。
+    yield return null;
+
     Texture tex = dObject.paintingGraphics.texture.nativeTexture;
     //得到tex后，你可以使用Unity的方法保存为图片或者进行其他处理。具体处理略。
 
@@ -34,7 +34,7 @@ order: 90
 
 ## 表情显示和输入
 
-FairyGUI支持表情显示和直接输入，即表情图片直接在输入状态下就显示在输入框中。例如：
+FairyGUI支持表情显示和直接输入，即表情图片直接在输入状态下就显示在输入框中，支持PC上的输入，也支持手机原生键盘的输入。例如：
 
 ![](../../images/20170924151030.png)
 

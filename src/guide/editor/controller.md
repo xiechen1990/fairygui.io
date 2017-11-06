@@ -106,7 +106,7 @@ order: 100
 
 - `持续时间` 整个缓动过程持续的时间，单位秒。
 - `延迟时间` 控制器页面切换后，延迟一定时间再开始缓动。单位秒。
-- `缓动函数` 时间/速度曲线。详细请参考 [图解](../../images/20170802000005.png) [示例](https://greensock.com/ease-visualizer)。
+- `缓动函数` 时间/速度曲线。详细请参考 [图解](../../images/20170802000005.jpg) [示例](https://greensock.com/ease-visualizer)。
 
 ### 大小控制
 
@@ -276,7 +276,20 @@ order: 100
     c1.on(fairygui.Events.STATE_CHANGED, this, this.onChanged);
 ```
 
-改变控制器页面时，与之连接的属性控制可能带有缓动，如果你正在做界面的初始化，可能不希望出现缓动。可以这样做：
+改变控制器页面时，与之连接的属性控制可能带有缓动，如果你要获得缓动结束的通知，可以侦听GearStop事件：
+
+```csharp
+    //Unity
+    aObject.OnGearStop.Add(OnGearStop);
+
+    //Egret
+    c1.addEventListener(GObject.GEAR_STOP, this.OnGearStop, this);
+
+    //Laya
+    c1.on(fairygui.Events.GEAR_STOP, this, this.OnGearStop);
+```
+
+如果你正在做界面的初始化，可能不希望出现缓动。可以这样做：
 
 ```csharp
     //禁止所有控制器引起的缓动

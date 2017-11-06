@@ -6,7 +6,7 @@ order: 30
 
 ## 鼠标/触摸输入
 
-FairyGUI使用内置的机制进行鼠标和触摸事件的处理，不使用射线。如果确实要使用射线，可以将UIPanel的“HitTest Mode”设置为“Raycast”。
+FairyGUI使用内置的机制进行鼠标和触摸事件的处理，不使用射线。如果确实要使用射线，可以将UIPanel的“HitTest Mode”设置为“Raycast”。无论哪种点击检测模式，下面的事件处理机制都一样。
 
 如果要区分点击UI还是点击场景里的对象，可以使用下面的方法：
 
@@ -21,7 +21,15 @@ FairyGUI使用内置的机制进行鼠标和触摸事件的处理，不使用射
 
 这种检测不仅适用于点击，也适用于悬停。例如，如果鼠标悬停在UI上，这个判断也是真。
 
-在任何事件回调中都可以获得当前鼠标或手指位置，以及点击的对象，例如：
+和鼠标/触摸相关的事件有：
+
+- `onTouchBegin` 鼠标按键按下（左、中、右键），或者手指按下。鼠标按钮可以从context.inputEvent.button获得，0-左键,1-中键,2-右键。
+- `onTouchMove` 鼠标指针移动或者手指在屏幕上移动。这个事件只有两种情况会触发，1、在onTouchBegin里调用了context.CaptureTouch()，那么后续的移动事件都会在这个对象上触发（无论手指或指针位置是不是在该对象上方）。2、舞台的onTouchMove始终会触发，即Stage.inst.onTouchMove，不需要使用CaptureTouch捕获。
+- `onTouchEnd` 鼠标按键释放或者手指从屏幕上离开。如果鼠标或者触摸位置已经不在组件范围内了，那么组件的TouchEnd事件是不会触发的，如果确实需要，可以在onTouchBegin里调用context.CaptureTouch()请求捕获。
+- `onClick` 鼠标或者手指点击。可以从context.inputEvent.isDoubleClick判断是否双击。
+- `onRightClick` 鼠标右键点击。
+
+在任何事件（即不只是鼠标/触摸相关的事件）回调中都可以获得当前鼠标或手指位置，以及点击的对象，例如：
 
 ```csharp
     void AnyEventHandler(EventContext context)
@@ -29,6 +37,7 @@ FairyGUI使用内置的机制进行鼠标和触摸事件的处理，不使用射
         Debug.Log(context.inputEvent.x + ", " + context.inputEvent.y);
 
         Debug.Log(context.sender);
+        Debug.Log(context.initiator);
     }
 ```
 
@@ -48,12 +57,6 @@ FairyGUI使用内置的机制进行鼠标和触摸事件的处理，不使用射
     int[] touchIDs = Stage.inst.GetAllTouch(null);
 ```
 
-如果要侦听鼠标或者手指的移动，FairyGUI提供了一个全局的事件。注意：在需要时侦听，不需要时请移除。
-
-```csharp
-    Stage.inst.onTouchMove.Add(onTouchMove);
-```
-
 在任何时候，如果需要获得当前点击的对象，或者鼠标下的对象，都可以通过以下的方式获得：
 
 ```csharp
@@ -65,7 +68,7 @@ FairyGUI使用内置的机制进行鼠标和触摸事件的处理，不使用射
 
 ## VR输入处理
 
-VR里输入一般使用凝视输入，或者手柄输入，针对这些新的输入方式，FairyGUI提供了封装支持，也就是说，在VR应用里，你仍然可以像处理鼠标或者触摸输入一样处理VR的输入。
+VR里输入一般使用凝视输入，或者手柄输入，针对这些新的输入方式，FairyGUI提供了封装支持，也就是说，在VR应用里，你仍然可以像处理鼠标或者触摸输入一样处理VR的输入，无任何区别。
 
 首先，需要把这些外部输入传入FairyGUI。在Stage类里提供了这些API：
 
