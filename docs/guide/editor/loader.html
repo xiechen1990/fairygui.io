@@ -363,7 +363,7 @@
 <li><p><code>填充方法</code> 设置填充方法可以实现图片的一些裁剪效果。详细说明请参考图片的<a href="image.html#实例属性">填充方法</a>。<em>（注：仅Starling、Unity版本支持）</em></p>
 </li>
 </ul>
-<h2 id="GLoader"><a href="#GLoader" class="headerlink" title="GLoader"></a>GLoader</h2><p>装载器支持动态创建，动态创建图形一定要设置图形的大小，否则显示不出来。例如：</p>
+<h2 id="GLoader"><a href="#GLoader" class="headerlink" title="GLoader"></a>GLoader</h2><p>装载器支持动态创建，动态创建装载器一定要设置装载器的大小，否则显示不出来。例如：</p>
 <figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line">GLoader aLoader = <span class="keyword">new</span> GLoader();</div><div class="line">aLoader.SetSize(<span class="number">100</span>,<span class="number">100</span>);</div><div class="line">aLoader.url = <span class="string">"ui://包名/图片名"</span>;</div></pre></td></tr></table></figure>
 <p>GLoader可以载入图片和动画，但不能是组件或其他类型的元件。如果是UI包里的资源，那么通过“ui://包名/图片名”这种格式的地址就可以载入。但实际项目中，可能我们还需要载入和显示一些不在UI包里的，我们称之为“外部”的图片。默认的GLoader具有有限度的的加载外部资源的能力，它们是：</p>
 <ul>

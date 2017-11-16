@@ -95,7 +95,7 @@ order: 80
     
     --也可以带上事件参数
     function TestClass:OnClick(context)
-        print('you click'..context.sender)
+        print('you click'..context.sender.name)
     end
     
     self.view.onClick:Add(TestClass.OnClick, self)

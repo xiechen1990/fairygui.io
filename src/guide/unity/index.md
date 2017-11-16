@@ -134,7 +134,7 @@ UIPanel也可以在游戏中创建，为任意游戏对象动态挂接UI界面�
     panel.container.renderMode = RenderMode.WorldSpace;
     
     //设置fairyBatching
-    panel.fairyBatching = true;
+    panel.container.fairyBatching = true;
     
     //设置sortingOrder的方式
     panel.SetSortingOrder(1, true);
