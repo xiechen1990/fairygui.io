@@ -144,6 +144,8 @@ FairyGUI编辑器支持位图字体。首先，我们创建一种字体。点击
     aTextField.textFormat = tf;
 ```
 
+如果要设置文本的字体为位图字体，字体名称直接使用字体的url就可以了，例如‘ui://包名/字体名’。
+
 ## GTextInput
 
 如果文本勾选为“输入”，则运行中的实例对象为GTextInput。

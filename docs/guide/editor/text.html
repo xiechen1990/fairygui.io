@@ -449,6 +449,7 @@
 <figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line">GTextField aTextField = <span class="keyword">new</span> GTextField();</div><div class="line">aTextField.SetSize(<span class="number">100</span>,<span class="number">100</span>);</div><div class="line">aTextField.text = <span class="string">"Hello World"</span>;</div></pre></td></tr></table></figure>
 <p>在Unity平台中，如果你需要改变文本的样式，请使用以下的方式：</p>
 <figure class="highlight csharp"><table><tr><td class="code"><pre><div class="line">TextFormat tf = aTextField.textFormat;</div><div class="line">tf.color = ...;</div><div class="line">tf.size = ...;</div><div class="line">aTextField.textFormat = tf;</div></pre></td></tr></table></figure>
+<p>如果要设置文本的字体为位图字体，字体名称直接使用字体的url就可以了，例如‘ui://包名/字体名’。</p>
 <h2 id="GTextInput"><a href="#GTextInput" class="headerlink" title="GTextInput"></a>GTextInput</h2><p>如果文本勾选为“输入”，则运行中的实例对象为GTextInput。</p>
 <p>可以通过UIConfig.inputHighlightColor和UIConfig.inputCaretSize修改光标的颜色和大小。注意，输入光标的大小会自动根据屏幕缩放选择最合适的宽度，一般情况下你不需要修改。</p>
 <p>输入文本在文本改变时有通知事件：</p>

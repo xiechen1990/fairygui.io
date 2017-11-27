@@ -140,7 +140,7 @@ order: 180
     aList.callbackThisObj = this;
     
     //Laya
-    aList.itemRenderer = Handler.create(this, this.RenderListItem);
+    aList.itemRenderer = Handler.create(this, this.RenderListItem, false);
 ```
 
 最后直接设置列表中的项目总数，这样列表就会调整当前列表容器的对象数量，然后调用回调函数渲染item。
