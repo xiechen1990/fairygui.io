@@ -45,7 +45,7 @@ FairyGUI编辑器是绿色软件，解压后可直接使用，无需安装。建
 
 <img src="https://img.shields.io/github/stars/fairygui/FairyGUI-layabox.svg"         alt="stars"> <img src="https://img.shields.io/github/forks/fairygui/FairyGUI-layabox.svg" alt="forks">
 
-[下载例子](http://res.fairygui.com/FairyGUI-layabox-demo20170726.zip)
+[下载例子](http://res.fairygui.com/FairyGUI-layabox-demo171128.zip)
 
 ## Egret SDK
 
@@ -53,7 +53,7 @@ FairyGUI编辑器是绿色软件，解压后可直接使用，无需安装。建
 
 <img src="https://img.shields.io/github/stars/fairygui/FairyGUI-egret.svg"         alt="stars"> <img src="https://img.shields.io/github/forks/fairygui/FairyGUI-egret.svg" alt="forks">
 
-[下载例子](http://res.fairygui.com/FairyGUI-egret-demo20170726.zip)
+[下载例子](http://res.fairygui.com/FairyGUI-egret-demo171128.zip)
 
 ## Pixi SDK
 
@@ -77,7 +77,7 @@ FairyGUI编辑器是绿色软件，解压后可直接使用，无需安装。建
 
 <img src="https://img.shields.io/github/stars/fairygui/FairyGUI-starling.svg"         alt="stars"> <img src="https://img.shields.io/github/forks/fairygui/FairyGUI-starling.svg" alt="forks">
 
-[下载例子](http://res.fairygui.com/FairyGUI-starling-demo20170726.zip)
+[下载例子](http://res.fairygui.com/FairyGUI-starling-demo171128.zip)
 
 ## Flash SDK
 
@@ -85,4 +85,4 @@ FairyGUI编辑器是绿色软件，解压后可直接使用，无需安装。建
 
 <img src="https://img.shields.io/github/stars/fairygui/FairyGUI-as3.svg"         alt="stars"> <img src="https://img.shields.io/github/forks/fairygui/FairyGUI-as3.svg" alt="forks">
 
-[下载例子](http://res.fairygui.com/FairyGUI-as3-demo20170726.zip)
+[下载例子](http://res.fairygui.com/FairyGUI-as3-demo171128.zip)
