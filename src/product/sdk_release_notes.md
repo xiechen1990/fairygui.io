@@ -3,6 +3,16 @@ title: SDK更新日志
 type: product
 order: 2
 ---
+## 2017/12/15
+
+1. [Unity] Unity发布了1.9.3版本。
+2. [Unity] 如果UIPackage.AddPackage方法用于AssetBundle，现在增加了一个参数unloadBundleAfterLoaded，可以控制是否由FairyGUI释放AB。默认是true（和旧版本行为一致）。
+3. [Unity] 修正了触摸输入处理的一个bug。
+4. [Unity] 修正了1.9.2办法引入的一个bug，可能导致窗口无法拖动。
+5. [Cocos2dx] Cocos2dx发布了1.1版本。
+6. [Cocos2dx] 修正了loadComponentChildren的bug。
+7. [Cocos2dx] 修正了析构函数没有加virtual修饰符的问题。
+8. [Cocos2dx] 修正了剪裁容器外面的元素也能响应点击的bug。
 
 ## 2017/11/28
 
